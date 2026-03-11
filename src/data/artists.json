@@ -1,0 +1,167 @@
+[
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/chacal-cult/",
+    "name": "CHACAL CULT",
+    "legalName": "CHACAL CULT",
+    "description": "Chacal Cult is a dynamic stoner rock band born in 2023. Composed of Kenneth G. (guitar and vocals), Daniel Chumillas (bass) and Jordi Learreta (drums), this powerful trio from Barcelona brings a heavy and hypnotic that combines raw energy with deep , psychedelic rhythms.",
+    "url": "https://beta.mygloven.com/listing/chacal-cult/",
+    "telephone": "662576882",
+    "email": "chacalband68@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/ddddd.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/ddddd.png"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/VFVFVFV.png",
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/aaaa.png",
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/ddddd.png",
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/YHYHYH.png"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "662576882",
+      "email": "chacalband68@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/chacal-cult/",
+    "slug": "chacal-cult"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/inigo-palmero/",
+    "name": "PALMERO",
+    "legalName": "PALMERO",
+    "description": "Iñigo Palmero Garcés (Bilbao 1992) es un apasionado DJ y productor que comenzó su aventura en la música electrónica hace mas de una década, poco antes de ir a probar suerte a Australia, donde fue residente de la mítica sala Rattle Snake (Gold Coast) durante casi 3 años, adquiriendo así soltura y psicología de cabina, lo que le llevo a actuar también en algunos de los mejores clubes de Australia, como Platinum o Elsewhere.\n\nEn el verano de 2017 Palmero regresa a Bilbao pasando por diferentes fiestas y salas como Sonora, Salitre o el mítico Flixgain de Mutriku. En la actualidad Iñigo ha terminado de montar su estudio donde trabaja en busca de un sonido propio e identidad como artista.\n\nCon un estilo versátil que le permite jugar con la energía de la pista, sus sesiones preferiblemente largas encadenan cambios de ritmo y género (Techno, House, Deep, Progresive, Minimal etc), manteniendo un sonido limpio que busca sorprender y sobre todo hacer bailar. Las melodías profundas y los sonidos oscuros en ambientes alegres, son su seña de identidad.\n\nsoundcloud\n\nfacebook.com/PalmeroDJ",
+    "url": "https://beta.mygloven.com/listing/inigo-palmero/",
+    "email": "iipalmero@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/palmero.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/palmero.jpeg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/palmerol.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "iipalmero@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/inigo-palmero/",
+    "slug": "inigo-palmero"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/jeremy-session-drummer-dj/",
+    "name": "JEREMY | SESSION DRUMMER & DJ",
+    "legalName": "JEREMY | SESSION DRUMMER &amp; DJ",
+    "description": "📍 LA 📍 London\nRose Gray • Mega • Tommy Genesis • Gigi Perez • Tianna Esperanza • Dawn Richards • Laville • Liv Dawson • Tom Tripp • George The Poet\n\n \n\nhttps://www.jayjaydrums.com/\n\n \n\nhttps://www.instagram.com/jeremy.jayjay/\n\n \n\nhttps://soundcloud.com/jerames/dua-lipa-break-my-heart-jerames-remix",
+    "url": "https://beta.mygloven.com/listing/jeremy-session-drummer-dj/",
+    "email": "jeremyberges.uk@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/jeremy.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/jeremy.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/JEREMYIII.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "jeremyberges.uk@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/jeremy-session-drummer-dj/",
+    "slug": "jeremy-session-drummer-dj"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/laville-acid-jazz-records/",
+    "name": "LAVILLE | ACID JAZZ RECORDS",
+    "legalName": "LAVILLE | ACID JAZZ RECORDS",
+    "description": "La sensación del soul en ascenso en el norte de Londres y firmante de Acid Jazz Records, Laville, lanza su EP debut &quot;Thirty One&quot; el 15 de marzo. Con los sencillos anteriores &quot;Easy&quot; y la canción principal del EP &quot;Thirty One&quot;, así como una hermosa versión de &quot;Passport Home&quot; de JP Cooper y una versión acústica de &quot;Thirty One&quot;, es una introducción sorprendente a un talento británico increíblemente emocionante.\n\nHablando sobre el lanzamiento del EP, Laville revela: “Este EP es un pequeño fragmento del tipo de música que quiero hacer, y creo que es una forma honesta de música soul. Uno que le dé sabor a la vieja y nueva escuela. Es como un renacimiento para mí. Significa dejar atrás viejos hábitos, comportamientos y fiestas. Es un placer cantar Passport Home porque está muy bien escrito y organizado. No le temo a una tapadera si creo que puedo hacerle justicia &quot;.\n\nHabiendo aparecido en la pista del álbum de Big Narstie &quot;Help&quot; en su álbum de 2018 &quot;BDL Bipolar&quot;, Laville recientemente interpretó la pista en vivo en el programa Channel 4 de Big Narstie. Míralo de nuevo en 4oD. También consiguió el apoyo de los creadores de tendencias de gente como Complex, que estrenó su sencillo 'Thirty One' y lo llamó &quot;Un cuento fresco y fresco sobre la llegada de la edad&quot;, CLASH, la revista Songwriting, The National Student, When The Horn Blows, Somewhere Soul para nombrar unos pocos.\n\nLos años de adolescencia de Laville siguieron un viaje familiar a través de la alegría y el trauma que lo vio cantar localmente, antes de que un lugar de la Universidad lo llamara y redujera brevemente sus ambiciones musicales. Empleado en una serie de trabajos, desde restaurantes con estrellas Michelin, liderando el front-of-house para ayudar a administrar varios lugares musicales en Londres, Laville ha mantenido una ética de trabajo implacable, una que desde entonces lo ha llevado a su primer amor.\n\nSi bien fue influenciado por una cornucopia creativa a medida que avanzaba en su adolescencia, más recientemente ha visto a este talentoso vocalista tejer su propio camino con la ayuda de una variedad de amigos y conocidos musicales mutuos.\n\nLaville ha encontrado el hogar ideal en Acid Jazz Records, para quien es el primer solista masculino nuevo al que firman desde Jamiroquai.",
+    "url": "https://beta.mygloven.com/listing/laville-acid-jazz-records/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/andre.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/andre.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/laville-acid-jazz-records/",
+    "slug": "laville-acid-jazz-records"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/ravioli-makers/",
+    "name": "RAVIOLI MAKERS",
+    "legalName": "RAVIOLI MAKERS",
+    "description": "Beatmakers, Productores, MC, Ingenieros de mezcla y masterización. All HOME MADE.\nNos encanta la cultura HIPHOP, y consideramos que es una manera de vivir, ver las cosas y actuar ante ellas.\nDisfruta de las birras, los colegas la familia y la buena música.\n\n@raviolimakers\n\nYoutube\n\nspotify",
+    "url": "https://beta.mygloven.com/listing/ravioli-makers/",
+    "email": "raviolimakerssound@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/ravi.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/ravi.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/ravioli.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "raviolimakerssound@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/ravioli-makers/",
+    "slug": "ravioli-makers"
+  }
+]

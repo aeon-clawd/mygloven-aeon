@@ -327,7 +327,7 @@
     "@context": "http://www.schema.org",
     "@type": "LocalBusiness",
     "@id": "https://beta.mygloven.com/listing/art-sushi-beach-club/",
-    "name": "ART &amp; SUSHI BEACH CLUB",
+    "name": "ART & SUSHI BEACH CLUB",
     "legalName": "ART &amp; SUSHI BEACH CLUB",
     "description": "Art. & Sushi Beach Club es la puerta que comunica el océano con La Terrazza del Mare, un lugar accesible en primera línea de Playa de Troya, donde disfrutar de tus momentos de relax y evasión bajo los rayos del sol.",
     "logo": [
@@ -787,7 +787,7 @@
     "@context": "http://www.schema.org",
     "@type": "LocalBusiness",
     "@id": "https://beta.mygloven.com/listing/back-stage/",
-    "name": "BACK &amp; STAGE",
+    "name": "BACK & STAGE",
     "legalName": "BACK &amp; STAGE",
     "description": "BACK&STAGE abre sus puertas en 2013, en su primera temporada consigue un éxito rotundo con las sesiones de noche y produciendo también pequeños conciertos. tanto es así que en 2.014 nace StageLive situada a unos pocos metros y se decide cambiar el nombre de la sala Backstage original por Backroom.\n\nEn 2015 STAGElive se consolida como sala de conciertos, las fiestas de jueves a sábado se vuelven masivas y se consigue aforo completo prácticamente durante toda la temporada. En 2016 la tendencia continua, BACK&STAGE consigue llenar las dos salas de manera habitual y es premiada como mejor discoteca en los Premios Ocio Nocturno de Bilbao consolidándose como referencia en la ciudad.\n\nBACK&STAGE actualmente gestiona 2 salas (BACKroom y STAGElive) situadas en la calle Uribitarte nº 8 de Bilbao, con una oferta de ocio variada produciendo conciertos, sesiones de música comercial y eventos privados.",
     "logo": [
@@ -3135,7 +3135,7 @@
     "@context": "http://www.schema.org",
     "@type": "LocalBusiness",
     "@id": "https://beta.mygloven.com/listing/imaginario-drinks-music/",
-    "name": "IMAGINARIO DRINKS &amp; MUSIC",
+    "name": "IMAGINARIO DRINKS & MUSIC",
     "legalName": "IMAGINARIO DRINKS &amp; MUSIC",
     "description": "Cocktail bar con música en directo.",
     "logo": [
@@ -5656,7 +5656,7 @@
     "@context": "http://www.schema.org",
     "@type": "LocalBusiness",
     "@id": "https://beta.mygloven.com/listing/portobello-rooftop-restaurantbar/",
-    "name": "PORTOBELLO ROOFTOP RESTAURANT&amp;BAR",
+    "name": "PORTOBELLO ROOFTOP RESTAURANT&BAR",
     "legalName": "PORTOBELLO ROOFTOP RESTAURANT&amp;BAR",
     "description": "PortoBello Rooftop Restaurant & Bar es un restaurante panorámico, incorporado en un hotel de 4 estrellas, ubicado en el corazón de la ciudad de Oporto.",
     "logo": [
@@ -5972,7 +5972,7 @@
     "@context": "http://www.schema.org",
     "@type": "LocalBusiness",
     "@id": "https://beta.mygloven.com/listing/rock-blues-cafe/",
-    "name": "ROCK &amp; BLUES CAFÉ",
+    "name": "ROCK & BLUES CAFÉ",
     "legalName": "ROCK &amp; BLUES CAFÉ",
     "description": "La sala de Rock & Blues Café fue inaugurada el 27 de diciembre del 2003. Debido a su estilo unico y particular es uno de los bares insignia de la ciudad por su musica en directo de Rock, Blues, Soul, Pop, Jazz, Country, Funky blues, Reggae y mucho más.",
     "logo": [
@@ -7477,7 +7477,7 @@
     "@context": "http://www.schema.org",
     "@type": "LocalBusiness",
     "@id": "https://beta.mygloven.com/listing/tao-club-garden/",
-    "name": "TAO CLUB &amp; GARDEN",
+    "name": "TAO CLUB & GARDEN",
     "legalName": "TAO CLUB &amp; GARDEN",
     "description": "Rodeada de jardines, en pleno centro de la capital y a escasos metros del Muelle Deportivo de Las Palmas de Gran Canaria, TAO Club & Garden es un nuevo concepto de terraza cosmopolita con 2 espacios bien diferenciados: TAO CLUB (terraza nocturna al aire libre) y TAO GARDEN (salón de eventos).\nLa Terraza TAO CLUB es el espacio para romper con la monotonía y el estrés de la ciudad donde encontrar la calma y el relax en buena compañía con un servicio excelente, deliciosos cocktails y masajes que nos ofrecerán un descanso para el cuerpo y la mente con una cuidadísima mezcla de sonidos del Mundo, Lounge, Easy listening, World Music, Chill-Out...\nSofás, sillones y camas, rodeados de fuentes, luces y agua te proporcionarán un exquisita mezcla de sensaciones mientras disfrutas de unos deliciosos Cocktails en un ambiente Zen.",
     "logo": [
@@ -8677,5 +8677,2504 @@
     "slug": "zz-pub",
     "city": "Málaga",
     "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/aguerecultural/",
+    "name": "AGUERE CULTURAL",
+    "legalName": "AGUERE CULTURAL",
+    "description": "El Aguere Espacio Cultural nace con el fin de inspirar, crear, entusiasmar y desafiar a artistas y visitantes en un entorno multidisciplinar, polivalente, dinámico y abierto. Trabajando junto a artistas, público y ciudadanos en la búsqueda del modelo de espacio cultural y de formación del futuro.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/agu-1.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/aguerecultural/",
+    "email": "info@aguerecultural.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/aguere.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/aguere.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@28.4880088,-16.3168674z",
+    "address": "Calle Herradores, 47, 38204 San Cristóbal de La Laguna, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@aguerecultural.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "28.4880088",
+      "longitude": "-16.3168674"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/aguerecultural/",
+    "slug": "aguerecultural",
+    "city": "San Cristóbal de La Laguna",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/bar-mubarak/",
+    "name": "BAR MUBARAK",
+    "legalName": "BAR MUBARAK",
+    "description": "Bar de Oviedo donde poder escuchar los mejores directos de ROCK//RYTHM & BLUES//INDIE//SOUL//FUNKY//ELECTRÓNICA",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/mub.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/bar-mubarak/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/muba.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/muba.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@43.5463339,-5.663996z",
+    "address": "Calle Rosario, 17, 33201 Gijón, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.5463339",
+      "longitude": "-5.663996"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/bar-mubarak/",
+    "slug": "bar-mubarak",
+    "city": "Gijón",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/big-bang-bar/",
+    "name": "BIG BANG BAR",
+    "legalName": "BIG BANG BAR",
+    "description": "Desde junio de 2013 el Jazz, el Blues, el Rock... resuenan de nuevo en el bar. A escuchar sus notas y a participar en las jam sessions y open mic vienen gentes de muchos rincones de Barcelona, incluso de otras ciudades y de países extranjeros, cosa que no deja de sorprender a los taberneros. Pero caen en la cuenta de que la música es capaz de realizar una extraña proeza: unir a las personas. Y es entonces cuando, día a día, se reafirman en su decisión de seguir luchando por ella.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/BIGLOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/big-bang-bar/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/BIFON.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/BIFON.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.3791394,2.1661116z",
+    "address": "Carrer d&#039;En Botella, 7, Barcelona, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.3791394",
+      "longitude": "2.1661116"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/big-bang-bar/",
+    "slug": "big-bang-bar",
+    "city": "Barcelona",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/black-note-club/",
+    "name": "BLACK NOTE CLUB",
+    "legalName": "BLACK NOTE CLUB",
+    "description": "Sala de conciertos especializada en Rock & Roll, R&B, Soul, Funk, Groove, Free Style, y en World Music!\n\n \n\nDesde 1993, apostamos fielmente por la calidad y la promoción de los músicos emergentes, ofreciendo una dinámica alternativa de ocio cultural nocturno. Prueba de ello son los más de 5.000 conciertos realizados.\n\nHemos actualizado nuestras instalaciones con la más moderna tecnología en sonido, imagen, grabación de video y luces para mejorar la calidad de los conciertos programados en la sala.\n\n \n\nBlack Note Club es algo más que música, es una manera de vivir por y para la música en directo.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/blacklogo.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/black-note-club/",
+    "email": "info@blacknoteclub.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/black-fondo.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/black-fondo.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.4722728,-0.3558238z",
+    "address": "Carrer de Polo y Peyrolón, 15, Valencia, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@blacknoteclub.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.4722728",
+      "longitude": "-0.3558238"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/black-note-club/",
+    "slug": "black-note-club",
+    "city": "Valencia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/bogui-jazz/",
+    "name": "BOGUI JAZZ",
+    "legalName": "BOGUI JAZZ",
+    "description": "Bogui Jazz abrió sus puertas en julio de 2005 y desde entonces ha programado conciertos de jazz en vivo con actuaciones de jazzmen nacionales e internacionales de primerísimo nivel.\nBogui Jazz fue galardonada con el Premio Ocio de Calidad 2011 a la sala más Emblemática y Representativa del Ocio Nocturno Madrileño por Noche Madrid, la Asociación de Empresarios de Ocio Nocturno de la Comunidad de Madrid.\nLa prensa nacional y diferentes medios de comunicación de ámbito tanto local como internacional han valorado la calidad de la programación, reseñada en guías, revistas especializadas y secciones de cultura de diversos periódicos, así como radios y televisiones de todo el país: entrevistas, reportajes, programas de televisión grabados en directo en el Bogui, etc.\nEl “feeling” que se palpa en el club, decorado al estilo de los lofts neoyorquinos y equipado con los mejores y más completos equipos de luz y sonido, convierten sus dos plantas en lo más novedoso del vibrante entorno de Chueca.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/boguilog.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/bogui-jazz/",
+    "telephone": "+34 915 211 568",
+    "email": "info@bogui.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/boguifon.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/boguifon.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4229791,-3.6956384z",
+    "address": "Calle del Barquillo, 29, Madrid, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 915 211 568",
+      "email": "info@bogui.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4229791",
+      "longitude": "-3.6956384"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/bogui-jazz/",
+    "slug": "bogui-jazz",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/cafe-del-duende/",
+    "name": "CAFÉ DEL DUENDE",
+    "legalName": "CAFÉ DEL DUENDE",
+    "description": "En el Café del Duende amamos el flamenco, esa bella y profunda manera de expresarse a través de la voz, de la guitarra o del baile; ese arte nacido en Andalucía en un tiempo incierto y engendrado por mestizajes venidos desde la hondura de la historia y de los sentimientos; ese arte surgido de músicas moriscas, castellanas y judías, y modelado con aires gitanos; ese arte que desde entonces no ha parado de ir… y de volver, de crecer y de enriquecerse sin perder una nota de su grandeza; ese arte que está hoy más vivo que nunca y que provoca en quien lo contempla sensaciones difícilmente olvidables.\n\n ",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/DUENDLOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/cafe-del-duende/",
+    "email": "duende@cafedelduende.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/DUENDEFONDO.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/DUENDEFONDO.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.4782774,-0.3853413z",
+    "address": "Carrer del Túria, 62, Valencia, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "duende@cafedelduende.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.4782774",
+      "longitude": "-0.3853413"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/cafe-del-duende/",
+    "slug": "cafe-del-duende",
+    "city": "Valencia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/cafe-mercedes-jazz/",
+    "name": "CAFÉ MERCEDES JAZZ",
+    "legalName": "CAFÉ MERCEDES JAZZ",
+    "description": "Ubicado en el carismático barrio de Russafa en Valencia, Café Mercedes Jazz abrió sus puertas en el año 2007.\n\nEste emblemático club de jazz es un espacio cultural al servicio de la música, los músicos y el público, y tiene como objetivo ser una plataforma para la creación musical y el intercambio cultural y artístico. Su actividad principal es la programación estable de conciertos de jazz y otros estilos afines.\n\nCafé Mercedes Jazz nació como homenaje a la pianista Mercedes Rossy, fallecida en 1995 a los 34 años de edad. Fue una excelente pianista y compositora que desarrolló su actividad clásica y jazzística en Barcelona, Munich, Boston y Nueva York. Su trabajo riguroso, su compromiso y dedicación y su amor por la música, junto a su incansable energía y su generosidad son, más que un ejemplo, un modelo a seguir para quienes formamos parte de este club que hoy lleva su nombre.\n\nEl local\nCafé Mercedes Jazz dispone de una sala de música con excelente acústica y equipamiento de primera línea - comparable a una sala de cámara donde todas las semanas podrás disfrutar de los mejores conciertos en vivo junto a verdaderos amantes de la música.\n\nLa sala ofrece una iluminación adecuada tanto escénica como ambiental y una cuidada estética.\n\nAdemás, posee una agradable zona de pub y bar con una amplia carta de copas, ideal para relajarse en un ambiente creativo frecuentado por artistas.\n\nLa música\nLos criterios de programación de los responsables revelan un elevado grado de compromiso artístico al ofrecer al público conciertos de jazz y de otros estilos afines destinados al intercambio cultural y artístico.\n\nA lo largo de estos años, Café Mercedes jazz ha acogido en su escenario a grandes músicos tanto a nivel local, nacional e internacional.\n\nSon innumerables los músicos que han pasado por nuestro escenario. Entre todos ellos podemos destacar a: Lionel Loueke, Ignacio Berroa, Grace Kelly, Wynton Marsalis, Marcus Printup, Carlos Henríquez, Ali Jackson, Ferenc Nemeth, Chano Domínguez, El Piraña, Mario Rossy, Perico Sambeat, Albert Sanz, Javier Vercher, Ignasi Terraza, Esteve Pi, Jordi Bonell, Antonio Rey, Carlos Martín, Nacho Mañó, Gisela Renes, Rogiers,etc",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MERCELOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/cafe-mercedes-jazz/",
+    "email": "info@cafemercedes.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MERCEFOND.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MERCEFOND.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.4620425,-0.3753749z",
+    "address": "Carrer de Sueca, 27, 46006 València, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@cafemercedes.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.4620425",
+      "longitude": "-0.3753749"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/cafe-mercedes-jazz/",
+    "slug": "cafe-mercedes-jazz",
+    "city": "València",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/capitolio/",
+    "name": "CAPITÓLIO",
+    "legalName": "CAPITÓLIO",
+    "description": "El Cineteatro Capitólio reabre sus puertas, 30 años después de su cierre, con el objetivo de la realización de eventos públicos y privados pluridisciplinarios que, respetando su historia, integren nuevas dinámicas programáticas, capaces de atraer a públicos diversos, reforzando la oferta cultural nacional, como se trata de de equipos con características únicas.\n\nEste proyecto garantiza, desde el inicio, la colaboración de numerosas instituciones y socios, que representan un sello de calidad, confieren notoriedad y dignifican la sala, constituyendo un punto de partida imprescindible en el relanzamiento de la marca Cineteatro Capitólio, en la comunicación de su mecenas. , Raúl Solnado y, sobre todo, en el (re) descubrimiento de este espacio por parte de los más variados públicos.\n\nAprovechando su arquitectura única y singular, tanto en la fachada como en el interior, el espacio capitolio se adapta a los más diversos formatos y eventos, destacando la versatilidad del escenario, pero también de la terraza, que permiten promover intersecciones artísticas y generar una oferta perfectamente adaptada a las características técnicas y capacidad del espacio.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/capi.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/capitolio/",
+    "email": "info@sonsemtransito.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/capit.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/capit.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.708768942049,-9.1551806381632z",
+    "address": "R. Vicente Borga 51, 1200-658 Lisboa, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@sonsemtransito.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.708768942049",
+      "longitude": "-9.1551806381632"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/capitolio/",
+    "slug": "capitolio",
+    "city": "-658 Lisboa",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/cave-rock-bar/",
+    "name": "CAVE ROCK BAR",
+    "legalName": "CAVE ROCK BAR",
+    "description": "La Cueva emergió para completar lo que faltaba en la Rua da Rosa, como en el propio Bairro Alto. Baluarte de los bohemios y simpatizantes de la música pesada e inconformista, la Cueva vino a combatir las canciones generales y efímeras que arrasan Lisboa.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/CAV.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/cave-rock-bar/",
+    "email": "cavebairroalto@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/CAVE.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/CAVE.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.713188030322,-9.1616175474395z",
+    "address": "Av. Infante Santo 374, 1350 Lisboa, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "cavebairroalto@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.713188030322",
+      "longitude": "-9.1616175474395"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/cave-rock-bar/",
+    "slug": "cave-rock-bar",
+    "city": "Lisboa",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/cha-cha-the-club/",
+    "name": "CHA CHÁ THE CLUB",
+    "legalName": "CHA CHÁ THE CLUB",
+    "description": "Cha Chá the Club donde cada viernes por la noche se reúnen las verdaderas celebrities y profesionales creativos. En la fila que se forma puedes encontrarte actores, cantantes, artistas, modelos, fotógrafos y diseñadores en una de las noches más selectas de la capital. Cha Chá the Club. Every Friday.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/CHACHALOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/cha-cha-the-club/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/CHACHA-FONDO.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/CHACHA-FONDO.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4175052,-3.6989758z",
+    "address": "Calle de Alcalá, 20, Madrid, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4175052",
+      "longitude": "-3.6989758"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/cha-cha-the-club/",
+    "slug": "cha-cha-the-club",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/el-buho-la-laguna/",
+    "name": "EL BÚHO LA LAGUNA",
+    "legalName": "EL BÚHO LA LAGUNA",
+    "description": "Música en vivo de miércoles a domingo, poniendo en valor a las bandas canarias, solistas y otros grupos de primera línea.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/BUH.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/el-buho-la-laguna/",
+    "email": "buhoclub@yahoo.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/BUHO.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/BUHO.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@28.4843682,-16.3147788z",
+    "address": "Calle Catedral, 3, 38205 San Cristóbal de La Laguna, Santa Cruz de Tenerife, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "buhoclub@yahoo.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "28.4843682",
+      "longitude": "-16.3147788"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/el-buho-la-laguna/",
+    "slug": "el-buho-la-laguna",
+    "city": "Santa Cruz de Tenerife",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/el-intruso/",
+    "name": "EL INTRUSO",
+    "legalName": "EL INTRUSO",
+    "description": "Intruso Bar es un club que se sitúa en el corazón de Madrid: Augusto Figueroa, 3 (enfrente del mercado de Fuencarral).\n\nConciertos, eventos, presentaciones y sesiones especiales son la propuesta del Intruso para que puedas disfrutar de la mejor atmósfera en este innovador espacio.\n\nAdemás de sus dos jam sessions (lunes, fusión y martes, jazz), desde sus inicios han pasado artistas de primera línea nacionales e internacionales de diferentes estilos:Eddie Roberts (UK), California Honeydrops, Bob Stroger (USA), Tail Dragger (USA), Graham Fenton (UK), Clinton Fearon (JM). La música en vivo da paso a la música de baile más divertida, moderna y desprejuiciada.\n\nEl Intruso está abierto todos los dias hasta las 5:30 am (6:00 fin de semana y vísperas de festivo).",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/intrulogo.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/el-intruso/",
+    "telephone": "+34 915 318 996",
+    "email": "info@intrusobar.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/intrufondo.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/intrufondo.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4230694,-3.7001722z",
+    "address": "Calle de Augusto Figueroa, 3, Madrid, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 915 318 996",
+      "email": "info@intrusobar.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4230694",
+      "longitude": "-3.7001722"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/el-intruso/",
+    "slug": "el-intruso",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/el-zorro/",
+    "name": "EL ZORRO",
+    "legalName": "EL ZORRO",
+    "description": "El Zorro, un bar con más de 30 años de historia, reabre sus puertas en 2015 con energía renovada y con la meta de continuar siendo un referente cultural en esta ciudad.\nLa Jam session de los jueves punto de reunión de buenos músicos, junto a los conciertos y sesiones de DJ los viernes y sábados, hacen de El Zorro un lugar ideal para pasar la noche y tomar unas copas.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/zor.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/el-zorro/",
+    "email": "pubelzorro@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/zo.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/zo.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.6509561,-0.8841946z",
+    "address": "Calle Cádiz, 13, 50004 Zaragoza, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "pubelzorro@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.6509561",
+      "longitude": "-0.8841946"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/el-zorro/",
+    "slug": "el-zorro",
+    "city": "Zaragoza",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/electropura/",
+    "name": "ELECTROPURA",
+    "legalName": "ELECTROPURA",
+    "description": "Electropura es un espacio nacido por y para disfrutar la buena música con los amigos. Tras su fachada neutra en Pintor Salvador Abril 20 se esconde la banda sonora del barrio de Ruzafa. Vinilos cuidadosamente seleccionados constituyen el mejor secreto de todas las iniciativas de Electropura.\nTomar copas y bailar con los amigos, disfrutar de conciertos acústicos de grupos nacionales e internacionales o acudir a sesiones de cine y proyectos artísticos multidisciplinares. Tardes y noches al ritmo de los clásicos, de los grupos con los crecimos y, por supuesto, dándole un repaso a la música de hoy.\nDesde que abriera sus puertas en 2010, Electropura se ha convertido en el protagonista indispensable de la noche en Ruzafa. Con el tesón de quien sabe lo que quiere, tratamos de bailar a nuestro ritmo, conduciendo a todo el que entra a nuestro curvilíneo local hacia el profundo tímpano de este particular espacio 100% auténtico, 100% Ruzafa.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ELECLOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/electropura/",
+    "email": "info@electropura.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ELECFONDO1.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ELECFONDO1.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.4631612,-0.3705288z",
+    "address": "Carrer del Pintor Salvador Abril, 20, 46005 València, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@electropura.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.4631612",
+      "longitude": "-0.3705288"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/electropura/",
+    "slug": "electropura",
+    "city": "València",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/es-gremi/",
+    "name": "ES GREMI",
+    "legalName": "ES GREMI",
+    "description": "Espacio de referencia en Mallorca, Es Gremi es uno de los centros musicales privados más grandes de Europa\nAdemás de tres salas de conciertos, un café club y más de setenta locales de ensayo; Es Gremi cuenta ya con su propio centro de formación musical, que reúne una Escuela de Músicos, una Escuela de Djs, y una Escuela de Iluminación y Sonido. A lo largo de estos años, por sus  escenarios han pasado los mejores grupos de todos los estilos, y sus locales de ensayo congregan una comunidad de más de quinientos músicos. Además, una media de alrededor de cinco mil personas por semana asiste a las fiestas y directos que Es Gremi alberga.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/grem.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/es-gremi/",
+    "telephone": "+34 971 911 004",
+    "email": "info@esgremi.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/gremi.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/gremi.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.5968755,2.6699562z",
+    "address": "Carrer Gremi de Porgadors, 16, 07009 Palma, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 971 911 004",
+      "email": "info@esgremi.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.5968755",
+      "longitude": "2.6699562"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/es-gremi/",
+    "slug": "es-gremi",
+    "city": "Palma",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/eskada-porto/",
+    "name": "ESKADA PORTO",
+    "legalName": "ESKADA PORTO",
+    "description": "El Grupo ESKADA se complace en inaugurar un nuevo espacio que pretende ser un referente en la noche de la ciudad de Porto - ESKADA Porto.\nEstratégicamente ubicado en el corazón de la ciudad, el nuevo Eskada Porto fue diseñado por el equipo de AAMD Arquitectos, también responsable de espacios como el Eskada Club Vizela, Baazar, Fuerte S. João, Giroflé y otros.\nESKADA Porto fue diseñado para satisfacer a varias generaciones en todos los ámbitos, centrándose en el servicio como factor diferenciador y buscando una relación cercana con el cliente.\nEn este contexto, fue diseñado teniendo en cuenta las últimas tendencias internacionales, absorbiendo influencias de Clubes como LIV en Miami, Allure en Abu Dhabi, Mokai en São Paulo y la Sala VIP en Saint-Tropez.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ESK.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/eskada-porto/",
+    "email": "geral@grupoeskada.pt",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ESKA.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ESKA.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.158241662161,-8.6148417666146z",
+    "address": "R. de Cervantes 222, 4050-289 Porto, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "geral@grupoeskada.pt"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.158241662161",
+      "longitude": "-8.6148417666146"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/eskada-porto/",
+    "slug": "eskada-porto",
+    "city": "-289 Porto",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/filloa-jazz-club/",
+    "name": "FILLOA JAZZ CLUB",
+    "legalName": "FILLOA JAZZ CLUB",
+    "description": "Actuaciones de música jazz en vivo en pequeña sala de conciertos con barra, fotos de músicos y aire bohemio.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-17-a-las-8.43.23.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/filloa-jazz-club/",
+    "email": "jazzfilloa@jazzfilloa.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/jazz.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/jazz.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@43.3714363,-8.4008952z",
+    "address": "Rúa Ciega, 15003 A Coruña, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "jazzfilloa@jazzfilloa.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.3714363",
+      "longitude": "-8.4008952"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/filloa-jazz-club/",
+    "slug": "filloa-jazz-club",
+    "city": "A Coruña",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/gare-porto/",
+    "name": "GARE PORTO",
+    "legalName": "GARE PORTO",
+    "description": "A escasos metros de la parada de Tren de Sao Bento, en el número 182 de la Rúa du Madeira, se alza el que es considerado templo del techno en Oporto: Gare Club. Considerado uno de los mejores clubs de Europa y el favorito de muchos artistas de géneros diversos. ... La música en Gare Club es de gran calidad.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/GAR.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/gare-porto/",
+    "email": "info@gareporto.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/GARE.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/GARE.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.148566778737,-8.617882886698z",
+    "address": "Tv. do Carregal 7, 4050-202 Porto, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@gareporto.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.148566778737",
+      "longitude": "-8.617882886698"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/gare-porto/",
+    "slug": "gare-porto",
+    "city": "-202 Porto",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/gong/",
+    "name": "GONG",
+    "legalName": "GONG",
+    "description": "Gong es un bar con ambiente retro, donde bailar toda la noche ritmos psicodélicos y funky beats. No sin antes haber probado su variedad de cervezas y licores. No te pierdas este clásico de la fiesta en Valencia.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-03-a-las-22.54.21.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/gong/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/GONGFOND.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/GONGFOND.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.47729,-0.37734z",
+    "address": "Calle de la Concordia, 3, 46003 València, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.47729",
+      "longitude": "-0.37734"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/gong/",
+    "slug": "gong",
+    "city": "València",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/guru-dance-club/",
+    "name": "GURU DANCE CLUB",
+    "legalName": "GURU DANCE CLUB",
+    "description": "Gurú es una discoteca de Murcia que nació en 2008 con el objetivo de ofrecer un lugar alternativo dedicado a la cultura de club y la música electronica. Poco a poco, con mucho trabajo y superando retos día a día, hemos conseguido que Gurú sea un referente en el panorama de Club de Murcia y el levante español.\n\nEn Gurú intentamos hacer de cada fin de semana, un encuentro único, basado en la relación personal entre las personas que componemos la sala, dirección, djs, camareros, rrpp y vosotros, nuestra gente, nuestra ilusión, ya que sin cada uno de vosotros Gurú no sería posible.\n\nApostamos tanto por djs de talla nacional e internacional como por djs de la zona, creando fiestas cada vez más relevantes y con más repercusión social. Artistas como Edu Imbernón, Pig & Dan, Miguel Bastida, Hollen, Matt Sassari, Nuria Ghia, Los Suruba, Dani Sbert, Alberto Pascual, Simon García o Ramiro López entre muchos otros ya han pasado por la cabina de Guru, haciendo poco a poco más grande este pequeño GRAN CLUB.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/GURU-1.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/guru-dance-club/",
+    "email": "info@gurudanceclub.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-23-a-las-18.07.42.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-23-a-las-18.07.42.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@37.9543495,-1.1484107z",
+    "address": "Calle Ciclista Mariano Rojas, 30009, Murcia, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@gurudanceclub.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9543495",
+      "longitude": "-1.1484107"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/guru-dance-club/",
+    "slug": "guru-dance-club",
+    "city": "Murcia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/hangar-48/",
+    "name": "HANGAR 48",
+    "legalName": "HANGAR 48",
+    "description": "Hangar 48 nació en en 2017 con una renovada propuesta después de haber sido el local de referencia de La Latina, con una trayectoria de más de 20 años (antiguo Vendetta).Por nuestro local han pasado artistas de la talla de “Señor Chinarro” o artistas referentes de la escena actual como “Los Vinagres”.\nAcogemos todo tipo de propuestas musicales desde Jazz, Soul, Reggae, Rock hasta Folk, Rap Disfruta los jueves del mejor Jazz en Underground Jazz Club, los viernes y sábados podrás vibrar con los mejores conciertos y sesiones clubbing y los domingos con las jam session de referencia en Madrid.\nOrganiza tu concierto o sesión Clubbling contactándonos en: hangar48conciertos@gmail.com\nParkings más cercanos:\n-Calle de La Ventosa n 26.\n-Plaza de la Cebada sn.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/148723468_1080472709029965_662820851677467877_o.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/hangar-48/",
+    "email": "hangar48madrid@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/hangar.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/hangar.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4113963,-3.7140411z",
+    "address": "Calle Bailén, 24, Madrid, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "hangar48madrid@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4113963",
+      "longitude": "-3.7140411"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/hangar-48/",
+    "slug": "hangar-48",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/hangar-org/",
+    "name": "HANGAR.ORG",
+    "legalName": "HANGAR.ORG",
+    "description": "Centro para la investigación y la producción artística en Barcelona que apoya a creadores y artistas.\n\nHangar cuenta con el apoyo de la Generalitat de Catalunya y el Ayuntamiento de Barcelona y con la colaboración específica de la Fundación Banco de Sabadell para las actividades de sus artistas residentes y el Ministerio de Cultura y la Comisión Europea para el desarrollo de proyectos específicos.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/04/han.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/hangar-org/",
+    "telephone": "+34 933 084 041",
+    "email": "info@hangar.org",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/04/ha.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/04/ha.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.4081626,2.2001013z",
+    "address": "Carrer Emilia Coranty, 16, 08018 Barcelona, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 933 084 041",
+      "email": "info@hangar.org"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.4081626",
+      "longitude": "2.2001013"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/hangar-org/",
+    "slug": "hangar-org",
+    "city": "Barcelona",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/hot-five-jazz-blues/",
+    "name": "HOT FIVE JAZZ & BLUES",
+    "legalName": "HOT FIVE JAZZ &amp; BLUES",
+    "description": "El club de música en vivo más antiguo, carismático y genuino de la ciudad, tiene las mejores condiciones para “sesiones en vivo” y está abierto a todo tipo de música y estilos. Siempre con un horario fuerte y exigente para quienes viven y respiran música.\nLos mejores y más respetados músicos locales imbuyen el ambiente artístico, el buen ambiente, la buena música y, a veces, la improvisación en el escenario.\nEn un espacio aireado, de techo alto y entrepiso, centrado en el pequeño escenario del fondo, una serie de sillas y mesas en hierro oscuro, revestidas de rojo, se encuentran esparcidas entre paredes donde se encuentran fotografías en blanco y negro de los maestros estadounidenses. .\nNo hay duda, estamos en un bar con música en directo donde reinan los sonidos del jazz y el blues: el Hot Five Jazz Club.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/FIVE.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/hot-five-jazz-blues/",
+    "email": "jazz@hotfive.pt",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/FI-1.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/FI-1.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.158621082989,-8.6252502291203z",
+    "address": "R. do Dr. Carlos Cal Brandão 323, 4050-160 Porto, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "jazz@hotfive.pt"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.158621082989",
+      "longitude": "-8.6252502291203"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/hot-five-jazz-blues/",
+    "slug": "hot-five-jazz-blues",
+    "city": "-160 Porto",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/jazz-corner-sevilla/",
+    "name": "JAZZ CORNER SEVILLA",
+    "legalName": "JAZZ CORNER SEVILLA",
+    "description": "Club de Jazz y Escuela de música.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/JAZZ-1.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/jazz-corner-sevilla/",
+    "email": "jazz@jazzcornersevilla.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/JAZ.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/JAZ.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@37.4079907,-5.9551825z",
+    "address": "Calle Rodio, 41, 41007 Sevilla, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "jazz@jazzcornersevilla.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.4079907",
+      "longitude": "-5.9551825"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/jazz-corner-sevilla/",
+    "slug": "jazz-corner-sevilla",
+    "city": "Sevilla",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/jimmy-glass-jazz-bar/",
+    "name": "JIMMY GLASS JAZZ BAR",
+    "legalName": "JIMMY GLASS JAZZ BAR",
+    "description": "El Jimmy Glass, situado entre la élite de los clubs de jazz del mundo según la prestigiosa revista especializada DOWNBEAT (febrero de 2018), es el local de jazz en activo de mayor antigüedad y trayectoria musical de la Comunidad Valenciana. El club abrió sus puertas en 1991 con el propósito de crear un espacio singular donde tomar una copa y escuchar buen jazz. Se ideó para ello un ambiente especial, no sujeto a las modas, de genuino carácter jazzístico, atemporal y cosmopolita, en el que las referencias estéticas son acordes con este estilo de música y sus modos.\n\nEl Jimmy Glass se encuentra en El Carmen, un emblemático barrio del centro histórico de Valencia de gran tradición cultural y lúdica, en un entorno de callejuelas y placitas con un gran número de bares, pubs y restaurantes, una de las zonas más activas para vivir la noche en esta ciudad. La sensación que recibe el que lo visita por primera vez es de cierta sorpresa, porque se encuentra en un lugar y una atmósfera únicos en Valencia.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/JIMMYLOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/jimmy-glass-jazz-bar/",
+    "email": "jimmyglass@jimmyglassjazz.net",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/JIMMY-FONDO.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/JIMMY-FONDO.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.4775976,-0.3791575z",
+    "address": "Carrer de Baix, 28, 46003 València, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "jimmyglass@jimmyglassjazz.net"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.4775976",
+      "longitude": "-0.3791575"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/jimmy-glass-jazz-bar/",
+    "slug": "jimmy-glass-jazz-bar",
+    "city": "València",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/kerala/",
+    "name": "KERALA",
+    "legalName": "KERALA",
+    "description": "Sala referente en Castilla y León. Ambiente selecto, los mejores djs y una decoración espectacular.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/KERA.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/kerala/",
+    "email": "salakeralavalladolid@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/KERAL.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/KERAL.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.6574061,-4.7369639z",
+    "address": "Avenida Ramón Pradera, Valladolid, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "salakeralavalladolid@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.6574061",
+      "longitude": "-4.7369639"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/kerala/",
+    "slug": "kerala",
+    "city": "Valladolid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/la-boveda/",
+    "name": "LA BÓVEDA",
+    "legalName": "LA BÓVEDA",
+    "description": "Es un espacio único en Zaragoza que data del año 1.470, bóveda de medio cañón, habilitada como sala multiusos, pretende ALBERGAR a todo tipo de actividades culturales con especial incapie en la música. Es una apuesta por la multiculturalidad, desde la agitación cultural. Todos los Domingos a las 20 horas el JAZZ se hace presente, con la presencia de los mejores grupos que fusionan su trabajo con las improvisaciones de la JAM SESSION.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/BOVE.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/la-boveda/",
+    "telephone": "+34 976 282 043",
+    "email": "jjuste@labovedazgz.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/BOV.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/BOV.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.6576429,-0.8859076z",
+    "address": "Calle de los Predicadores, 70, 50003 Zaragoza, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 976 282 043",
+      "email": "jjuste@labovedazgz.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.6576429",
+      "longitude": "-0.8859076"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/la-boveda/",
+    "slug": "la-boveda",
+    "city": "Zaragoza",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/la-coquette/",
+    "name": "LA COQUETTE",
+    "legalName": "LA COQUETTE",
+    "description": "Fundado en 1982, dedicado única y exclusivamente a la música BLUES y sus diferentes estilos, por cuyo escenario pasaron y siguen pasando increíbles músicos de renombre de diferentes nacionalidades.\nEn vivo : M,X,J,V,S(22:30) y Dom.: JAM SESSION(20:45)",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/COQLOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/la-coquette/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/COQFONDO.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/COQFONDO.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4177305,-3.7074789z",
+    "address": "Calle de las Hileras, 14, Madrid, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4177305",
+      "longitude": "-3.7074789"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/la-coquette/",
+    "slug": "la-coquette",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/la-movida/",
+    "name": "LA MOVIDA",
+    "legalName": "LA MOVIDA",
+    "description": "Toma su nombre a un movimiento músico-cultural que surgió en Madrid a finales de los años 70, extendiéndose por todo el país a lo largo de los 80. Se trata de una Sala en continua programación de conciertos en directo, de grupos y cantautores de música Pop y música Pop-Rock, siendo frecuente la presencia de formaciones que protagonizaron el movimiento de La Movida. Un lugar de paso para los amantes del Pop Español e Internacional y para los que se quieran divertir hasta altas horas de la madrugada.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/la-movida.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/la-movida/",
+    "email": "info@lamovidacafeconcierto.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/lamo.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/lamo.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.580337,2.6212983z",
+    "address": "Carrer Albó, Palma, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@lamovidacafeconcierto.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.580337",
+      "longitude": "2.6212983"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/la-movida/",
+    "slug": "la-movida",
+    "city": "Palma",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/la-salvaje/",
+    "name": "LA SALVAJE",
+    "legalName": "LA SALVAJE",
+    "description": "Sala de conciertos, bar y refugio para la música en Oviedo. Música en directo, presentaciones literarias, sesiones de dj y cultura en general.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/la-salvaje/",
+    "email": "lasalvaje.oviedo@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL4.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL4.jpeg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL6.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL5.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL3.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL2.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL1.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SAL4.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@43.3640862,-5.842106z",
+    "address": "Calle Martínez Vigil, 9, 33010 Oviedo, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "lasalvaje.oviedo@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.3640862",
+      "longitude": "-5.842106"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/la-salvaje/",
+    "slug": "la-salvaje",
+    "city": "Oviedo",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/lanna-club/",
+    "name": "LANNA CLUB",
+    "legalName": "LANNA CLUB",
+    "description": "Nace Lanna, el nuevo punto de encuentro para los amantes de la música electrónica en Asturias",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LAN.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/lanna-club/",
+    "email": "info@lannaclub.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LANN.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LANN.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@43.5421008,-5.6641055z",
+    "address": "Calle Corrida, 33206 Gijón, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@lannaclub.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.5421008",
+      "longitude": "-5.6641055"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/lanna-club/",
+    "slug": "lanna-club",
+    "city": "Gijón",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/lav-lisboa-ao-vivo/",
+    "name": "LAV LISBOA AO VIVO",
+    "legalName": "LAV LISBOA AO VIVO",
+    "description": "LAV - Lisboa Ao Vivo se creó para llenar el vacío en términos de salas de conciertos de tamaño medio en la capital. Un salón diseñado y diseñado desde cero para eventos y actividades performativas, principalmente espectáculos de música en vivo, con capacidad para unas mil personas. Equipamiento cultural a disposición de músicos, agentes y promotores que ahora se está convirtiendo en una realidad en Lisboa.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LAV.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/lav-lisboa-ao-vivo/",
+    "email": "lisboaaovivo@lisboaaovivo.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LAVV.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LAVV.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.733749082903,-9.102355676191z",
+    "address": "Avenida Infante Dom Henrique, (Cruz.Com A Av. Marechal Gomes Da Costa) Edif. Xerox, Lisboas, Lisboa, 1950 Lisboa, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "lisboaaovivo@lisboaaovivo.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.733749082903",
+      "longitude": "-9.102355676191"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/lav-lisboa-ao-vivo/",
+    "slug": "lav-lisboa-ao-vivo",
+    "city": "Lisboa",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/long-rock/",
+    "name": "LONG ROCK",
+    "legalName": "LONG ROCK",
+    "description": "La sala Long Rock es ya un referente en Sevilla para los fans del rock y del pop nacional e internacional. En sus paredes están presentes las grandes estrellas del Rock, que complementan una muy cuidada decoración, con espacio suficiente para acoger conciertos de primer orden y un aforo superior a las 300 personas.\nSu música se enriquece cada semana con las actuaciones de numerosas bandas revival. tributos y bandas de temas propios. La calidad de su sonido, iluminación espectacular y la calidad y variedad de sus bebidas, lo convierten en un local único e indispensable para disfrutar del ocio a un elevado nivel.\nSi quieres saborear la fantasía de un local auténtico, dedicado a los clásicos de la música pop-rock y con el mejor ambiente... ven a Long Rock Sevilla.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LONG.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/long-rock/",
+    "email": "mariarol@longrock.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LONGF.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/LONGF.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@37.3866526,-5.9793411z",
+    "address": "Calle José de la Cámara &amp; Calle Blanco White, 41018 Seville, Sevilla, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "mariarol@longrock.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.3866526",
+      "longitude": "-5.9793411"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/long-rock/",
+    "slug": "long-rock",
+    "city": "Sevilla",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/lovella-negra/",
+    "name": "L´OVELLA NEGRA",
+    "legalName": "L´OVELLA NEGRA",
+    "description": "Con un aforo de 97 personas, esta fundación alberga en su agenda a todo tipo de músicos, artistas, grupos, intérpretes o cantantes asociados con el centro dentro de un ambiente rústico que dota a las interpretaciones de un gran encanto.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/lovelogo.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/lovella-negra/",
+    "email": "programacio@salaolvellanegra.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/lovefondo.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/lovefondo.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.3959361,2.1901779z",
+    "address": "Carrer de Zamora, 78, Barcelona, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "programacio@salaolvellanegra.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.3959361",
+      "longitude": "2.1901779"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/lovella-negra/",
+    "slug": "lovella-negra",
+    "city": "Barcelona",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/malavita/",
+    "name": "MALAVITA",
+    "legalName": "MALAVITA",
+    "description": "MALAVITA es el local ideal para disfrutar de un ambiente moderno y acogedor, donde podrás relacionarte con tu gente y amig@s, celebrar tu cumpleaños, fiesta, evento, o simplemente acudir para ver qué te espera cada noche.\nCon nosotros encontrarás las mejores promociones y ofertas para celebrar tus cumpleaños y fiestas, todo ello con unos precios muy económicos.\nCon un concepto de iluminación diferente basado en la tecnología LED, sonido de alta calidad proporcionado por BOSE, y por encima de todo, bebidas de calidad excelente, MALAVITA se convierte en una opción magnífica dentro de una de las zonas más populares de Madrid junto a la glorieta de Bilbao, en la calle Cardenal Cisneros 35.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MALA.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/malavita/",
+    "email": "malavita-bardecopas@hotmail.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MAL.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MAL.jpeg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-26-a-las-11.00.07.png",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MAL.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4315621,-3.7021672z",
+    "address": "Calle del Cardenal Cisneros, 35, 28010 Madrid, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "malavita-bardecopas@hotmail.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4315621",
+      "longitude": "-3.7021672"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/malavita/",
+    "slug": "malavita",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/nou-raco-169/",
+    "name": "NOU RACÓ 169",
+    "legalName": "NOU RACÓ 169",
+    "description": "La vida unió a personas que hablaban música y que sumaron historias desde el 4 de abril del 2014.\n\nNuestro agradecimiento constante a la gente que escucha y se emociona con la música, a la gente que nos acompaña cada semana y a la vida por darnos la oportunidad de hacer lo que nos gusta.\n\nPara los que quieren  disfrutar de un buen rato entre amig@s respirando la música de siempre, rumbitas, flamenco, ritmos latinos, pop español e inglés.\n\n ",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/NOULOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/nou-raco-169/",
+    "email": "nouraco169@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/NOUFONDO.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/NOUFONDO.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/NOU1.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.3917992,2.1501232z",
+    "address": "Carrer de Casanova, 169, Barcelona, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "nouraco169@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.3917992",
+      "longitude": "2.1501232"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/nou-raco-169/",
+    "slug": "nou-raco-169",
+    "city": "Barcelona",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/nyc-taxi-rock-bar/",
+    "name": "NYC TAXI ROCK BAR",
+    "legalName": "NYC TAXI ROCK BAR",
+    "description": "NYC TAXI Bar. En Las Canteras (cerca del Auditorio) y dentro de la “Ruta Playa Viva” se encuentra este milimétrico bar rock con cierta solera dentro del panorama musical de Las Palmas de Gran Canaria. Dirigido por José desde el 2010 y especializado en Rock y Blues, organiza conciertos regularmente en su terraza para divertimento de su clientela y asiduos del paseo de Las Canteras.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ny.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/nyc-taxi-rock-bar/",
+    "telephone": "+34 928 220 861",
+    "email": "josetaxibar@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/nyc.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/nyc.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@28.1313618,-15.4440835z",
+    "address": "Calle Numancia, 25, 35010 Las Palmas de Gran Canaria, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 928 220 861",
+      "email": "josetaxibar@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "28.1313618",
+      "longitude": "-15.4440835"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/nyc-taxi-rock-bar/",
+    "slug": "nyc-taxi-rock-bar",
+    "city": "Las Palmas de Gran Canaria",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/paginas-tantas-jazz-bar/",
+    "name": "PÁGINAS TANTAS JAZZ BAR",
+    "legalName": "PÁGINAS TANTAS JAZZ BAR",
+    "description": "Bar de jazz con música en vivo.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PAG.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/paginas-tantas-jazz-bar/",
+    "email": "jazzbar.paginastantas@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PAGI.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PAGI.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.725862364548,-9.1946317728604z",
+    "address": "Cruz Oliveiras, 1500 Lisboa, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "jazzbar.paginastantas@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.725862364548",
+      "longitude": "-9.1946317728604"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/paginas-tantas-jazz-bar/",
+    "slug": "paginas-tantas-jazz-bar",
+    "city": "Lisboa",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/palexco/",
+    "name": "PALEXCO",
+    "legalName": "PALEXCO",
+    "description": "A la elegancia y funcionalidad, añadimos la calidad en los productos y servicios adicionales y la profesionalidad de su equipo humano, completando la organización de cualquier tipo de evento.\n\nHostelería con la garantía de la cocina de boketé, disc jockey, grupos musicales, animaciones infantiles, decoraciones temáticas, fiestas temáticas y un universo que engloba todo tipo de posibilidades, conforman a Palexco como garantía de éxito.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/palex.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/palexco/",
+    "telephone": "+34 981 228 888",
+    "email": "ventas@palexco.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/pale.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/pale.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@43.3619136,-8.3963231z",
+    "address": "Muelle del Este, 15003, A Coruña, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 981 228 888",
+      "email": "ventas@palexco.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.3619136",
+      "longitude": "-8.3963231"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/palexco/",
+    "slug": "palexco",
+    "city": "A Coruña",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/park/",
+    "name": "PARK",
+    "legalName": "PARK",
+    "description": "Una fantástica terraza en el techo de un estacionamiento para coches, con vista al Puente 25 de Abril. Por la cantidad de plantas parece un acogedor jardín.  Hay toda clase de bebidas, comidas ligeras y música en vivo con DJs.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/pa.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/park/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/paa.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/paa.jpeg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/paaa.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/paa.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.714478946024,-9.1498811910354z",
+    "address": "R. Ruben A. Leitão 4A, 1200-392 Lisboa, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.714478946024",
+      "longitude": "-9.1498811910354"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/park/",
+    "slug": "park",
+    "city": "-392 Lisboa",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/peter-rock/",
+    "name": "PETER ROCK",
+    "legalName": "PETER ROCK",
+    "description": "Peter Rock, donde el rock vive. Conciertos, música de décadas pasadas, ambiente artístico y cultural, copas, cerveza, y sobre todo las mejores guitarras rugiendo en esta sala en pleno barrio del Carmen donde se concentran músicos profesionales, amateurs, amantes del rock y cualquiera que pretenda disfrutar de una noche con música 10.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PETER-LOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/peter-rock/",
+    "email": "peterrockclubvalencia@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PETERFON1.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PETERFON1.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PETER2.jpg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PETERFONDO.jpg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PETERFON1.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.4762074,-0.3816216z",
+    "address": "Carrer de Quart, 26, 46001 València, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "peterrockclubvalencia@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.4762074",
+      "longitude": "-0.3816216"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/peter-rock/",
+    "slug": "peter-rock",
+    "city": "València",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/piccadilly-downtown-club/",
+    "name": "PICCADILLY DOWNTOWN CLUB",
+    "legalName": "PICCADILLY DOWNTOWN CLUB",
+    "description": "Mítica en Valencia, un imprescindible para las noches de fin de semana. El club más gamberro de la zona de moda de la ciudad, el más divertido, el que todo el mundo conoce y muchos desean conocer. Picadilly es un club de aire vintage, referencia para la fiesta en Valencia desde hace más de 10 años, gracias a su público variado y a su diversidad musical: éxitos de los 90, techno 80 bailable, petardeo, rock, pop, indie…",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PICCALOGO.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/piccadilly-downtown-club/",
+    "email": "piccadillyvalencia@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-03-a-las-21.46.10.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-03-a-las-21.46.10.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.4616297,-0.3724707z",
+    "address": "Carrer dels Tomasos, 12, Valencia, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "piccadillyvalencia@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.4616297",
+      "longitude": "-0.3724707"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/piccadilly-downtown-club/",
+    "slug": "piccadilly-downtown-club",
+    "city": "Valencia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/raco-verd/",
+    "name": "RACO VERD",
+    "legalName": "RACO VERD",
+    "description": "Raco Verd es uno de los lugares privilegiados para la música en vivo en Ibiza. Tenemos actuaciones casi todas las noches, donde mostramos al mejor talento local de Ibiza, así como a artistas visitantes ocasionales. Nuestro programa es variado para todos los gustos musicales; desde Rock Acústico, Jazz, Blues y Bossa Nova hasta auténticos Espectáculos de Baile Flamenco.\n\nRacó Verd es el lugar perfecto para celebrar un evento privado, ya que nuestra terraza es apartada y espaciosa. Contamos con muchos años de experiencia en la realización de celebraciones, bodas y todo tipo de fiestas. Si está interesado en organizar una fiesta, comuníquese con nosotros y haremos todo lo posible para que su evento sea especial.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-16-a-las-15.53.56.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/raco-verd/",
+    "telephone": "+34 971 800 267",
+    "email": "info@racoverdibiza.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/RACOF.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/RACOF.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.9071989,1.3180042z",
+    "address": "07830 Sant Josep de sa Talaia, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 971 800 267",
+      "email": "info@racoverdibiza.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.9071989",
+      "longitude": "1.3180042"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/raco-verd/",
+    "slug": "raco-verd",
+    "city": "Sant Josep de sa Talaia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/ragnarock/",
+    "name": "RAGNARÖCK",
+    "legalName": "RAGNARÖCK",
+    "description": "Sala de conciertos, pub musical.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/RAGNA.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/ragnarock/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/RAGNA.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/RAGNA.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.9803314,1.3020195z",
+    "address": "Carrer de Cristòfol Colom, 9, 07820 Sant Antoni de Portmany, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.9803314",
+      "longitude": "1.3020195"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/ragnarock/",
+    "slug": "ragnarock",
+    "city": "Sant Antoni de Portmany",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/rock-star/",
+    "name": "ROCK STAR",
+    "legalName": "ROCK STAR",
+    "description": "La sala Rock Star se ubica en pleno corazón de Bilbao, a escasos metros de la Plaza Sagrado Corazón en el centro de Bilbao.\n\nActúa tanto de discoteca como de sala de conciertos y se especializa en el género del rock de los 80 y los 90 y el indie más actual.\n\nTenemos un aforo de más de 500 personas y ha acogido conciertos de bandas como Mago de Oz, Taxi o Fondo Flamenco.\n\nEn la sala Rock Star estamos completamente equipados tanto técnica como humanamente para realizar actividades como: conciertos, fiestas, presentaciones de producto…\n\nLa enorme lista de actividades realizadas avalan nuestro buen hacer.\n\nY todos los domingos por la tarde son del Rock Star. ¡El mejor punto de encuentro para gente con ganas de pasarlo bien y de conocer gente nueva en Bilbao.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ROCK.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/rock-star/",
+    "email": "info@rockstarbilbao.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ROCKF.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ROCKF.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@43.2649417,-2.9445039z",
+    "address": "Gran Vía de Don Diego López de Haro, 89, Bilbao, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@rockstarbilbao.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.2649417",
+      "longitude": "-2.9445039"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/rock-star/",
+    "slug": "rock-star",
+    "city": "Bilbao",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-apolo/",
+    "name": "SALA APOLO",
+    "legalName": "SALA APOLO",
+    "description": "Sala Apolo es una de las salas de baile más antiguas de toda Europa y un espacio musical de referencia en el ámbito nacional e internacional. Su origen se remonta a principios del siglo XX y su transformación siempre ha ido ligada a la de Barcelona, formando una parte importante del ADN de la ciudad y de su gente.\n\nSituada en el corazón del Paralelo, centro neurálgico de la escena cultural de la ciudad, Apolo nació como parque de atracciones y desde entonces ha alojado una sala de baile, un bingo, un club de patinaje profesional, una discoteca... hasta llegar a convertirse en la sala de conciertos y el club nocturno que todos conocemos y hemos pisado en alguna ocasión.\n\nApolo es el destino preferente de los públicos más diversos y exigentes y cada día de la semana acoge algunos de los mejores clubes, conciertos, ciclos y otros eventos musicales de Barcelona. Además, también hace una apuesta por la experimentación y la difusión musical a través del LAB, una plataforma dedicada a las ideas, el aprendizaje, la tecnología, el activismo y el impulso de nuevos proyectos.\n\nPor los escenarios de la sala principal, La (2) y La (3) ya han pasado más de 11.000 grupos y 5.500 DJs y productores en representación tanto de las propuestas más populares como de las nuevas tendencias emergentes. Artistas internacionales del nivel de Coldplay, Tindersticks, Interpol, Kings of Leon, The Killers, The Fall, Iron & Wine, The Hives, Rufus Wainwright, Mark Almond, Superfurry Animals, Justice, Alboroise, Gregory Isaacs, The Wailers, Laurent Garnier, Ellen Allien, Dj Rush i Maceo Plex, y nacionales como La Pegatina, Txarango, Sílvia Pérez Cruz, La Mala Rodríguez, Green Valley, Rapsusklei o John Talabot.\n\nHeredera de la cultura de club, Apolo toca todas las teclas: rock, pop, indie, house, techno, disco, reggae, jungle, dub, dancehall, drum'n'bass, funk, reggaeton, trap, hip-hop entre muchos otros estilos... la lista es interminable.\n\nEn 2018 celebramos el 75 aniversario de la sala con programación especial durante todo el año, el estreno del documental “La Juventud Baila” dirigido por Marc Crehuet y la publicación del libro histórico “75 Años sin parar de Bailar” escrito por Eva Espinet.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/apologo.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-apolo/",
+    "telephone": "+34 934 414 001",
+    "email": "info@sala-apolo.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/apolofondo1.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/apolofondo1.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.3745062,2.1700845z",
+    "address": "Carrer Nou de la Rambla, 107, Barcelona, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 934 414 001",
+      "email": "info@sala-apolo.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.3745062",
+      "longitude": "2.1700845"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-apolo/",
+    "slug": "sala-apolo",
+    "city": "Barcelona",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-barco/",
+    "name": "SALA BARCO",
+    "legalName": "SALA BARCO",
+    "description": "Sala de conciertos. Jam session de soul, funk, rock, jazz, sesiones de clubbing.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/barcologo.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-barco/",
+    "telephone": "+34 915 212 447",
+    "email": "pdejuan@barcobar.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/Captura-de-pantalla-2021-02-23-a-las-11.21.41.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/Captura-de-pantalla-2021-02-23-a-las-11.21.41.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4231185,-3.702278z",
+    "address": "Calle del Barco, 34, Madrid, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 915 212 447",
+      "email": "pdejuan@barcobar.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4231185",
+      "longitude": "-3.702278"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-barco/",
+    "slug": "sala-barco",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-creedence/",
+    "name": "SALA CREEDENCE",
+    "legalName": "SALA CREEDENCE",
+    "description": "Sala emblemática de la noche sonora de Zaragoza. Bandas aragonesas, nacionales e internacionales visitan la sala con asiduidad. Una combinación sonora que convive con otras propuestas culturales y un ambiente mágico donde disfrutar de una copa y su magnífica terraza rodeada de murales con artísticos grafitis temáticos.\nTodo ello en La Plaza del Rock, Plaza San Lamberto.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/CRE.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-creedence/",
+    "email": "salacreedence@icloud.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/CRED.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/CRED.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.6529473,-0.8853038z",
+    "address": "Plaza San Lamberto, no3, 50004 Zaragoza, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "salacreedence@icloud.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.6529473",
+      "longitude": "-0.8853038"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-creedence/",
+    "slug": "sala-creedence",
+    "city": "Zaragoza",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-matisse/",
+    "name": "SALA MATISSE",
+    "legalName": "SALA MATISSE",
+    "description": "En Matisse Club disfrutarás de la mejor música en directo de Valencia, jams todas las semanas de jazz, clásica, hip hop y reggae. Música selecta para todos los públicos.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MATILOGO.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-matisse/",
+    "email": "info@matisseclub.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MATIFONDO.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/MATIFONDO.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.4707455,-0.3465311z",
+    "address": "RAMON CAMPOAMOR 60 VALENCIA",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@matisseclub.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.4707455",
+      "longitude": "-0.3465311"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-matisse/",
+    "slug": "sala-matisse",
+    "city": "",
+    "country": "RAMON CAMPOAMOR 60 VALENCIA"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-porta-caeli/",
+    "name": "SALA PORTA CAELI",
+    "legalName": "SALA PORTA CAELI",
+    "description": "Porta Caeli Global Music lleva más de 10 años programando conciertos y espectáculos. Una sala polivalente con una cuidada decoración y un potente sonido hará que el público asistente disfrute de un espectáculo inolvidable.\nDesde el año 2007 la Sala Porta Caeli está acercando al publico vallisoletano y de Castilla y León la música en directo. Rock, Punk, Heavy, Metal, Hip hop, Fusión, Mestizaje, Indie, Pop, Ska, Blues… La Sala da cabida a todo tipo de propuestas musicales. Cuenta con una acústica impecable y se encuentra en el corazón de Valladolid.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PORTA.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-porta-caeli/",
+    "telephone": "+34 983 378 358",
+    "email": "info@salaportacaeli.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PORT.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/PORT.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.6381903,-4.7485731z",
+    "address": "Calle Mariano de los Cobos, 1, 47014 Valladolid, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 983 378 358",
+      "email": "info@salaportacaeli.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.6381903",
+      "longitude": "-4.7485731"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-porta-caeli/",
+    "slug": "sala-porta-caeli",
+    "city": "Valladolid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-rem/",
+    "name": "SALA REM",
+    "legalName": "SALA REM",
+    "description": "Por nuestro escenario pasan algunas de las mejores giras nacionales e internacionales. También damos oportunidad a nuevas bandas emergentes así como al talento efervescente de la Región de Murcia. Indie, rock, pop, rap, canción de autor…",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/REM.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-rem/",
+    "email": "info@salarem.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/REMF.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/REMF.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@37.9913336,-1.1283501z",
+    "address": "Calle Puerta Nueva, 33, Murcia, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@salarem.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9913336",
+      "longitude": "-1.1283501"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-rem/",
+    "slug": "sala-rem",
+    "city": "Murcia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-revolver/",
+    "name": "SALA REVÓLVER",
+    "legalName": "SALA REVÓLVER",
+    "description": "Cervecería y sala de conciertos Revolver, un espacio de ocio nocturno en el centro de Murcia inaugurado en septiembre del año 2006. Aquí encontrarás una estable agenda de conciertos de pequeño formato de bandas emergentes o en acústico.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/REV.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-revolver/",
+    "email": "salarevolver@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/REVO.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/REVO.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@37.9870178,-1.1254647z",
+    "address": "Calle Victorio, 36, 30003 Murcia, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "salarevolver@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9870178",
+      "longitude": "-1.1254647"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-revolver/",
+    "slug": "sala-revolver",
+    "city": "Murcia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-x/",
+    "name": "SALA X",
+    "legalName": "SALA X",
+    "description": "Club de rock, pop, indie, electrónica. Conciertos y sesiones.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/X.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-x/",
+    "email": "info@rocknrollaproducciones.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/XX.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/XX.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@37.4086715,-5.9899938z",
+    "address": "Calle José Díaz, 7, Seville, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@rocknrollaproducciones.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.4086715",
+      "longitude": "-5.9899938"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-x/",
+    "slug": "sala-x",
+    "city": "Seville",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sala-z/",
+    "name": "SALA Z",
+    "legalName": "SALA Z",
+    "description": "La Sala Zeta es un espacio de música Rock referente en nuestra ciudad. Arrancamos esta nueva temporada con un cambio de aires, reinventando y refrescando nuestra programación musical para hacer de la Sala Zeta un lugar donde poder disfrutar de grandes conciertos de grupos locales, nacionales e internacionales.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Z.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/sala-z/",
+    "telephone": "+34 976 567 889",
+    "email": "conciertos@salazeta.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ZZ-1.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/ZZ-1.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.6429877,-0.8920062z",
+    "address": "Calle Félix Latassa, 14, Zaragoza, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 976 567 889",
+      "email": "conciertos@salazeta.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.6429877",
+      "longitude": "-0.8920062"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sala-z/",
+    "slug": "sala-z",
+    "city": "Zaragoza",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sankeys/",
+    "name": "SANKEYS",
+    "legalName": "SANKEYS",
+    "description": "Sankeys es un peso pesado entre las franquicias británicas dentro del mundo del clubbing, se puede decir que son novatos en la isla pues llevan abiertos desde 2011, aunque han sabido abrirse un hueco y establecer su estilo con firmeza, un local clave e indispensable para fanáticos de la música electrónica underground.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/04/SAN.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/sankeys/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/04/SANN.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/04/SANN.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.8876542,1.4076353z",
+    "address": "Playa D&#039;en Bossa, s/n, 07817 Sant Josep de sa Talaia, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.8876542",
+      "longitude": "1.4076353"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sankeys/",
+    "slug": "sankeys",
+    "city": "Sant Josep de sa Talaia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/shamrock/",
+    "name": "SHAMROCK",
+    "legalName": "SHAMROCK",
+    "description": "Grupos locales, nacionales y artistas de todo el mundo nos han amenizado la noche durante años. Grandes músicos que se entregan de lleno en el escenario con temas propios y versiones de las mejores canciones de la Historia del Rock, Pop, Funk, Reggae, Country, Blues, Jazz…",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SHAM.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/shamrock/",
+    "telephone": "+34 971 735 962",
+    "email": "shamrockpalma@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SHAMF.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SHAMF.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.5689021,2.6334683z",
+    "address": "Avinguda de Gabriel Roca, 3, 07014 Palma, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 971 735 962",
+      "email": "shamrockpalma@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.5689021",
+      "longitude": "2.6334683"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/shamrock/",
+    "slug": "shamrock",
+    "city": "Palma",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/specka/",
+    "name": "SPECKA",
+    "legalName": "SPECKA",
+    "description": "Specka es uno de los pilares principales de la cultura de club en Madrid.\n\nAbierto de manera ininterrumpida desde 1989, el club ha ido transformando su sonido a lo largo del tiempo: desde los inicios con el post punk, new wave y EBM, pasando por el trance y el techno hasta hoy.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/spe.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/specka/",
+    "email": "info@specka.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/spe3.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/spe3.jpeg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/spe3.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/spe2.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/spe1.jpeg",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/sp.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4519151,-3.6942988z",
+    "address": "Avenida del General Perón, 32, 28020 Madrid, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@specka.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4519151",
+      "longitude": "-3.6942988"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/specka/",
+    "slug": "specka",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/stardust/",
+    "name": "STARDUST",
+    "legalName": "STARDUST",
+    "description": "Techno club established in 2003, Madrid.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/STARDUST.jpg"
+    ],
+    "url": "https://beta.mygloven.com/listing/stardust/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/STARDUSTFONDO.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/STARDUSTFONDO.jpg"
+    ],
+    "hasMap": "https://www.google.com/maps/@40.4211039,-3.7089062z",
+    "address": "Calle de Isabel la Católica, 6, Madrid, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.4211039",
+      "longitude": "-3.7089062"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/stardust/",
+    "slug": "stardust",
+    "city": "Madrid",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/teatre/",
+    "name": "TEATRE",
+    "legalName": "TEATRE",
+    "description": "Teatre es un concepto de negocio creado para ofrecerte toda la oferta de ocio en un solo espacio.\nEventos y espectáculos relacionados con todas las temáticas comedia, teatro, conciertos, flamenco y mucha mucha fiesta\nEl lugar ideal para la celebración de cualquier evento con espacios privados para que cuentes con intimidad rodeado de toda tu gente.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TEAT-1.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/teatre/",
+    "email": "viveteatre@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TEA.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TEA.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@37.9938111,-1.1158009z",
+    "address": "Calle Isla Cristina, 6, 30007 Murcia, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "viveteatre@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9938111",
+      "longitude": "-1.1158009"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/teatre/",
+    "slug": "teatre",
+    "city": "Murcia",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/titi/",
+    "name": "TITÍ",
+    "legalName": "TITÍ",
+    "description": "Somos una taberna diferente situada en el concurrido barrio de Pedregalejo. De día y de noche le ofrecemos deliciosas tapas junto a una amplia selección de vinos y digestivos para su disfrute.\nVenga a comer, a tomar café, a cenar, a disfrutar nuestra terraza, a escuchar flamenco, a bailar, a vivir nuestro ambiente o a tomar unas copas cuando se aleje el sol.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-16-a-las-8.08.50.png"
+    ],
+    "url": "https://beta.mygloven.com/listing/titi/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-16-a-las-8.08.23.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-16-a-las-8.08.23.png"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-16-a-las-8.08.40.png",
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/Captura-de-pantalla-2021-03-16-a-las-8.08.23.png"
+    ],
+    "hasMap": "https://www.google.com/maps/@36.7217952,-4.3757552z",
+    "address": "Calle Bolivia, 97, Málaga, Spain",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "36.7217952",
+      "longitude": "-4.3757552"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/titi/",
+    "slug": "titi",
+    "city": "Málaga",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/tokyo-lisboa/",
+    "name": "TOKYO LISBOA",
+    "legalName": "TOKYO LISBOA",
+    "description": "Tokio es un espacio cultural intertemporal y se ha utilizado para fiestas, conciertos y lanzamientos en las más variadas áreas.\nBrindamos el espacio para bandas que ya son reconocidas y para bandas nuevas que quieran afirmarse en el ámbito musical.\nDisponemos de un AP adecuado a las necesidades de las bandas teniendo en cuenta también el espacio físico del lugar.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TOKY.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/tokyo-lisboa/",
+    "email": "tokyo@tokyo.com.pt",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TOK-scaled.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TOK-scaled.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@38.706578879923,-9.1620956667322z",
+    "address": "R. do Conde 54, 1200-805 Lisboa, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "tokyo@tokyo.com.pt"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.706578879923",
+      "longitude": "-9.1620956667322"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/tokyo-lisboa/",
+    "slug": "tokyo-lisboa",
+    "city": "-805 Lisboa",
+    "country": "Portugal"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/tunnel-rock-club/",
+    "name": "TUNNEL ROCK CLUB",
+    "legalName": "TUNNEL ROCK CLUB",
+    "description": "Bar de Mallorca que ofrece conciertos de rock en directo.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TUN.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/tunnel-rock-club/",
+    "telephone": "+34 971 456 652",
+    "email": "tunnelrockclub@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TUNF.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/TUNF.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@39.5631325,2.6261576z",
+    "address": "Plaça Gomila, 2, 07014 Palma, España",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+34 971 456 652",
+      "email": "tunnelrockclub@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.5631325",
+      "longitude": "2.6261576"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/tunnel-rock-club/",
+    "slug": "tunnel-rock-club",
+    "city": "Palma",
+    "country": "España"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/zoom-porto/",
+    "name": "ZOOM PORTO",
+    "legalName": "ZOOM PORTO",
+    "description": "Zoom Porto es un club en la ciudad y es extremadamente popular y está bien decorado en el centro de la ciudad y, como otros lugares, está ubicado en un antiguo almacén.",
+    "logo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SOO.jpeg"
+    ],
+    "url": "https://beta.mygloven.com/listing/zoom-porto/",
+    "email": "zoomdiscoporto@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SO.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/03/SO.jpeg"
+    ],
+    "hasMap": "https://www.google.com/maps/@41.146905572834,-8.6107523530863z",
+    "address": "R. de Sampaio Bruno 5, 4000-196 Porto, Portugal",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "zoomdiscoporto@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.146905572834",
+      "longitude": "-8.6107523530863"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "10"
+    },
+    "source_url": "https://beta.mygloven.com/listing/zoom-porto/",
+    "slug": "zoom-porto",
+    "city": "-196 Porto",
+    "country": "Portugal"
   }
 ]
