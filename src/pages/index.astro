@@ -3,11 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import ChatBot from "../components/ChatBot";
 import SearchBox from '../components/SearchBox';
 import ArtistGrid from '../components/ArtistGrid';
-import venuesData from '../data/venues.json';
-import artistsData from '../data/artists.json';
+import { getAllVenues, getAllArtists, getSiteConfig } from '../sanity/queries';
+
+const venuesData = await getAllVenues();
+const artistsData = await getAllArtists();
+const config = await getSiteConfig();
 
 const venueCount = venuesData.length;
 const artistCount = artistsData.length;
+const contactEmail = config?.contactEmail || 'info@mygloven.com';
 ---
 <Layout title="MyGloven · Unifying Music Industry">
 	<main>
@@ -19,24 +23,21 @@ const artistCount = artistsData.length;
 					<a href="#explore" class="text-gray-300 hover:text-white transition">Espacios</a>
 					<a href="#artists" class="text-gray-300 hover:text-white transition">Artistas</a>
 					<a href="#about" class="text-gray-300 hover:text-white transition">About</a>
-					<a href="mailto:info@mygloven.com" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-4 py-1.5 rounded-full text-sm font-semibold transition">Contacto</a>
+					<a href={`mailto:${contactEmail}`} class="bg-[#e4665c] hover:bg-[#d86259] text-white px-4 py-1.5 rounded-full text-sm font-semibold transition">Contacto</a>
 				</div>
 			</div>
 		</nav>
 
-		<!-- Hero with background image -->
+		<!-- Hero -->
 		<section class="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 pt-14" 
-			style="background: linear-gradient(rgba(26,26,42,0.75), rgba(26,26,42,0.85)), url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=1600') center/cover no-repeat;">
+			style={`background: linear-gradient(rgba(26,26,42,0.75), rgba(26,26,42,0.85)), url('${config?.heroBackground || 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=1600'}') center/cover no-repeat;`}>
 			<div class="relative z-10 max-w-3xl">
-				<h1 class="text-4xl md:text-6xl font-black text-white mb-4 leading-tight tracking-tight">
-					Espacios y artistas<br>para tu próximo evento.
-				</h1>
+				<h1 class="text-4xl md:text-6xl font-black text-white mb-4 leading-tight tracking-tight" set:html={config?.heroTitle || 'Espacios y artistas<br>para tu próximo evento.'} />
 				<p class="text-base md:text-lg text-gray-300 max-w-xl mx-auto mb-8">
-					new AI tools coming soon.. my'G.<br>
-					<span class="text-[#e4665c] font-semibold">#myglobalvenue</span>
+					{config?.heroSubtitle || "new AI tools coming soon.. my'G."}<br>
+					<span class="text-[#e4665c] font-semibold">{config?.heroHashtag || '#myglobalvenue'}</span>
 				</p>
 
-				<!-- Search tabs -->
 				<div class="bg-white rounded-2xl shadow-2xl p-6 max-w-2xl mx-auto">
 					<div class="flex gap-4 mb-4 justify-center">
 						<a href="#explore" class="flex items-center gap-2 bg-[#e4665c] text-white px-5 py-2 rounded-full text-sm font-semibold">
@@ -56,21 +57,17 @@ const artistCount = artistsData.length;
 			<div class="max-w-5xl mx-auto px-4">
 				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">¿Por qué confiar en MYGLOVEN?</h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<div class="text-center">
-						<div class="text-4xl font-black text-[#e4665c] mb-2">1</div>
-						<h3 class="font-bold text-[#1a1a2a] mb-2">Descubre espacios más rápido</h3>
-						<p class="text-sm text-gray-500">Búsqueda inteligente con IA para encontrar el espacio perfecto para tu evento.</p>
-					</div>
-					<div class="text-center">
-						<div class="text-4xl font-black text-[#e4665c] mb-2">2</div>
-						<h3 class="font-bold text-[#1a1a2a] mb-2">Conecta con la industria</h3>
-						<p class="text-sm text-gray-500">Conectamos espacios, artistas y promotores para facilitar la música en vivo.</p>
-					</div>
-					<div class="text-center">
-						<div class="text-4xl font-black text-[#e4665c] mb-2">3</div>
-						<h3 class="font-bold text-[#1a1a2a] mb-2">Información clara y útil</h3>
-						<p class="text-sm text-gray-500">Rider técnico, capacidad, contacto directo y ubicación exacta en un click.</p>
-					</div>
+					{(config?.features || [
+						{ title: 'Descubre espacios más rápido', description: 'Búsqueda inteligente con IA para encontrar el espacio perfecto para tu evento.' },
+						{ title: 'Conecta con la industria', description: 'Conectamos espacios, artistas y promotores para facilitar la música en vivo.' },
+						{ title: 'Información clara y útil', description: 'Rider técnico, capacidad, contacto directo y ubicación exacta en un click.' },
+					]).map((f: any, i: number) => (
+						<div class="text-center">
+							<div class="text-4xl font-black text-[#e4665c] mb-2">{i + 1}</div>
+							<h3 class="font-bold text-[#1a1a2a] mb-2">{f.title}</h3>
+							<p class="text-sm text-gray-500">{f.description}</p>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>
@@ -93,7 +90,7 @@ const artistCount = artistsData.length;
 				</div>
 				<ArtistGrid client:load />
 				<div class="text-center mt-14">
-					<a href="mailto:info@mygloven.com" class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
+					<a href={`mailto:${contactEmail}`} class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
 						¿Eres artista? Regístrate →
 					</a>
 				</div>
@@ -105,17 +102,13 @@ const artistCount = artistsData.length;
 			<div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 				<div>
 					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Sobre MYGLOVEN</h2>
-					<p class="text-gray-500 leading-relaxed text-sm mb-3">
-						MyGloven nace con una idea sencilla: facilitar la conexión entre espacios, artistas y promotores para hacer posible más eventos de música en vivo.
-					</p>
-					<p class="text-gray-500 leading-relaxed text-sm">
-						Estamos incorporando búsqueda inteligente con IA y herramientas visuales para explorar espacios según la visión de cada evento.
-					</p>
+					<p class="text-gray-500 leading-relaxed text-sm mb-3">{config?.aboutText || 'MyGloven nace con una idea sencilla: facilitar la conexión entre espacios, artistas y promotores para hacer posible más eventos de música en vivo.'}</p>
+					<p class="text-gray-500 leading-relaxed text-sm">{config?.aboutSecondary || 'Estamos incorporando búsqueda inteligente con IA y herramientas visuales para explorar espacios según la visión de cada evento.'}</p>
 				</div>
 				<div class="bg-[#1a1a2a] rounded-2xl p-10 text-center">
-					<p class="text-3xl font-black text-white mb-2">Primavera Pro '26</p>
-					<p class="text-[#e4665c] font-semibold text-sm">Proyecto seleccionado · Ideas Showroom</p>
-					<p class="text-gray-400 text-xs mt-2">Barcelona · 3-5 Junio 2026</p>
+					<p class="text-3xl font-black text-white mb-2">{config?.primaveraProYear || "Primavera Pro '26"}</p>
+					<p class="text-[#e4665c] font-semibold text-sm">{config?.primaveraProSubtitle || 'Proyecto seleccionado · Ideas Showroom'}</p>
+					<p class="text-gray-400 text-xs mt-2">{config?.primaveraProDate || 'Barcelona · 3-5 Junio 2026'}</p>
 				</div>
 			</div>
 		</section>
@@ -123,10 +116,10 @@ const artistCount = artistsData.length;
 		<!-- CTA -->
 		<section class="py-16 bg-[#1a1a2a] text-center">
 			<div class="max-w-xl mx-auto px-4">
-				<h2 class="text-2xl font-black text-white mb-4">¿Quieres formar parte?</h2>
-				<p class="text-gray-400 text-sm mb-8">Espacios, artistas y promotores — únete a la comunidad.</p>
-				<a href="mailto:info@mygloven.com" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
-					info@mygloven.com
+				<h2 class="text-2xl font-black text-white mb-4">{config?.ctaTitle || '¿Quieres formar parte?'}</h2>
+				<p class="text-gray-400 text-sm mb-8">{config?.ctaSubtitle || 'Espacios, artistas y promotores — únete a la comunidad.'}</p>
+				<a href={`mailto:${contactEmail}`} class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
+					{contactEmail}
 				</a>
 			</div>
 		</section>

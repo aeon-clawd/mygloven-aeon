@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import Fuse from 'fuse.js';
@@ -26,36 +27,56 @@ const fuse = new Fuse(allData, {
   includeScore: true,
 });
 
-async function askQwen(prompt, context) {
-  const systemPrompt = `Eres my'G, el asistente IA de MyGloven. Respondes SIEMPRE en español, breve y útil.
-Usa SOLO la información proporcionada. NO inventes datos. Recomienda venues/artistas del contexto.`;
+// Use OpenClaw gateway as OpenAI-compatible proxy (no external API key needed)
+const OPENCLAW_URL = process.env.OPENCLAW_URL || 'http://127.0.0.1:18789/v1/chat/completions';
+const OPENCLAW_TOKEN = process.env.OPENCLAW_TOKEN;
+if (!OPENCLAW_TOKEN) {
+  console.error('⚠️  OPENCLAW_TOKEN not set — chat will use fallback only');
+}
 
-  const fullPrompt = `${systemPrompt}\n\nDatos:\n${context}\n\nUsuario: ${prompt}\n\nmy'G:`;
+async function askClaude(prompt, context) {
+  if (!OPENCLAW_TOKEN) return null;
+
+  const systemPrompt = `Eres my'G, el asistente IA de MyGloven — la plataforma que conecta venues de música en vivo con artistas.
+Respondes SIEMPRE en español, de forma breve, útil y con personalidad.
+Usa SOLO la información proporcionada en los datos. NO inventes venues, artistas ni datos que no estén en el contexto.
+Si no encuentras resultados relevantes, dilo honestamente y sugiere reformular la búsqueda.
+Cuando recomiendes venues o artistas, menciona su nombre y ciudad.`;
 
   try {
+    console.log('[claude] calling gateway...');
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 45000);
-    
-    const res = await fetch('http://localhost:11434/api/generate', {
+    const timeout = setTimeout(() => controller.abort(), 30000);
+
+    const res = await fetch(OPENCLAW_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${OPENCLAW_TOKEN}`,
+      },
       body: JSON.stringify({
-        model: 'qwen3.5:0.8b',
-        prompt: fullPrompt,
-        stream: false,
-        options: { num_predict: 250, temperature: 0.7 }
+        model: 'claude-haiku-4-5',
+        max_tokens: 300,
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: `Datos disponibles:\n${context}\n\nPregunta del usuario: ${prompt}` }
+        ],
       }),
       signal: controller.signal,
     });
     clearTimeout(timeout);
+
+    if (!res.ok) {
+      console.error(`Claude API error: ${res.status} ${res.statusText}`);
+      return null;
+    }
+
     const data = await res.json();
-    let response = data.response || '';
-    // Strip thinking tags if present
-    response = response.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
-    return response;
+    console.log('[claude] response received');
+    return data.choices?.[0]?.message?.content || null;
   } catch (e) {
-    console.error('Ollama error:', e.message);
-    return null; // Will use fallback
+    console.error('[claude] error:', e.message);
+    return null;
   }
 }
 
@@ -110,7 +131,7 @@ app.post('/api/chat', async (req, res) => {
   }).join('\n');
 
   // Try Qwen, fallback to structured response
-  const aiAnswer = await askQwen(message, context);
+  const aiAnswer = await askClaude(message, context);
   const answer = aiAnswer || buildFallback(results, message);
 
   res.json({ answer, sources });
