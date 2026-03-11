@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SearchBox from '../components/SearchBox';
+import { Music, Zap, Shield, Globe } from 'lucide-react';
+---
+<Layout title="MyGloven - Unifying Music Industry (IA Enabled)">
+	<main>
+		<section class="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 pt-20">
+			<h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter text-white">MY<span class="text-[#00D4FF]">GLOVEN</span></h1>
+			<p class="text-xl md:text-2xl text-[#EBDECC]/80 max-w-2xl mx-auto mb-10 italic">La industria musical, unificada mediante inteligencia artificial.</p>
+			<div class="flex gap-4 justify-center">
+				<a href="#explore" class="bg-[#8B5CF6] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg">Explorar Venues</a>
+			</div>
+		</section>
+		<section id="explore" class="py-20 bg-[#0A0A14]"><SearchBox client:load /></section>
+		<footer class="py-10 text-center border-t border-[#1A1A2E] text-xs text-gray-600">&copy; 2026 MyGloven &bull; Powered by Aeon Infinitive</footer>
+	</main>
+</Layout>
