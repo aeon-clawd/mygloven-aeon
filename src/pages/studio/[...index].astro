@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [{ params: { index: undefined } }];
+}
+---
+<Layout title="MyGloven CMS">
+  <div id="sanity"></div>
+  <script>
+    import { renderStudio } from 'sanity';
+    import config from '../../../sanity.config';
+    renderStudio(document.getElementById('sanity'), config);
+  </script>
+</Layout>
+
+<style is:global>
+  html, body, #sanity {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
