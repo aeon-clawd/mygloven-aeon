@@ -1,0 +1,797 @@
+[
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/chacal-cult/",
+    "name": "CHACAL CULT",
+    "legalName": "CHACAL CULT",
+    "description": "Chacal Cult is a dynamic stoner rock band born in 2023. Composed of Kenneth G. (guitar and vocals), Daniel Chumillas (bass) and Jordi Learreta (drums), this powerful trio from Barcelona brings a heavy and hypnotic that combines raw energy with deep , psychedelic rhythms.",
+    "url": "https://beta.mygloven.com/listing/chacal-cult/",
+    "telephone": "662576882",
+    "email": "chacalband68@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/ddddd.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/ddddd.png"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/VFVFVFV.png",
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/aaaa.png",
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/ddddd.png",
+      "https://beta.mygloven.com/wp-content/uploads/2026/03/YHYHYH.png"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "662576882",
+      "email": "chacalband68@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/chacal-cult/",
+    "slug": "chacal-cult"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/inigo-palmero/",
+    "name": "PALMERO",
+    "legalName": "PALMERO",
+    "description": "Iñigo Palmero Garcés (Bilbao 1992) es un apasionado DJ y productor que comenzó su aventura en la música electrónica hace mas de una década, poco antes de ir a probar suerte a Australia, donde fue residente de la mítica sala Rattle Snake (Gold Coast) durante casi 3 años, adquiriendo así soltura y psicología de cabina, lo que le llevo a actuar también en algunos de los mejores clubes de Australia, como Platinum o Elsewhere.\n\nEn el verano de 2017 Palmero regresa a Bilbao pasando por diferentes fiestas y salas como Sonora, Salitre o el mítico Flixgain de Mutriku. En la actualidad Iñigo ha terminado de montar su estudio donde trabaja en busca de un sonido propio e identidad como artista.\n\nCon un estilo versátil que le permite jugar con la energía de la pista, sus sesiones preferiblemente largas encadenan cambios de ritmo y género (Techno, House, Deep, Progresive, Minimal etc), manteniendo un sonido limpio que busca sorprender y sobre todo hacer bailar. Las melodías profundas y los sonidos oscuros en ambientes alegres, son su seña de identidad.\n\nsoundcloud\n\nfacebook.com/PalmeroDJ",
+    "url": "https://beta.mygloven.com/listing/inigo-palmero/",
+    "email": "iipalmero@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/palmero.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/palmero.jpeg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/palmerol.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "iipalmero@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/inigo-palmero/",
+    "slug": "inigo-palmero"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/jeremy-session-drummer-dj/",
+    "name": "JEREMY | SESSION DRUMMER & DJ",
+    "legalName": "JEREMY | SESSION DRUMMER &amp; DJ",
+    "description": "📍 LA 📍 London\nRose Gray • Mega • Tommy Genesis • Gigi Perez • Tianna Esperanza • Dawn Richards • Laville • Liv Dawson • Tom Tripp • George The Poet\n\n \n\nhttps://www.jayjaydrums.com/\n\n \n\nhttps://www.instagram.com/jeremy.jayjay/\n\n \n\nhttps://soundcloud.com/jerames/dua-lipa-break-my-heart-jerames-remix",
+    "url": "https://beta.mygloven.com/listing/jeremy-session-drummer-dj/",
+    "email": "jeremyberges.uk@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/jeremy.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/jeremy.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/JEREMYIII.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "jeremyberges.uk@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/jeremy-session-drummer-dj/",
+    "slug": "jeremy-session-drummer-dj"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/laville-acid-jazz-records/",
+    "name": "LAVILLE | ACID JAZZ RECORDS",
+    "legalName": "LAVILLE | ACID JAZZ RECORDS",
+    "description": "La sensación del soul en ascenso en el norte de Londres y firmante de Acid Jazz Records, Laville, lanza su EP debut &quot;Thirty One&quot; el 15 de marzo. Con los sencillos anteriores &quot;Easy&quot; y la canción principal del EP &quot;Thirty One&quot;, así como una hermosa versión de &quot;Passport Home&quot; de JP Cooper y una versión acústica de &quot;Thirty One&quot;, es una introducción sorprendente a un talento británico increíblemente emocionante.\n\nHablando sobre el lanzamiento del EP, Laville revela: “Este EP es un pequeño fragmento del tipo de música que quiero hacer, y creo que es una forma honesta de música soul. Uno que le dé sabor a la vieja y nueva escuela. Es como un renacimiento para mí. Significa dejar atrás viejos hábitos, comportamientos y fiestas. Es un placer cantar Passport Home porque está muy bien escrito y organizado. No le temo a una tapadera si creo que puedo hacerle justicia &quot;.\n\nHabiendo aparecido en la pista del álbum de Big Narstie &quot;Help&quot; en su álbum de 2018 &quot;BDL Bipolar&quot;, Laville recientemente interpretó la pista en vivo en el programa Channel 4 de Big Narstie. Míralo de nuevo en 4oD. También consiguió el apoyo de los creadores de tendencias de gente como Complex, que estrenó su sencillo 'Thirty One' y lo llamó &quot;Un cuento fresco y fresco sobre la llegada de la edad&quot;, CLASH, la revista Songwriting, The National Student, When The Horn Blows, Somewhere Soul para nombrar unos pocos.\n\nLos años de adolescencia de Laville siguieron un viaje familiar a través de la alegría y el trauma que lo vio cantar localmente, antes de que un lugar de la Universidad lo llamara y redujera brevemente sus ambiciones musicales. Empleado en una serie de trabajos, desde restaurantes con estrellas Michelin, liderando el front-of-house para ayudar a administrar varios lugares musicales en Londres, Laville ha mantenido una ética de trabajo implacable, una que desde entonces lo ha llevado a su primer amor.\n\nSi bien fue influenciado por una cornucopia creativa a medida que avanzaba en su adolescencia, más recientemente ha visto a este talentoso vocalista tejer su propio camino con la ayuda de una variedad de amigos y conocidos musicales mutuos.\n\nLaville ha encontrado el hogar ideal en Acid Jazz Records, para quien es el primer solista masculino nuevo al que firman desde Jamiroquai.",
+    "url": "https://beta.mygloven.com/listing/laville-acid-jazz-records/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/andre.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/andre.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/laville-acid-jazz-records/",
+    "slug": "laville-acid-jazz-records"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/ravioli-makers/",
+    "name": "RAVIOLI MAKERS",
+    "legalName": "RAVIOLI MAKERS",
+    "description": "Beatmakers, Productores, MC, Ingenieros de mezcla y masterización. All HOME MADE.\nNos encanta la cultura HIPHOP, y consideramos que es una manera de vivir, ver las cosas y actuar ante ellas.\nDisfruta de las birras, los colegas la familia y la buena música.\n\n@raviolimakers\n\nYoutube\n\nspotify",
+    "url": "https://beta.mygloven.com/listing/ravioli-makers/",
+    "email": "raviolimakerssound@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/ravi.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/ravi.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/ravioli.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "raviolimakerssound@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/ravioli-makers/",
+    "slug": "ravioli-makers"
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/alba-heidari-decoding-the-void-aria/",
+    "name": "ALBA HEIDARI | DECODING THE VOID",
+    "legalName": "ALBA HEIDARI | DECODING THE VOID",
+    "description": "Al crecer en Madrid, donde obtuvo su experiencia como DJ, Alba Heidari siempre ha buscado explorar una variedad de géneros diferentes. Con un amplio conocimiento de drum n bass, breaks, hardcore, hardtek, electro e incluso gótico industrial, definió su destreza técnica y descubrió el techno industrial crudo que une su sonido versátil.\n\nYa sea que esté utilizando vinilo o fuentes digitales para sus apasionantes sets de DJ, la asombrosa mezcla de castigo y diversión de Alba la ha convertido en un elemento básico cada vez mayor en fiestas en España y Londres, incluida una residencia en Aria. Formó el colectivo &quot;D.T.V&quot; (Decoding The Void) con su colaborador frecuente Manson X para afinar aún más sus habilidades y llevar la música de ellos y de otros artistas a una audiencia más amplia.\n\nEl sonido atrevido de Alba contrasta fuertemente con su carácter modesto. Su pasión por encontrar lanzamientos desconocidos, locales y subestimados beneficia a la comunidad de música dance underground en general, mientras que las pistas originales cargan sus sesiones de DJ con una energía única que desafía las tendencias principales.\n\nsoundcloud.com/lemmiwinks",
+    "url": "https://beta.mygloven.com/listing/alba-heidari-decoding-the-void-aria/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/albita.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/albita.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/alba-heidari-decoding-the-void-aria/",
+    "slug": "alba-heidari-decoding-the-void-aria",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/andy-princz/",
+    "name": "ANDY PRINCZ",
+    "legalName": "ANDY PRINCZ",
+    "description": "https://www.youtube.com/watch?v=q5lKiFIbuPY\n\nhttps://open.spotify.com/artist/41PaXmrIss6YvycGxQnS6B\n\nhttps://www.amazon.es/That-Dirt-Explicit-Andy-Princz/dp/B08K475FPX\n\nhttps://www.mixcloud.com/andyprincz5/",
+    "url": "https://beta.mygloven.com/listing/andy-princz/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/ANDY.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/ANDY.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/andy-princz/",
+    "slug": "andy-princz",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/black-lotus/",
+    "name": "BLACK LOTUS",
+    "legalName": "BLACK LOTUS",
+    "description": "El sonido de Black Lotus surge de las diversas influencias de los miembros de la banda. El heavy metal tradicional es el factor común y la fuerza motriz de la banda, pero su paleta también incluye sonidos alternativos de los 90s, o géneros como el Stoner Rock, el Doom Metal y el Post Metal. Sus composiciones incorporan todas estas influencias sin limitaciones ni dogmas. Sus líricas son eminentemente simbólicas, expresando su visión distópica de la sociedad y del mundo. La mitología clásica, el ocultismo, y las experiencias y visiones personales son la fuente de sus composiciones.",
+    "url": "https://beta.mygloven.com/listing/black-lotus/",
+    "email": "blacklotusdoommetal@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/lot.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/lot.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "blacklotusdoommetal@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/black-lotus/",
+    "slug": "black-lotus",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/borgia-serrano-grabeaty/",
+    "name": "BORGIA SERRANO | GRABEATY",
+    "legalName": "BORGIA SERRANO | GRABEATY",
+    "description": "Desde principio de los 90 es cuando Borgia Serrano está ligado a la música electrónica.\n\nInfluenciado por el techno en varias de sus vertientes, sus sesiones se caracterizan por sus melodías, atmósferas y una elegante contundencia.\n\nPero no es hasta 2014 cuando da el paso profesional que le lleva a organizar sus propios eventos además de actuar en clubs y eventos punteros de Madrid como: Ekho, Studio 76, La Riviera, Hostel Club, Suite, Taboó, Utopía, Traquetonia, Sildavia, X Club, Status Club...y Platform 7 en Valladolid.\n\nEn 2019 se embarca en su nuevo proyecto Grabeaty.\n\n \n\nfacebook.com/grabeaty\n\n@grabeaty\n\nsoundcloud.com/borgiaserrano\n\nmixcloud.com/BorgiaSerrano",
+    "url": "https://beta.mygloven.com/listing/borgia-serrano-grabeaty/",
+    "email": "borjaserrano80@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/SERRA-LOGO.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/SERRA-LOGO.jpeg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "borjaserrano80@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/borgia-serrano-grabeaty/",
+    "slug": "borgia-serrano-grabeaty",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/carlos-coca-vivesince-1987/",
+    "name": "CARLOS COCA | VIVESINCE 1987",
+    "legalName": "CARLOS COCA | VIVESINCE 1987",
+    "url": "https://beta.mygloven.com/listing/carlos-coca-vivesince-1987/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2024/07/IMG_6131.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2024/07/IMG_6131.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/carlos-coca-vivesince-1987/",
+    "slug": "carlos-coca-vivesince-1987",
+    "description": "",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/cosmo-sofi/",
+    "name": "COSMO SOFI",
+    "legalName": "COSMO SOFI",
+    "description": "Cosmo Sofi es una DJ y diseñadora uruguaya afincada en Londres. Curiosa por la música y la cultura, a Sofi le encanta profundizar y descubrir sonidos conmovedores del mundo y más allá, y compartirlos con la gente. Música para oídos abiertos, mentes abiertas y corazones abiertos.\n\nSintonízate y relájate para luego subir en esta mezcla llena de sonidos orgánicos y sintéticos, ambient house, downtempo, voces resonantes y ritmos afrolatinos.",
+    "url": "https://beta.mygloven.com/listing/cosmo-sofi/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/sofi.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/sofi.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/cosmo-sofi/",
+    "slug": "cosmo-sofi",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/dav-o/",
+    "name": "DAV-O | GRABEATY",
+    "legalName": "DAV-O | GRABEATY",
+    "description": "Dj asturiano, debutó a finales del 2004 en pequeños clubs de Gijón. Fué en Mayo de 2009 cuando se dió a conocer en el mundo de la electrónica al decidir ponerse al frente del “OXYGENO CLUB”. situado en el ambientado Barrio de Cimadevilla , en el cual estuvo de Dj residente durante 3 años.\nA finales de 2013 decidió dar un giro a su vida y mudarse a Londres sin contar con todo lo que le estaba por venir ni la aventura musical que le esperaba en su nuevo destino.\nSerá allí donde se impregna de la esencia del techno Londinense, mostrándolo en sus sets enérgicos y envolventes. En ese momento fue descubierto y captado por el que ahora es su gran amigo Gabbi López, fundador del sello Release Sustain. Ya formando parte de dicho sello participa en numerosos eventos en salas como el conocido conocido “Café 1001” de Brick Lane. Continuando su andadura por salas de la categoría de “Crucifix Lane” , “93 Feet”, “The Egg”, “Búnker”, “Corsica Studios” (Jaded). Llegando a conseguir una residencia en “Lightbox” . También ha formando parte de la promotora “Wasted Talent” entre otras promotoras en múltiples Warehouse de la ciudad. En los últimos años también ha visitado conocidas salas Madrileñas y pasa a formar parte de la importante marca “Grabeaty” con su fundador, el reconocido artista Madrileño Borgia Serrano.",
+    "url": "https://beta.mygloven.com/listing/dav-o/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/WhatsApp-Image-2021-05-17-at-11.21.10.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/WhatsApp-Image-2021-05-17-at-11.21.10.jpeg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/dav-o/",
+    "slug": "dav-o",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/el-milagro/",
+    "name": "EL MILAGRO",
+    "legalName": "EL MILAGRO",
+    "description": "Borja Salazar aka &quot;El Milagro&quot; es un artista nacido en Vitoria-Gasteiz en 1990. Artista compositor empezó en el género Rap hardcore exponiendo sin filtro sus relatos y vivencias,sacando en 2005 su primer trabajo audiovisual llamado &quot;Cossafinah&quot; dónde grabó diferentes conceptos visuales por varias ciudades del mundo a lo largo de sus viajes. Actualmente está trabajando diferentes géneros musicales, trap,dancehall,ritmos latinos...siendo versátil dentro de la música, buscando otro enfoque a su carrera,ya qué se considera un amante de la música independientemente del género que se trate. De Vitoria para el mundo.\n\nyoutube\n\n@el_milagro_bsm",
+    "url": "https://beta.mygloven.com/listing/el-milagro/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/el-milagro.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/el-milagro.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/milagro.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/el-milagro/",
+    "slug": "el-milagro",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/francisco-sokolowicz-compositor/",
+    "name": "FRANCISCO SOKOLOWICZ | COMPOSITOR",
+    "legalName": "FRANCISCO SOKOLOWICZ | COMPOSITOR",
+    "description": "Francisco Sokolowicz es un compositor argentino-español especializado en bandas sonoras que reside en Madrid.\n\nA lo largo de su carrera, Francisco ha encontrado su vocación en la creación de mundos sonoros en colaboración con artistas de distintas disciplinas. Esta búsqueda personal lo ha llevado a componer la música original para diversos proyectos artísticos tales como largometrajes, series de televisión, cortometrajes, videojuegos y publicidades, a la vez que obras de teatro y video-instalaciones. Francisco también se ha desempeñado en la composición de músicas adicionales trabajando para Trafalgar 13 Music House y explorado en piezas de concierto.\n\nEn Buenos Aires, Francisco ha realizado sus estudios de piano en el Conservatorio Superior de Música Manuel de Falla y con la renombrada pianista clásica Susana Kasakoff. A su vez, ha llevado a cabo su formación en audioperceptiva con María del Carmen Aguilar y profundizado sus estudios de orquestación sinfónica con Gabriel Senanes. Francisco se ha formado bajo la tutela de Daniel Montes en composición, armonía, contrapunto, orquestación y análisis musical.\n\nEn el año 2015, Francisco ha sido ganador de una beca de Berklee College of Music para cursar el Master Certificate in Film Scoring. A su vez, Sokolowicz ha participado de residencias de verano con compositores de renombre mundial como Sean Callery, Michael Levine y Mark Snow en New York University, en el marco de los programas Steinhardt Film Scoring Workshop y Scoring for Television en la ciudad de Nueva York; John Lunn y Conrad Pope en Baden, Austria, en los workshops Scoring for TV Drama Series y Orchestration and Arranging; Christopher Young en Varna, Bulgaria, dentro del Film Scoring Summer Program; y Hummie Mann, quien imparte el Pacific Northwest Film Scoring Summer Program en Seattle. Asimismo, en 2019 Francisco ha sido seleccionado como uno de los diez compositores activos para participar en el XVII Taller de Sonido y Música para Cine impulsado por la Fundación Sgae y llevado a cabo en Madrid durante los meses de octubre y diciembre.\n\nEn 2019 Sokolowicz ha sido honrado con el 3er premio en la competencia internacional de música para películas RecChange por su composición para el cortometraje Daniel y en 2020 ha sido invitado por Berklee College of Music para impartir clases en el Master of Music in Scoring for Film, Television and Videogames para alumnos de todo el mundo.\n\nActualmente Francisco se encuentra trabajando en proyectos que se desarrollan en ciudades como Los Ángeles, Londres, Jerusalem, Madrid, Buenos Aires y Lima. Además, compone regularmente para la compañía MPath (distribuida por APM) del multipremiado compositor Michael Levine; y se encuentra trabajando en la serie La cocinera de Castamar (Antena 3) como editor musical, asistiendo al compositor Iván Palomares.\n\n \n\n@franciscosokolowicz\n\nspotify\n\nimdb",
+    "url": "https://beta.mygloven.com/listing/francisco-sokolowicz-compositor/",
+    "email": "franciscosoko@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/fran.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/fran.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "franciscosoko@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/francisco-sokolowicz-compositor/",
+    "slug": "francisco-sokolowicz-compositor",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/grazziella/",
+    "name": "GRAZZIELLA",
+    "legalName": "GRAZZIELLA",
+    "description": "Al crecer en el noreste de Londres, Graziella descubrió por primera vez su voz cantando en Community Gospel Choir. Las tumultuosas relaciones en casa llevaron a Graziella a descubrir la escritura de poesía, entre otras cosas, como el último escapismo.\nEn su adolescencia se unió a un equipo de hip-hop y convirtió su poesía en canciones de rap. Se sintió inmediatamente como en casa trabajando con gente como Skinnyman, Ed Skrein, Plan B y Foreign Beggars.\nSe ha convertido en internacional con Foreign Beggars, con una gran participación en 3 de sus álbumes, además de abrir con ellos para Amy Winehouse y actuar juntas en Glastonbury.\nDesde concursos de talentos de televisión hasta bandas de rock / electro y la colaboración con DJ Vladim en su gira, Graziella continuó su búsqueda en la música y desarrolló su destreza en el escenario. Sin embargo, perdió su propia voz de escritura y su estilo único. En sus propias palabras “Era como un divorcio inminente, quería que funcionara tanto que patinaba, rapeaba, gritaba pero la pasión se había ido”.\nFue solo después de tocar fondo con una falta de inspiración que su regreso a la industria como el fénix fue catalizado por el productor Charlie J. Perry.\nExperimentando la vida antes que la música, Graziella ha escrito canciones infundidas en soul y blues con letras autobiográficas profundamente personales. Como todo buen blues, lleva al oyente en un viaje a través de los esfuerzos y luchas de la vida hacia el empoderamiento y la fuerza interior.\n&quot;Si Johnny Cash y Nina Simone hubieran tenido un bebé, me habrían dado a luz&quot;.",
+    "url": "https://beta.mygloven.com/listing/grazziella/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/GRAZZ1.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/GRAZZ1.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/grazziella/",
+    "slug": "grazziella",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/groove-grill/",
+    "name": "GROOVE GRILL",
+    "legalName": "GROOVE GRILL",
+    "description": "Dúo afincado en Madrid formado por Orson Sinaka y Cortazar, sesiones a vinilo con un gusto muy selectivo.",
+    "url": "https://beta.mygloven.com/listing/groove-grill/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2024/07/IMG_6137.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2024/07/IMG_6137.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/groove-grill/",
+    "slug": "groove-grill",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/juannce/",
+    "name": "JUANNCE",
+    "legalName": "JUANNCE",
+    "description": "Juan Esquivel aka juanncE, nacido en Córdoba Argentina. Sus comienzos en la música son a muy corta edad. Comenzó a hacer sus primeras mezclas en bares discos y fiestas privadas. A principios del 2013 comenzó a introducirse en la música electrónica como DJ tocando en los club`s más destacados de la ciudad. Su sonido underground entre house , tech house , acid hacen vibrar a la audiencia. A mediados de 2016 se muda a Barcelona donde comienza a dar sus primero pasos en Europa. En 2019 comienza a formarse como productor musical en plastic academia donde logro publicar su música en los sellos Defka Record / Duqua Records / Street Groove entre otros mientras prepara sus nuevos Eps y presentaciones.",
+    "url": "https://beta.mygloven.com/listing/juannce/",
+    "email": "juanesquivel@live.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-18-at-08.41.28.jpeg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-18-at-08.41.28.jpeg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "juanesquivel@live.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/juannce/",
+    "slug": "juannce",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/mihai/",
+    "name": "MIHAIL | SAVE THE SOUND",
+    "legalName": "MIHAIL | SAVE THE SOUND",
+    "description": "soundcloud.com/mihai-latish\n\nsavethesoundprod.wixsite.com/enter\n\nUna identidad dual combinada de melodías afectuosas y ritmos armónicos en una travesía de sonido clandestino y composiciones edificantes.\n\nAsí es como define MYLET, este nuevo proyecto que saca a luz su lado más puro, su amor de más de una década por el sonido Trance. Nacido y con una infancia pasada en la zona de Transilvania, Rumania, desde pequeño se empezó a interesar por la música dance en sus vertientes electro, breakbeat, happyhardcore, y hip hop.\n\nSu crianza en la costa Mediterránea, cerca de la ciudad de Valencia, España hizo descubrir la música house y EBM, para más tarde quedar absorto por la música trance de Holanda, y el sonido techno-trance del festival &quot;Love Parade&quot; de Berlín.\n\nSiendo un fiel trabajador para su comunidad local cerca de Valencia, España; a través de un proyecto de festival titulado &quot;Save The Sound&quot; fundado por él, que le aportó notoriedad como residente, compartiendo cabina con artistas de renombre a nivel nacional como &quot;Gomad & Monster&quot;, &quot;Kostrok&quot;, &quot;Sara de Araújo&quot;, o &quot;Mar Flores&quot; y participación en festivales como &quot;Eyes Canet&quot;, además de residencias en salas de la zona.\n\nSu estancia y estudios en &quot;Music Business&quot; en la ciudad de Barcelona, le hizo adentrarse además en el universo Techno. Durante los últimos años ha afincado cada vez más su pasión por la escena de baile en Barcelona, con proyectos de residencia como &quot;We funked it up&quot; en distintos locales de Barcelona y visitando salas como Slow Club Barcelona.",
+    "url": "https://beta.mygloven.com/listing/mihai/",
+    "email": "hola@savethesound.es",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/IMG_6134-2.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/IMG_6134-2.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/mihai-1-scaled.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "hola@savethesound.es"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/mihai/",
+    "slug": "mihai",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/negrait-butterfly-kollektiv/",
+    "name": "NEGRAIT | BUTTERFLY KOLLEKTIV",
+    "legalName": "NEGRAIT | BUTTERFLY KOLLEKTIV",
+    "description": "www.mixcloud.com/Negrait",
+    "url": "https://beta.mygloven.com/listing/negrait-butterfly-kollektiv/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/neg3.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/neg3.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/negrait-butterfly-kollektiv/",
+    "slug": "negrait-butterfly-kollektiv",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/orson-sinaka-groove-grill/",
+    "name": "ORSON SINAKA | GROOVE GRILL",
+    "legalName": "ORSON SINAKA | GROOVE GRILL",
+    "url": "https://beta.mygloven.com/listing/orson-sinaka-groove-grill/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2024/07/IMG_6138.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2024/07/IMG_6138.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/orson-sinaka-groove-grill/",
+    "slug": "orson-sinaka-groove-grill",
+    "description": "",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/persus-nine/",
+    "name": "PERSUS NINE",
+    "legalName": "PERSUS NINE",
+    "description": "Persus Nine es uno de los alias musicales de Enrico Mariottino, músico y productor afincado en Barcelona. Se distingue por reunir bajos profundos y atmósferas de ensueño, transitorios rápidos y samples inusuales. Una experiencia de Jazz y una formación técnica se fusionan para crear un híbrido que abarca un vasto lenguaje musical, que va desde downtempo, IDM, trip-hop hasta texturas de estilo house.",
+    "url": "https://beta.mygloven.com/listing/persus-nine/",
+    "email": "bhhevents@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/persus.png"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/persus.png"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/persus.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "bhhevents@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/persus-nine/",
+    "slug": "persus-nine",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/radical-district/",
+    "name": "RADICAL DISTRICT",
+    "legalName": "RADICAL DISTRICT",
+    "description": "De un rincón inhóspito de la prisión de asfalto nace Radical District, una nueva propuesta musical que no dejará indiferente a nadie.\n\nActualmente están trabajando en el nuevo disco que sale en Otoño 2021 con nuevo show producido en Salamandra.\n\nradicaldistrict.com\n\ninstagram.com/radicaldistrict\n\nyoutube",
+    "url": "https://beta.mygloven.com/listing/radical-district/",
+    "email": "info@radicaldistrict.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/radic.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/radic.jpg"
+    ],
+    "photos": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/OGO.png"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@radicaldistrict.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/radical-district/",
+    "slug": "radical-district",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/sonido-tupinamba/",
+    "name": "SONIDO TUPINAMBA",
+    "legalName": "SONIDO TUPINAMBA",
+    "description": "Sonido Tupinamba es music curator, DJ y presentadora de radio en Dublab y Radio Primavera Sound.\nNacida en los Andes argentinos, Tupinamba comenzó a pinchar cuando tenía dieciséis años en su ciudad natal de Mendoza. En ese momento, ella era una de las pocas artistas femeninas en la escena. Una vez establecida en Barcelona inició su andadura musical en diferentes espacios y centros culturales de la ciudad.\nHa compartido sus gustos y habilidades en festivales internacionales como Glastonbury (Reino Unido), WOMAD (Reino Unido y España), Pohoda (Eslovaquia), BUE (Argentina), Plai (Rumania), Soundeat, Mutek y Primavera Sound (España). Sus sets también han sacudido las pistas de baile en templos de la música como Pikes (Ibiza). Nitsa (Barcelona), Bar Caracol (São Paulo), Noche Negra y Terminal Club (Ciudad de México).\n\nESTILO DE MUSICA\nInspirada en las raíces selváticas y exóticas de la música africana y latinoamericana, Tupinamba mezcla sus influencias tropicales con los ritmos disco, funk y house. Sus sesiones son eclécticas y vibrantes, transportando al público a diferentes épocas y lugares. Crea la banda sonora perfecta para cada momento y el ambiente perfecto para cada fiesta o evento. Sus sets son siempre brillantes y festivos, ya sea que los sonidos te lleven a una perfecta puesta de sol en la playa, una noche en Manhattan o una aventura en la jungla.\nSonido Tupinamba ha actuado junto a artistas como Lindstrom, Tensnake, Fatboy Slim, Victor Kiswell, Mafalda, Waxist, El Guincho y Chancha Via Circuito, entre otros.\n\nsonidotupinamba.com\n\nsoundcloud.com/tupinamba\n\nwww.mixcloud.com/sonidotupinamba/",
+    "url": "https://beta.mygloven.com/listing/sonido-tupinamba/",
+    "email": "julia@sonidotupinamba.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/aoniso-tupi.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/aoniso-tupi.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "julia@sonidotupinamba.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/sonido-tupinamba/",
+    "slug": "sonido-tupinamba",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/uakoz-terminal-m-elevate-off/",
+    "name": "UAKOZ | TERMINAL M | ELEVATE | OFF",
+    "legalName": "UAKOZ | TERMINAL M | ELEVATE | OFF",
+    "description": "Italian Techno player based in London.\n\nwww.beatport.com/artist/uakoz/171139\n\nsoundcloud.com/uakoz\n\nUakoz de la calurosa capital siciliana: Palermo, desarrolló su fuerte pasión por la música desde una edad muy temprana. El italiano comenzó a autoaprenderse a sí mismo con una caja de ritmos y a explorar programas de música gratuitos después de ser hipnotizado por los ritmos Techno y Minimal. Habiendo construido una sólida capacidad de producción en su ciudad natal, en 2011 decidió llevar las cosas más allá uniéndose al instituto SAE en Milán y completando el curso con resultados sobresalientes.\n\nCon un conjunto completo de nuevas habilidades adquiridas a través del estudio y la realización de sus primeros conciertos internacionales, Uakoz se mudó a Londres (donde ha estado basado desde 2013) para perseguir su sueño de desarrollar una exitosa carrera musical y ampliar sus percepciones musicales.\n\nSus producciones llamaron la atención de muchos, en particular del conocido dúo: Pig & Dan, que decidió lanzar sus producciones en su propio sello: Elevate. El lanzamiento incluyó un EP de 4 pistas llamado &quot;Handtrace&quot;. La pista principal también se lanzó en vinilo, uno de sus mejores logros para alguien relativamente nuevo en la industria de la música. Después de los siguientes 2 EP en el sello, donde su pista '' Disappeared '' obtuvo la licencia para la compilación en CD de '' Live In Tokyo '' de John Digweed en Bedrock Rec, el jefe del sello decidió que hiciera un remix de su propia canción llamada '' On The Way To Holland '', convirtiéndolo en un habitual del sello.\n\nAvance rápido otro EP de 4 pistas '' Don't Leave '' esta vez en colaboración con su compañero de clase de SAE: Alex Lentini, que incluye un remix de Dubspeeka, firmó con el legendario Monika Kruse's: Terminal M, y fue tocado y apoyado por muchos Djs de todo el mundo. como: Carl Cox, Adam Beyer & Ida Engberg, Enrico Sangiuliano, Pan-Pot, Tocadisco, Wally Lopez, D-Unity, Reform, Skober y muchos más.\n\nTuvo el honor absoluto de conseguir una de sus pistas en la exclusiva\nRecopilación en CD &quot;27 Years of Space Ibiza&quot; mezclada por Pig & Dan junto a Carl Cox y Mark Brown,\nEntre temas de grandes artistas como: Nicole Moudaber, Julian Jeweil, Luca Agnelli, Nic Fanciulli, Jon Rundell, Carlo Lio y muchos más.\n\nEn 2018 se asombró al ver su remix para el veterano: Eric Sneo, tocado en Privilege en Ibiza para su fiesta Resistance.\n\nAhora firmó con Planet Rhythm, KMS, Riot, Prospect Records, OFF Recordings, Respekt Recordings. remezclado y remezclado de grandes nombres de la escena como: Dubspeeka, Loco & Jam, Ramon Tapia, The Yellowheads, Hollen, Gallya, Balthazar & Jackrock, Dj Jock, Durtysoxxx, Andre Crom, Angy Kore, Aitor Ronda, Agent Orange\n\nMuchas veces detrás de las cubiertas demostró que sus habilidades maduraron con el tiempo lo que lo llevó a jugar en muchos eventos en ciudades del mundo como: Bahrein, Los Ángeles, Ámsterdam, Nantes, Split y muchas más.\nUno de sus mejores conciertos fue para la fiesta de lanzamiento de Junction 2 en Tobacco Dock en Londres en diciembre de 2018 tocando junto a leyendas: Adam Beyer y Joel Mull.\nParticipó en casi todas las exhibiciones de Terminal M, desde 2015, e hizo muchas apariciones en muchos shows en el renombrado Egg London, que se convirtió en su club de residencia, lo que le dio el honor de compartir los platos con artistas como: Monika Kruse (por supuesto), Mark. Reeve, Joyhauser, Ramiro Lopez Frankyeffe, Paride Saraceni, Bart Skills, Gary Beck, Paul Ritch, Dubspeeka, Oliver Huntemann, Sinisa Tamamovic y muchos más.\n\nEn 2018, Pig & Dan lo invitó a participar en su exclusivo escaparate de sellos &quot;Elevate&quot; impulsado por DJ Mag.\njunto con su compañero de sello: Aitor Ronda, y transmitido en vivo en la web.\n\nEn menos palabras, su devoción y pasión por la música nunca terminará porque la música es ahora una parte integral de su naturaleza y esencia.",
+    "url": "https://beta.mygloven.com/listing/uakoz-terminal-m-elevate-off/",
+    "email": "uakozmusic@gmail.com",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/UAKOZ1.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/UAKOZ1.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "uakozmusic@gmail.com"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/uakoz-terminal-m-elevate-off/",
+    "slug": "uakoz-terminal-m-elevate-off",
+    "city": "",
+    "country": ""
+  },
+  {
+    "@context": "http://www.schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://beta.mygloven.com/listing/unz/",
+    "name": "CORTAZAR | GROOVE GRILL",
+    "legalName": "CORTAZAR | GROOVE GRILL",
+    "description": "Cortazar es un dj vitoriano afincado en Madrid desde hace años.\n\nEl gasteiztarra Juan Cortazar pertenecía al colectivo de música electrónica Butterfly Kollektiv, pudiéndose escuchar sus sesiones mensualmente en locales como el Hor Dago!, Jimmy Jazz y Circulo entre otros. Cortazar comenzó a pinchar en el 2006 pero fue tiempo después viviendo en Bruselas y saliendo por los principales clubs y festivales, lo que le influenció musicalmente. Sus sesiones suelen ser melódicas y deep al principio, y más techno y underground al final. Su sesión especial orientada para escuharla en casa o una terraza, nos presenta desde temas disco al house del gran Moodymann.\n\nActualmente integrante del dúo que forma Groove Grill junto a Orson Sinaka.\n\nsoundcloud.com/unzmusic",
+    "url": "https://beta.mygloven.com/listing/unz/",
+    "photo": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/IMG_6139.jpg"
+    ],
+    "image": [
+      "https://beta.mygloven.com/wp-content/uploads/2021/02/IMG_6139.jpg"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support"
+    },
+    "geo": {
+      "@type": "GeoCoordinates"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": "5"
+    },
+    "source_url": "https://beta.mygloven.com/listing/unz/",
+    "slug": "unz",
+    "city": "",
+    "country": ""
+  }
+]

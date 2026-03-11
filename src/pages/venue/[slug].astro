@@ -13,34 +13,29 @@ const { venue } = Astro.props;
 const lat = venue.geo?.latitude;
 const lng = venue.geo?.longitude;
 const desc = (venue.description || '').replace(/&#039;/g, "'").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/\r\n/g, "\n");
-const images = venue.image || [];
+const allImages = [...new Set([...(venue.image || []), ...(venue.photo || []), ...(venue.photos || [])])];
 const logo = venue.logo?.[0];
-const photos = venue.photo || [];
-const allImages = [...new Set([...images, ...photos])];
 ---
 
 <Layout title={`${venue.name} - MyGloven`}>
   <main class="max-w-5xl mx-auto px-4 py-8">
-    <!-- Back -->
-    <a href="/#explore" class="text-cyan-400 hover:text-cyan-300 text-sm mb-6 inline-block">← Volver al buscador</a>
+    <a href="/#explore" class="text-[#e4665c] hover:text-[#d86259] text-sm mb-6 inline-block">← Volver</a>
 
-    <!-- Header -->
     <div class="flex items-center gap-4 mb-6">
-      {logo && <img src={logo} alt="" class="w-16 h-16 rounded-xl object-cover bg-[#12121E]" />}
+      {logo && <img src={logo} alt="" class="w-14 h-14 rounded-xl object-cover bg-gray-50 border border-gray-100" />}
       <div>
-        <h1 class="text-3xl md:text-4xl font-black text-white">{venue.name}</h1>
-        <p class="text-gray-400 text-sm mt-1">📍 {venue.address || 'Dirección no disponible'} {venue.city && `· ${venue.city}`} {venue.country && `· ${venue.country}`}</p>
+        <h1 class="text-2xl md:text-3xl font-black text-[#1a1a2a]">{venue.name}</h1>
+        <p class="text-gray-400 text-sm mt-1">📍 {venue.address || ''} {venue.city && `· ${venue.city}`}</p>
       </div>
     </div>
 
-    <!-- Images gallery -->
     {allImages.length > 0 && (
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8 rounded-xl overflow-hidden">
-        <img src={allImages[0]} alt={venue.name} class="w-full h-64 md:h-80 object-cover" />
+        <img src={allImages[0]} alt={venue.name} class="w-full h-64 md:h-80 object-cover rounded-xl" />
         {allImages.length > 1 && (
           <div class="grid grid-cols-2 gap-3">
             {allImages.slice(1, 5).map((img: string) => (
-              <img src={img} alt={venue.name} class="w-full h-full object-cover" />
+              <img src={img} alt={venue.name} class="w-full h-full object-cover rounded-lg" />
             ))}
           </div>
         )}
@@ -48,68 +43,43 @@ const allImages = [...new Set([...images, ...photos])];
     )}
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Description -->
       <div class="md:col-span-2">
-        <h2 class="text-xl font-bold text-white mb-4">Sobre este espacio</h2>
-        <div class="text-gray-300 leading-relaxed whitespace-pre-line text-sm">{desc}</div>
+        <div class="bg-white rounded-2xl border border-gray-100 p-8 shadow-sm">
+          <h2 class="text-lg font-bold text-[#1a1a2a] mb-4">Sobre este espacio</h2>
+          <div class="text-gray-600 leading-relaxed whitespace-pre-line text-sm">{desc}</div>
+        </div>
       </div>
 
-      <!-- Sidebar -->
-      <div class="space-y-6">
-        <!-- Contact info -->
-        <div class="bg-[#12121E] border border-[#1A1A2E] rounded-xl p-6">
-          <h3 class="font-bold text-white mb-4">Contacto</h3>
+      <div class="space-y-5">
+        <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+          <h3 class="font-bold text-[#1a1a2a] mb-4 text-sm uppercase tracking-wider">Contacto</h3>
           <div class="space-y-3 text-sm">
             {venue.telephone && (
-              <a href={`tel:${venue.telephone}`} class="flex items-center gap-2 text-gray-300 hover:text-cyan-400">
-                📞 {venue.telephone}
-              </a>
+              <a href={`tel:${venue.telephone}`} class="flex items-center gap-2 text-gray-500 hover:text-[#e4665c]">📞 {venue.telephone}</a>
             )}
             {venue.email && (
-              <a href={`mailto:${venue.email}`} class="flex items-center gap-2 text-gray-300 hover:text-cyan-400">
-                ✉️ {venue.email}
-              </a>
-            )}
-            {venue.url && venue.url !== venue.source_url && (
-              <a href={venue.url} target="_blank" class="flex items-center gap-2 text-gray-300 hover:text-cyan-400">
-                🌐 Web oficial
-              </a>
+              <a href={`mailto:${venue.email}`} class="flex items-center gap-2 text-gray-500 hover:text-[#e4665c]">✉️ {venue.email}</a>
             )}
           </div>
         </div>
 
-        <!-- Map -->
         {lat && lng && (
-          <div class="bg-[#12121E] border border-[#1A1A2E] rounded-xl overflow-hidden">
-            <h3 class="font-bold text-white p-4 pb-2">Ubicación</h3>
+          <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
             <iframe 
               src={`https://www.openstreetmap.org/export/embed.html?bbox=${parseFloat(lng)-0.01},${parseFloat(lat)-0.005},${parseFloat(lng)+0.01},${parseFloat(lat)+0.005}&layer=mapnik&marker=${lat},${lng}`}
-              class="w-full h-48 border-0"
-              loading="lazy"
+              class="w-full h-48 border-0" loading="lazy"
             ></iframe>
-            <a 
-              href={`https://www.google.com/maps?q=${lat},${lng}`}
-              target="_blank"
-              class="block text-center text-sm text-cyan-400 hover:text-cyan-300 py-3"
-            >
+            <a href={`https://www.google.com/maps?q=${lat},${lng}`} target="_blank"
+              class="block text-center text-sm text-[#e4665c] hover:text-[#d86259] py-3 font-medium">
               Abrir en Google Maps →
             </a>
           </div>
         )}
-
-        <!-- Quick facts -->
-        <div class="bg-[#12121E] border border-[#1A1A2E] rounded-xl p-6">
-          <h3 class="font-bold text-white mb-4">Detalles</h3>
-          <div class="space-y-2 text-sm text-gray-400">
-            {venue.address && <p>📍 {typeof venue.address === 'string' ? venue.address : ''}</p>}
-            {venue.openingHours && <p>🕐 {venue.openingHours}</p>}
-          </div>
-        </div>
       </div>
     </div>
   </main>
 
-  <footer class="py-10 text-center border-t border-[#1A1A2E] mt-20">
-    <p class="text-sm text-gray-600">&copy; 2026 MyGloven &bull; Powered by <span class="text-cyan-400">Aeon Infinitive</span></p>
+  <footer class="py-10 text-center border-t border-gray-100 mt-20">
+    <p class="text-xs text-gray-400">&copy; 2026 MyGloven &bull; Powered by <span class="text-[#e4665c]">Aeon Infinitive</span></p>
   </footer>
 </Layout>

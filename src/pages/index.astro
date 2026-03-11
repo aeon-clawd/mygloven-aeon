@@ -2,126 +2,137 @@
 import Layout from '../layouts/Layout.astro';
 import SearchBox from '../components/SearchBox';
 import ArtistGrid from '../components/ArtistGrid';
-import { Music, Zap, Shield, Globe } from 'lucide-react';
 import venuesData from '../data/venues.json';
 import artistsData from '../data/artists.json';
 
 const venueCount = venuesData.length;
 const artistCount = artistsData.length;
 ---
-<Layout title="MyGloven - Unifying Music Industry">
+<Layout title="MyGloven · Unifying Music Industry">
 	<main>
 		<!-- Navbar -->
-		<nav class="fixed top-0 w-full z-50 bg-[#0A0A14]/90 backdrop-blur-md border-b border-[#1A1A2E]">
-			<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-				<a href="/" class="text-2xl font-black text-white">MY<span class="text-cyan-400">GLOVEN</span></a>
-				<div class="hidden md:flex items-center gap-6 text-sm text-gray-400">
-					<a href="#explore" class="hover:text-white transition">Espacios</a>
-					<a href="#artists" class="hover:text-white transition">Artistas</a>
-					<a href="#about" class="hover:text-white transition">About</a>
-					<a href="mailto:info@mygloven.com" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">Contacto</a>
+		<nav class="fixed top-0 w-full z-50 bg-[#1a1a2a] shadow-sm">
+			<div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+				<a href="/" class="text-xl font-black text-white tracking-tight">MYGLOVEN</a>
+				<div class="hidden md:flex items-center gap-6 text-sm">
+					<a href="#explore" class="text-gray-300 hover:text-white transition">Espacios</a>
+					<a href="#artists" class="text-gray-300 hover:text-white transition">Artistas</a>
+					<a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+					<a href="mailto:info@mygloven.com" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-4 py-1.5 rounded-full text-sm font-semibold transition">Contacto</a>
 				</div>
 			</div>
 		</nav>
 
-		<!-- Hero -->
-		<section class="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 pt-24 pb-10 overflow-hidden">
-			<div class="absolute inset-0 pointer-events-none opacity-15">
-				<div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-cyan-400 blur-[150px] rounded-full"></div>
-				<div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-500 blur-[150px] rounded-full"></div>
-			</div>
-			<div class="relative z-10 max-w-4xl">
-				<p class="text-cyan-400 text-sm font-bold tracking-widest uppercase mb-4">Unifying Music Industry</p>
-				<h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-					Encuentra el espacio<br>perfecto para tu<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">próximo evento</span>
+		<!-- Hero with background image -->
+		<section class="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 pt-14" 
+			style="background: linear-gradient(rgba(26,26,42,0.75), rgba(26,26,42,0.85)), url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=1600') center/cover no-repeat;">
+			<div class="relative z-10 max-w-3xl">
+				<h1 class="text-4xl md:text-6xl font-black text-white mb-4 leading-tight tracking-tight">
+					Espacios y artistas<br>para tu próximo evento.
 				</h1>
-				<p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-					La mayor red de venues y artistas de España y Portugal. Toda la información técnica y contacto directo en un solo click.
+				<p class="text-base md:text-lg text-gray-300 max-w-xl mx-auto mb-8">
+					new AI tools coming soon.. my'G.<br>
+					<span class="text-[#e4665c] font-semibold">#myglobalvenue</span>
 				</p>
-				<div class="flex gap-4 justify-center flex-wrap">
-					<a href="#explore" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-purple-500/20 transition-all hover:scale-105">
-						Explorar Venues ({venueCount})
-					</a>
-					<a href="#artists" class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-bold transition-all">
-						Ver Artistas ({artistCount})
-					</a>
+
+				<!-- Search tabs -->
+				<div class="bg-white rounded-2xl shadow-2xl p-6 max-w-2xl mx-auto">
+					<div class="flex gap-4 mb-4 justify-center">
+						<a href="#explore" class="flex items-center gap-2 bg-[#e4665c] text-white px-5 py-2 rounded-full text-sm font-semibold">
+							📍 Espacios <span class="bg-white/20 px-2 py-0.5 rounded-full text-xs">{venueCount}</span>
+						</a>
+						<a href="#artists" class="flex items-center gap-2 bg-gray-100 text-[#1a1a2a] px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
+							🎵 Artistas <span class="bg-[#e4665c]/10 text-[#e4665c] px-2 py-0.5 rounded-full text-xs">{artistCount}</span>
+						</a>
+					</div>
+					<p class="text-gray-400 text-xs">Busca entre {venueCount + artistCount} espacios y artistas verificados en España y Portugal</p>
 				</div>
 			</div>
 		</section>
 
-		<!-- Stats -->
-		<section class="py-12 border-y border-[#1A1A2E] bg-[#0A0A14]">
-			<div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-				<div>
-					<p class="text-3xl font-black text-white">{venueCount}</p>
-					<p class="text-sm text-gray-400 uppercase tracking-widest">Venues</p>
-				</div>
-				<div>
-					<p class="text-3xl font-black text-white">{artistCount}</p>
-					<p class="text-sm text-gray-400 uppercase tracking-widest">Artistas</p>
-				</div>
-				<div>
-					<p class="text-3xl font-black text-white">70+</p>
-					<p class="text-sm text-gray-400 uppercase tracking-widest">Ciudades</p>
-				</div>
-				<div>
-					<p class="text-3xl font-black text-white">IA</p>
-					<p class="text-sm text-gray-400 uppercase tracking-widest">Powered</p>
+		<!-- Why trust MyGloven -->
+		<section class="py-16 bg-white border-b border-gray-100">
+			<div class="max-w-5xl mx-auto px-4">
+				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">¿Por qué confiar en MYGLOVEN?</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="text-center">
+						<div class="text-4xl font-black text-[#e4665c] mb-2">1</div>
+						<h3 class="font-bold text-[#1a1a2a] mb-2">Descubre espacios más rápido</h3>
+						<p class="text-sm text-gray-500">Búsqueda inteligente con IA para encontrar el espacio perfecto para tu evento.</p>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-black text-[#e4665c] mb-2">2</div>
+						<h3 class="font-bold text-[#1a1a2a] mb-2">Conecta con la industria</h3>
+						<p class="text-sm text-gray-500">Conectamos espacios, artistas y promotores para facilitar la música en vivo.</p>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-black text-[#e4665c] mb-2">3</div>
+						<h3 class="font-bold text-[#1a1a2a] mb-2">Información clara y útil</h3>
+						<p class="text-sm text-gray-500">Rider técnico, capacidad, contacto directo y ubicación exacta en un click.</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Explore Venues -->
-		<section id="explore" class="py-20 bg-[#0A0A14]">
+		<section id="explore" class="py-16 bg-[#fafafa]">
 			<div class="max-w-7xl mx-auto px-4 text-center mb-8">
-				<h2 class="text-3xl md:text-4xl font-black text-white mb-3 italic tracking-tight">Directorio de Espacios</h2>
-				<p class="text-gray-400">Salas de conciertos, clubs, rooftops y espacios polivalentes.</p>
+				<h2 class="text-3xl font-black text-[#1a1a2a] mb-2">Espacios</h2>
+				<p class="text-gray-400 text-sm">Salas de conciertos, clubs, teatros, rooftops y más</p>
 			</div>
 			<SearchBox client:load />
 		</section>
 
 		<!-- Artists -->
-		<section id="artists" class="py-24 bg-[#12121E] border-y border-[#1A1A2E]">
+		<section id="artists" class="py-20 bg-white border-y border-gray-100">
 			<div class="max-w-7xl mx-auto px-4">
-				<div class="text-center mb-16">
-					<p class="text-cyan-400 text-sm font-bold tracking-widest uppercase mb-4">Lineup</p>
-					<h2 class="text-4xl md:text-5xl font-black text-white italic tracking-tight">Artistas</h2>
-					<p class="text-gray-400 max-w-xl mx-auto mt-4">Conecta con DJs, bandas y productores de toda la península.</p>
+				<div class="text-center mb-14">
+					<h2 class="text-3xl font-black text-[#1a1a2a] mb-2">Artistas</h2>
+					<p class="text-gray-400 text-sm">DJs, bandas y productores. Haz click para ver sus perfiles y enlaces.</p>
 				</div>
 				<ArtistGrid client:load />
-				<div class="text-center mt-16">
-					<a href="mailto:info@mygloven.com" class="text-cyan-400 border border-cyan-400/20 px-8 py-4 rounded-full font-bold hover:bg-cyan-400/5 transition-all inline-block">
-						¿Eres artista? Regístrate gratis
+				<div class="text-center mt-14">
+					<a href="mailto:info@mygloven.com" class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
+						¿Eres artista? Regístrate →
 					</a>
 				</div>
 			</div>
 		</section>
 
-		<!-- About -->
-		<section id="about" class="py-20 bg-[#0A0A14]">
+		<!-- About + Primavera Pro -->
+		<section id="about" class="py-16 bg-[#fafafa]">
 			<div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 				<div>
-					<p class="text-cyan-400 text-sm font-bold tracking-widest uppercase mb-4">Sobre nosotros</p>
-					<h2 class="text-3xl font-black text-white mb-6">Nacidos de la industria musical</h2>
-					<p class="text-gray-400 leading-relaxed mb-4 text-sm">
-						MyGloven facilita la conexión entre espacios, artistas y promotores para hacer posible más eventos de música en vivo.
+					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Sobre MYGLOVEN</h2>
+					<p class="text-gray-500 leading-relaxed text-sm mb-3">
+						MyGloven nace con una idea sencilla: facilitar la conexión entre espacios, artistas y promotores para hacer posible más eventos de música en vivo.
 					</p>
-					<p class="text-gray-400 leading-relaxed text-sm">
-						Actualmente incorporamos búsqueda inteligente y sistemas que permitirán visualizar espacios según la visión de cada evento, preparándonos para el lanzamiento oficial en Primavera Pro '26.
+					<p class="text-gray-500 leading-relaxed text-sm">
+						Estamos incorporando búsqueda inteligente con IA y herramientas visuales para explorar espacios según la visión de cada evento.
 					</p>
 				</div>
-				<div class="bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-[#1A1A2E] rounded-3xl p-10 text-center relative overflow-hidden group">
-					<div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					<p class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-4 tracking-tighter">Primavera Pro '26</p>
-					<p class="text-gray-400 text-sm">Proyecto seleccionado<br>Ideas Showroom</p>
-					<p class="text-xs text-gray-500 mt-3 font-mono">BCN · 3-5 JUN</p>
+				<div class="bg-[#1a1a2a] rounded-2xl p-10 text-center">
+					<p class="text-3xl font-black text-white mb-2">Primavera Pro '26</p>
+					<p class="text-[#e4665c] font-semibold text-sm">Proyecto seleccionado · Ideas Showroom</p>
+					<p class="text-gray-400 text-xs mt-2">Barcelona · 3-5 Junio 2026</p>
 				</div>
 			</div>
 		</section>
 
-		<footer class="py-12 text-center border-t border-[#1A1A2E] bg-[#0A0A14]">
-			<p class="text-[10px] text-gray-600 uppercase tracking-[0.2em]">
-				&copy; 2026 MyGloven &bull; Unifying Music Industry &bull; <span class="text-cyan-400">Aeon Infinitive</span>
+		<!-- CTA -->
+		<section class="py-16 bg-[#1a1a2a] text-center">
+			<div class="max-w-xl mx-auto px-4">
+				<h2 class="text-2xl font-black text-white mb-4">¿Quieres formar parte?</h2>
+				<p class="text-gray-400 text-sm mb-8">Espacios, artistas y promotores — únete a la comunidad.</p>
+				<a href="mailto:info@mygloven.com" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
+					info@mygloven.com
+				</a>
+			</div>
+		</section>
+
+		<footer class="py-8 text-center bg-[#fafafa] border-t border-gray-100">
+			<p class="text-[10px] text-gray-400 uppercase tracking-[0.15em]">
+				&copy; 2026 MyGloven &bull; Powered by <span class="text-[#e4665c]">Aeon Infinitive</span>
 			</p>
 		</footer>
 	</main>

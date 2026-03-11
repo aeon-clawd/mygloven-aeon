@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import artistsData from '../../data/artists.json';
+
+export function getStaticPaths() {
+  return artistsData.map((artist: any) => ({
+    params: { slug: artist.slug },
+    props: { artist },
+  }));
+}
+
+const { artist } = Astro.props;
+const desc = (artist.description || '').replace(/&#039;/g, "'").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/\r\n/g, "\n");
+const images = [...new Set([...(artist.image || []), ...(artist.photo || []), ...(artist.photos || [])])];
+const logo = artist.logo?.[0];
+
+// Extract links from description (spotify, youtube, soundcloud, instagram, etc)
+const linkPatterns = [
+  { name: 'Spotify', icon: '🎵', regex: /https?:\/\/(open\.)?spotify\.com\/[^\s<"]+/gi },
+  { name: 'YouTube', icon: '▶️', regex: /https?:\/\/(www\.)?(youtube\.com|youtu\.be)\/[^\s<"]+/gi },
+  { name: 'SoundCloud', icon: '☁️', regex: /https?:\/\/(www\.)?soundcloud\.com\/[^\s<"]+/gi },
+  { name: 'Instagram', icon: '📸', regex: /https?:\/\/(www\.)?instagram\.com\/[^\s<"]+/gi },
+  { name: 'Web', icon: '🌐', regex: /https?:\/\/(?!.*(?:spotify|youtube|youtu\.be|soundcloud|instagram|mygloven))[^\s<"]+/gi },
+];
+
+const links: { name: string; icon: string; url: string }[] = [];
+for (const p of linkPatterns) {
+  const matches = desc.match(p.regex);
+  if (matches) {
+    for (const url of matches) {
+      links.push({ name: p.name, icon: p.icon, url });
+    }
+  }
+}
+
+// Also check if artist has a website URL
+if (artist.sameAs) {
+  const sameAs = Array.isArray(artist.sameAs) ? artist.sameAs : [artist.sameAs];
+  for (const url of sameAs) {
+    if (url.includes('spotify')) links.push({ name: 'Spotify', icon: '🎵', url });
+    else if (url.includes('youtube') || url.includes('youtu.be')) links.push({ name: 'YouTube', icon: '▶️', url });
+    else if (url.includes('soundcloud')) links.push({ name: 'SoundCloud', icon: '☁️', url });
+    else if (url.includes('instagram')) links.push({ name: 'Instagram', icon: '📸', url });
+    else links.push({ name: 'Web', icon: '🌐', url });
+  }
+}
+---
+
+<Layout title={`${artist.name} - MyGloven`}>
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <a href="/#artists" class="text-[#e4665c] hover:text-[#d86259] text-sm mb-8 inline-block">← Volver a artistas</a>
+
+    <div class="flex flex-col md:flex-row items-start gap-8 mb-10">
+      <div class="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-[#e4665c] flex-shrink-0 mx-auto md:mx-0">
+        <img 
+          src={images[0] || 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400'} 
+          alt={artist.name}
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="text-3xl md:text-4xl font-black text-[#1a1a2a] mb-2">{artist.name}</h1>
+        {artist.email && (
+          <a href={`mailto:${artist.email}`} class="text-gray-500 text-sm hover:text-[#e4665c]">✉️ {artist.email}</a>
+        )}
+        
+        {links.length > 0 && (
+          <div class="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
+            {links.map((link) => (
+              <a 
+                href={link.url} 
+                target="_blank" 
+                class="bg-[#e4665c] hover:bg-[#d86259] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2"
+              >
+                {link.icon} {link.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    {images.length > 1 && (
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10 rounded-xl overflow-hidden">
+        {images.slice(1, 7).map((img: string) => (
+          <img src={img} alt={artist.name} class="w-full h-48 object-cover rounded-lg" />
+        ))}
+      </div>
+    )}
+
+    {desc && (
+      <div class="bg-white rounded-2xl border border-gray-100 p-8 shadow-sm">
+        <h2 class="text-lg font-bold text-[#1a1a2a] mb-4">Sobre el artista</h2>
+        <div class="text-gray-600 leading-relaxed whitespace-pre-line text-sm">{desc}</div>
+      </div>
+    )}
+  </main>
+
+  <footer class="py-10 text-center border-t border-gray-100 mt-20">
+    <p class="text-xs text-gray-400">&copy; 2026 MyGloven &bull; Powered by <span class="text-[#e4665c]">Aeon Infinitive</span></p>
+  </footer>
+</Layout>
