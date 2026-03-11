@@ -1,0 +1,12 @@
+{
+  "name": "mygloven-rag-api",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "fuse.js": "^7.0.0"
+  }
+}

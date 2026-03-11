@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ChatBot from "../components/ChatBot";
 import SearchBox from '../components/SearchBox';
 import ArtistGrid from '../components/ArtistGrid';
 import venuesData from '../data/venues.json';
@@ -135,5 +136,6 @@ const artistCount = artistsData.length;
 				&copy; 2026 MyGloven &bull; Powered by <span class="text-[#e4665c]">Aeon Infinitive</span>
 			</p>
 		</footer>
+	<ChatBot client:load />
 	</main>
 </Layout>
