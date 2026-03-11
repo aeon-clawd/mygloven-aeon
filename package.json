@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
-    "@astrojs/tailwind": "^6.0.0",
     "@tailwindcss/vite": "^4.0.0",
     "astro": "^5.4.1",
     "clsx": "^2.1.1",
     "fuse.js": "^7.0.0",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
