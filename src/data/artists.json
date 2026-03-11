@@ -35,7 +35,8 @@
       "bestRating": "5"
     },
     "source_url": "https://beta.mygloven.com/listing/chacal-cult/",
-    "slug": "chacal-cult"
+    "slug": "chacal-cult",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -68,7 +69,12 @@
       "bestRating": "5"
     },
     "source_url": "https://beta.mygloven.com/listing/inigo-palmero/",
-    "slug": "inigo-palmero"
+    "slug": "inigo-palmero",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/0TOhXnyKNW9YhFV4U",
+      "soundcloud": "https://soundcloud.com/palmerodj",
+      "instagram": "https://instagram.com/i.palmero"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -101,7 +107,12 @@
       "bestRating": "5"
     },
     "source_url": "https://beta.mygloven.com/listing/jeremy-session-drummer-dj/",
-    "slug": "jeremy-session-drummer-dj"
+    "slug": "jeremy-session-drummer-dj",
+    "links": {
+      "instagram": "https://instagram.com/jeremy.jayjay",
+      "soundcloud": "https://soundcloud.com/jerames",
+      "web": "https://www.jayjaydrums.com/"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -129,7 +140,11 @@
       "bestRating": "5"
     },
     "source_url": "https://beta.mygloven.com/listing/laville-acid-jazz-records/",
-    "slug": "laville-acid-jazz-records"
+    "slug": "laville-acid-jazz-records",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/0Yozms4JXzD67amL5nv3eV",
+      "web": "https://lavillemusic.world/"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -162,7 +177,10 @@
       "bestRating": "5"
     },
     "source_url": "https://beta.mygloven.com/listing/ravioli-makers/",
-    "slug": "ravioli-makers"
+    "slug": "ravioli-makers",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/6HyAMWnPqVOjAaPrHg4j1H"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -192,7 +210,10 @@
     "source_url": "https://beta.mygloven.com/listing/alba-heidari-decoding-the-void-aria/",
     "slug": "alba-heidari-decoding-the-void-aria",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {
+      "ra": "https://ra.co/dj/albaheidari"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -222,7 +243,12 @@
     "source_url": "https://beta.mygloven.com/listing/andy-princz/",
     "slug": "andy-princz",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/41PaXmrIss6YvycGxQnS6B",
+      "youtube": "https://www.youtube.com/watch?v=q5lKiFIbuPY",
+      "web": "https://www.mixcloud.com/andyprincz5/"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -254,7 +280,10 @@
     "source_url": "https://beta.mygloven.com/listing/black-lotus/",
     "slug": "black-lotus",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {
+      "soundcloud": "https://soundcloud.com/blcklts"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -286,7 +315,8 @@
     "source_url": "https://beta.mygloven.com/listing/borgia-serrano-grabeaty/",
     "slug": "borgia-serrano-grabeaty",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -316,7 +346,8 @@
     "slug": "carlos-coca-vivesince-1987",
     "description": "",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -346,7 +377,12 @@
     "source_url": "https://beta.mygloven.com/listing/cosmo-sofi/",
     "slug": "cosmo-sofi",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {
+      "soundcloud": "https://soundcloud.com/cosmosofi",
+      "instagram": "https://instagram.com/cosmo.sofi",
+      "ra": "https://ra.co/dj/cosmosofi"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -376,7 +412,8 @@
     "source_url": "https://beta.mygloven.com/listing/dav-o/",
     "slug": "dav-o",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -409,7 +446,8 @@
     "source_url": "https://beta.mygloven.com/listing/el-milagro/",
     "slug": "el-milagro",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -441,7 +479,8 @@
     "source_url": "https://beta.mygloven.com/listing/francisco-sokolowicz-compositor/",
     "slug": "francisco-sokolowicz-compositor",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -471,7 +510,8 @@
     "source_url": "https://beta.mygloven.com/listing/grazziella/",
     "slug": "grazziella",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -501,7 +541,10 @@
     "source_url": "https://beta.mygloven.com/listing/groove-grill/",
     "slug": "groove-grill",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {
+      "web": "https://groovegrill.net/"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -533,7 +576,8 @@
     "source_url": "https://beta.mygloven.com/listing/juannce/",
     "slug": "juannce",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -568,7 +612,8 @@
     "source_url": "https://beta.mygloven.com/listing/mihai/",
     "slug": "mihai",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -598,7 +643,8 @@
     "source_url": "https://beta.mygloven.com/listing/negrait-butterfly-kollektiv/",
     "slug": "negrait-butterfly-kollektiv",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -628,7 +674,8 @@
     "slug": "orson-sinaka-groove-grill",
     "description": "",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -663,7 +710,11 @@
     "source_url": "https://beta.mygloven.com/listing/persus-nine/",
     "slug": "persus-nine",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/7KuVHGcLx5sZHFvFpcb1la",
+      "soundcloud": "https://soundcloud.com/persus-nine"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -698,7 +749,8 @@
     "source_url": "https://beta.mygloven.com/listing/radical-district/",
     "slug": "radical-district",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   },
   {
     "@context": "http://www.schema.org",
@@ -730,7 +782,10 @@
     "source_url": "https://beta.mygloven.com/listing/sonido-tupinamba/",
     "slug": "sonido-tupinamba",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {
+      "soundcloud": "https://soundcloud.com/tupinamba"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -762,7 +817,11 @@
     "source_url": "https://beta.mygloven.com/listing/uakoz-terminal-m-elevate-off/",
     "slug": "uakoz-terminal-m-elevate-off",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/63P4xkValYo5VlpnirLqRM",
+      "soundcloud": "https://soundcloud.com/uakoz"
+    }
   },
   {
     "@context": "http://www.schema.org",
@@ -792,6 +851,7 @@
     "source_url": "https://beta.mygloven.com/listing/unz/",
     "slug": "unz",
     "city": "",
-    "country": ""
+    "country": "",
+    "links": {}
   }
 ]
