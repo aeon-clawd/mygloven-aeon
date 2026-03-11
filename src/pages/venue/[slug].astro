@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import VenueMap from '../../components/VenueMap';
 import venuesData from '../../data/venues.json';
 
 export function getStaticPaths() {
@@ -10,11 +11,12 @@ export function getStaticPaths() {
 }
 
 const { venue } = Astro.props;
-const lat = venue.geo?.latitude;
-const lng = venue.geo?.longitude;
+const lat = venue.geo?.latitude ? parseFloat(venue.geo.latitude) : null;
+const lng = venue.geo?.longitude ? parseFloat(venue.geo.longitude) : null;
 const desc = (venue.description || '').replace(/&#039;/g, "'").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/\r\n/g, "\n");
 const allImages = [...new Set([...(venue.image || []), ...(venue.photo || []), ...(venue.photos || [])])];
 const logo = venue.logo?.[0];
+const addr = typeof venue.address === 'string' ? venue.address.replace(/&#039;/g, "'") : '';
 ---
 
 <Layout title={`${venue.name} - MyGloven`}>
@@ -25,7 +27,7 @@ const logo = venue.logo?.[0];
       {logo && <img src={logo} alt="" class="w-14 h-14 rounded-xl object-cover bg-gray-50 border border-gray-100" />}
       <div>
         <h1 class="text-2xl md:text-3xl font-black text-[#1a1a2a]">{venue.name}</h1>
-        <p class="text-gray-400 text-sm mt-1">📍 {venue.address || ''} {venue.city && `· ${venue.city}`}</p>
+        <p class="text-gray-400 text-sm mt-1">📍 {addr} {venue.city && `· ${venue.city}`}</p>
       </div>
     </div>
 
@@ -55,25 +57,22 @@ const logo = venue.logo?.[0];
           <h3 class="font-bold text-[#1a1a2a] mb-4 text-sm uppercase tracking-wider">Contacto</h3>
           <div class="space-y-3 text-sm">
             {venue.telephone && (
-              <a href={`tel:${venue.telephone}`} class="flex items-center gap-2 text-gray-500 hover:text-[#e4665c]">📞 {venue.telephone}</a>
+              <a href={`tel:${venue.telephone}`} class="flex items-center gap-2 text-gray-500 hover:text-[#e4665c] transition-colors">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 fill-gray-400"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                {venue.telephone}
+              </a>
             )}
             {venue.email && (
-              <a href={`mailto:${venue.email}`} class="flex items-center gap-2 text-gray-500 hover:text-[#e4665c]">✉️ {venue.email}</a>
+              <a href={`mailto:${venue.email}`} class="flex items-center gap-2 text-gray-500 hover:text-[#e4665c] transition-colors">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 fill-gray-400"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                {venue.email}
+              </a>
             )}
           </div>
         </div>
 
         {lat && lng && (
-          <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
-            <iframe 
-              src={`https://www.openstreetmap.org/export/embed.html?bbox=${parseFloat(lng)-0.01},${parseFloat(lat)-0.005},${parseFloat(lng)+0.01},${parseFloat(lat)+0.005}&layer=mapnik&marker=${lat},${lng}`}
-              class="w-full h-48 border-0" loading="lazy"
-            ></iframe>
-            <a href={`https://www.google.com/maps?q=${lat},${lng}`} target="_blank"
-              class="block text-center text-sm text-[#e4665c] hover:text-[#d86259] py-3 font-medium">
-              Abrir en Google Maps →
-            </a>
-          </div>
+          <VenueMap client:load lat={lat} lng={lng} name={venue.name} address={addr} />
         )}
       </div>
     </div>
