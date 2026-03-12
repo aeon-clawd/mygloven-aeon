@@ -32,8 +32,8 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 		<section class="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 pt-14" 
 			style={`background: linear-gradient(rgba(26,26,42,0.65), rgba(26,26,42,0.80)), url('/images/hero-bg.jpg') center/cover no-repeat;`}>
 			<div class="relative z-10 max-w-3xl">
-				<h1 class="text-4xl md:text-6xl font-light text-white mb-4 leading-tight tracking-tight" set:html={config?.heroTitle || 'Espacios y artistas<br>para tu próximo evento.'} />
-				<p class="text-base md:text-lg text-white max-w-xl mx-auto mb-8">
+				<h1 class="text-4xl md:text-6xl font-extralight text-white mb-4 leading-tight tracking-tight" set:html={config?.heroTitle || 'Espacios y artistas<br>para tu próximo evento.'} />
+				<p class="text-base md:text-lg text-white max-w-xl mx-auto mb-8" style="color: #ffffff !important;">
 					{config?.heroSubtitle || "new AI tools coming soon.. my'G."}<br>
 					<span class="text-[#e4665c] font-semibold">{config?.heroHashtag || '#myglobalvenue'}</span>
 				</p>
@@ -58,9 +58,9 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">¿Por qué confiar en mygloven?</h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{(config?.features || [
-						{ title: 'Descubre espacios más rápido', description: 'Búsqueda inteligente con IA para encontrar el espacio perfecto para tu evento.' },
-						{ title: 'Conecta con la industria', description: 'Conectamos espacios, artistas y promotores para facilitar la música en vivo.' },
-						{ title: 'Información clara y útil', description: 'Rider técnico, capacidad, contacto directo y ubicación exacta en un click.' },
+						{ title: 'Busca', description: 'Utiliza la búsqueda inteligente impulsada por IA de my\'G para encontrar exactamente lo que necesitas en segundos. Describe tu evento, aplica filtros o introduce tus criterios y la plataforma analizará múltiples variables para mostrarte las opciones más relevantes, optimizando el proceso de planificación desde el primer momento.' },
+						{ title: 'Elige', description: 'Accede a una amplia base de datos de espacios, artistas y proveedores dentro de la industria. Explora perfiles verificados, compara opciones y conecta directamente con los profesionales y recursos que mejor se adaptan a tu proyecto o evento.' },
+						{ title: 'Unifica', description: 'Centraliza todo el proceso en un solo lugar. my\'G reúne tus búsquedas, resultados y contactos en un mismo portal, facilitando la gestión y la comunicación con todos los proveedores implicados en la producción de tu evento.' },
 					]).map((f: any, i: number) => (
 						<div class="text-center">
 							<div class="text-4xl font-black text-[#e4665c] mb-2">{i + 1}</div>
@@ -79,7 +79,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				<p class="text-gray-400 text-sm">Descubre nuevos espacios para tus eventos.</p>
 			</div>
 			<SearchBox client:load />
-			<div class="text-center mt-10">
+			<div class="text-center mt-14 flex flex-col sm:flex-row gap-4 justify-center">
 				<a href={`mailto:${contactEmail}`} class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
 					¿Tienes un espacio? Regístrate →
 				</a>
@@ -112,12 +112,13 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Sobre mygloven</h2>
 					<p class="text-gray-500 leading-relaxed text-sm mb-3">{config?.aboutText || 'MyGloven nace con una idea sencilla: facilitar la conexión entre espacios, artistas y promotores para hacer posible más eventos de música en vivo.'}</p>
 					<p class="text-gray-500 leading-relaxed text-sm">{config?.aboutSecondary || 'Estamos incorporando búsqueda inteligente con IA y herramientas visuales para explorar espacios según la visión de cada evento.'}</p>
+					<img src="/images/about-team.jpg" alt="Álvaro y Nayara — equipo mygloven" class="mt-6 rounded-xl shadow-md w-full object-cover" loading="lazy" />
 				</div>
 				<div class="bg-[#1a1a2a] rounded-2xl p-10 text-center">
 					<p class="text-3xl font-black text-white mb-2">{config?.primaveraProYear || "Primavera Pro '26"}</p>
 					<p class="text-[#e4665c] font-semibold text-sm">{config?.primaveraProSubtitle || 'Proyecto seleccionado · Ideas Showroom'}</p>
 					<p class="text-gray-400 text-xs mt-2">{config?.primaveraProDate || 'Barcelona · 3-5 Junio 2026'}</p>
-					<a href="https://www.primaverasound.com/es/primavera-pro" target="_blank" rel="noopener" class="inline-block mt-4 text-[#e4665c] hover:text-white text-xs font-semibold border border-[#e4665c] px-4 py-1.5 rounded-full transition-all hover:bg-[#e4665c]">
+					<a href="https://www.primaverasound.com/en/primavera-pro/meet-the-selected-proposals-for-ideas-showroom-2026" target="_blank" rel="noopener" class="inline-block mt-4 text-[#e4665c] hover:text-white text-xs font-semibold border border-[#e4665c] px-4 py-1.5 rounded-full transition-all hover:bg-[#e4665c]">
 						Ver Ideas Showroom →
 					</a>
 				</div>
