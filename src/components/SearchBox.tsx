@@ -30,7 +30,7 @@ export default function SearchBox() {
     });
   }, []);
 
-  const allCities = useMemo(() => [...new Set(venuesData.map(v => v.city).filter(Boolean))].sort() as string[], [venuesData]);
+  const allCities = useMemo(() => [...new Set(venuesData.map(v => v.city).filter(c => c && c.length > 2 && !c.startsWith('-') && !/^\d+$/.test(c)))].sort() as string[], [venuesData]);
 
   const fuse = useMemo(() => new Fuse(venuesData, {
     keys: [
