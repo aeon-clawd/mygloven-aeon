@@ -30,7 +30,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 
 		<!-- Hero -->
 		<section class="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 pt-14" 
-			style={`background: linear-gradient(rgba(26,26,42,0.65), rgba(26,26,42,0.80)), url('${config?.heroBackground || '/images/hero-bg.jpg'}') center/cover no-repeat;`}>
+			style={`background: linear-gradient(rgba(26,26,42,0.65), rgba(26,26,42,0.80)), url('/images/hero-bg.jpg') center/cover no-repeat;`}>
 			<div class="relative z-10 max-w-3xl">
 				<h1 class="text-4xl md:text-6xl font-light text-white mb-4 leading-tight tracking-tight" set:html={config?.heroTitle || 'Espacios y artistas<br>para tu próximo evento.'} />
 				<p class="text-base md:text-lg text-white max-w-xl mx-auto mb-8">
