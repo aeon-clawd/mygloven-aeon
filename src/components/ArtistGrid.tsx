@@ -13,10 +13,12 @@ export default function ArtistGrid() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    client.fetch(`*[_type == "artist"] | order(name asc) {
+    client.fetch(`*[_type == "artist"] {
       _id, name, "slug": slug.current, avatar, images
     }`).then((data) => {
-      setArtists(data);
+      // Shuffle and show max 10 on homepage
+      const shuffled = [...data].sort(() => Math.random() - 0.5);
+      setArtists(shuffled.slice(0, 10));
       setLoading(false);
     });
   }, []);

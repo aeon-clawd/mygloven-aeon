@@ -14,23 +14,23 @@ export default function SearchBox() {
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('');
   const [city, setCity] = useState('');
-  const [country, setCountry] = useState('');
   const [results, setResults] = useState<any[]>([]);
-  const [showCount, setShowCount] = useState(18);
+  const [showCount, setShowCount] = useState(10);
 
   useEffect(() => {
-    client.fetch(`*[_type == "venue"] | order(name asc) {
+    client.fetch(`*[_type == "venue"] {
       _id, name, "slug": slug.current, description, city, country, address,
       telephone, email, logo, images, geo
     }`).then((data) => {
-      setVenuesData(data);
-      setResults(data.slice(0, 18));
+      // Shuffle for random order on each load
+      const shuffled = [...data].sort(() => Math.random() - 0.5);
+      setVenuesData(shuffled);
+      setResults(shuffled.slice(0, 10));
       setLoading(false);
     });
   }, []);
 
   const allCities = useMemo(() => [...new Set(venuesData.map(v => v.city).filter(Boolean))].sort() as string[], [venuesData]);
-  const allCountries = useMemo(() => [...new Set(venuesData.map(v => v.country).filter(Boolean))].sort() as string[], [venuesData]);
 
   const fuse = useMemo(() => new Fuse(venuesData, {
     keys: [
@@ -49,10 +49,9 @@ export default function SearchBox() {
       filtered = fuse.search(query).map(r => r.item);
     }
     if (city) filtered = filtered.filter(v => v.city === city);
-    if (country) filtered = filtered.filter(v => v.country === country);
     setResults(filtered);
-    setShowCount(18);
-  }, [query, city, country, venuesData]);
+    setShowCount(10);
+  }, [query, city, venuesData]);
 
   if (loading) return <div className="text-center py-16 text-gray-400">Cargando venues...</div>;
 
@@ -72,24 +71,14 @@ export default function SearchBox() {
       <div className="flex flex-wrap gap-3 mb-8">
         <select
           className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-[#1a1a2a] focus:outline-none focus:ring-1 focus:ring-[#e4665c]"
-          value={country}
-          onChange={(e) => { setCountry(e.target.value); setCity(''); }}
-        >
-          <option value="">Todos los países</option>
-          {allCountries.map(c => <option key={c} value={c}>{c}</option>)}
-        </select>
-        <select
-          className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-[#1a1a2a] focus:outline-none focus:ring-1 focus:ring-[#e4665c]"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         >
           <option value="">Todas las ciudades</option>
-          {allCities
-            .filter(c => !country || venuesData.some(v => v.city === c && v.country === country))
-            .map(c => <option key={c} value={c}>{c}</option>)}
+          {allCities.map(c => <option key={c} value={c}>{c}</option>)}
         </select>
-        {(query || city || country) && (
-          <button className="text-sm text-[#e4665c] hover:text-[#d86259] px-3" onClick={() => { setQuery(''); setCity(''); setCountry(''); }}>
+        {(query || city) && (
+          <button className="text-sm text-[#e4665c] hover:text-[#d86259] px-3" onClick={() => { setQuery(''); setCity(''); }}>
             ✕ Limpiar filtros
           </button>
         )}

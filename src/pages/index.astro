@@ -18,7 +18,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 		<!-- Navbar -->
 		<nav class="fixed top-0 w-full z-50 bg-[#1a1a2a] shadow-sm">
 			<div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-				<a href="/" class="text-xl font-black text-white tracking-tight">MYGLOVEN</a>
+				<a href="/" class="text-xl font-light text-white tracking-tight">mygloven</a>
 				<div class="hidden md:flex items-center gap-6 text-sm">
 					<a href="#explore" class="text-gray-300 hover:text-white transition">Espacios</a>
 					<a href="#artists" class="text-gray-300 hover:text-white transition">Artistas</a>
@@ -32,8 +32,8 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 		<section class="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 pt-14" 
 			style={`background: linear-gradient(rgba(26,26,42,0.75), rgba(26,26,42,0.85)), url('${config?.heroBackground || 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=1600'}') center/cover no-repeat;`}>
 			<div class="relative z-10 max-w-3xl">
-				<h1 class="text-4xl md:text-6xl font-black text-white mb-4 leading-tight tracking-tight" set:html={config?.heroTitle || 'Espacios y artistas<br>para tu próximo evento.'} />
-				<p class="text-base md:text-lg text-gray-300 max-w-xl mx-auto mb-8">
+				<h1 class="text-4xl md:text-6xl font-light text-white mb-4 leading-tight tracking-tight" set:html={config?.heroTitle || 'Espacios y artistas<br>para tu próximo evento.'} />
+				<p class="text-base md:text-lg text-white max-w-xl mx-auto mb-8">
 					{config?.heroSubtitle || "new AI tools coming soon.. my'G."}<br>
 					<span class="text-[#e4665c] font-semibold">{config?.heroHashtag || '#myglobalvenue'}</span>
 				</p>
@@ -47,7 +47,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 							Artistas <span class="bg-[#e4665c]/10 text-[#e4665c] px-2 py-0.5 rounded-full text-xs">{artistCount}</span>
 						</a>
 					</div>
-					<p class="text-gray-400 text-xs">Busca entre {venueCount + artistCount} espacios y artistas verificados en España y Portugal</p>
+					<p class="text-gray-400 text-xs">Busca entre {venueCount + artistCount} espacios y artistas verificados</p>
 				</div>
 			</div>
 		</section>
@@ -55,7 +55,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 		<!-- Why trust MyGloven -->
 		<section class="py-16 bg-white border-b border-gray-100">
 			<div class="max-w-5xl mx-auto px-4">
-				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">¿Por qué confiar en MYGLOVEN?</h2>
+				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">¿Por qué confiar en mygloven?</h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{(config?.features || [
 						{ title: 'Descubre espacios más rápido', description: 'Búsqueda inteligente con IA para encontrar el espacio perfecto para tu evento.' },
@@ -101,7 +101,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 		<section id="about" class="py-16 bg-[#fafafa]">
 			<div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 				<div>
-					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Sobre MYGLOVEN</h2>
+					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Sobre mygloven</h2>
 					<p class="text-gray-500 leading-relaxed text-sm mb-3">{config?.aboutText || 'MyGloven nace con una idea sencilla: facilitar la conexión entre espacios, artistas y promotores para hacer posible más eventos de música en vivo.'}</p>
 					<p class="text-gray-500 leading-relaxed text-sm">{config?.aboutSecondary || 'Estamos incorporando búsqueda inteligente con IA y herramientas visuales para explorar espacios según la visión de cada evento.'}</p>
 				</div>
