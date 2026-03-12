@@ -8,6 +8,11 @@ export default defineConfig({
   title: 'MyGloven CMS',
   projectId: '81mezrx9',
   dataset: 'production',
-  plugins: [structureTool(), visionTool()],
-  schema: { types: schemaTypes },
+  plugins: [
+    structureTool(),
+    visionTool(),
+  ],
+  schema: {
+    types: schemaTypes,
+  },
 });
