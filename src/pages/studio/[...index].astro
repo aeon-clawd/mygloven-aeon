@@ -1,23 +1,34 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-
 export function getStaticPaths() {
   return [{ params: { index: undefined } }];
 }
 ---
-<Layout title="MyGloven CMS">
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyGloven Studio</title>
+  <style>
+    html, body, #sanity { height: 100%; margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
   <div id="sanity"></div>
   <script>
     import { renderStudio } from 'sanity';
-    import config from '../../../sanity.config';
-    renderStudio(document.getElementById('sanity'), config);
-  </script>
-</Layout>
+    import { structureTool } from 'sanity/structure';
+    import { visionTool } from '@sanity/vision';
+    import { schemaTypes } from '../../sanity/schemas/index';
 
-<style is:global>
-  html, body, #sanity {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-</style>
+    renderStudio(document.getElementById('sanity'), {
+      name: 'mygloven',
+      title: 'MyGloven CMS',
+      projectId: '81mezrx9',
+      dataset: 'production',
+      plugins: [structureTool(), visionTool()],
+      schema: { types: schemaTypes },
+      basePath: '/studio',
+    });
+  </script>
+</body>
+</html>
