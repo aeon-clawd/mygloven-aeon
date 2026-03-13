@@ -47,7 +47,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 							Artistas <span class="bg-[#e4665c]/10 text-[#e4665c] px-2 py-0.5 rounded-full text-xs">{artistCount}</span>
 						</a>
 					</div>
-					<p class="text-gray-400 text-xs">Busca entre {venueCount + artistCount} espacios y artistas verificados</p>
+					<p class="text-gray-400 text-xs">Encuentra nuevos espacios y artistas</p>
 				</div>
 			</div>
 		</section>
@@ -58,9 +58,9 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">¿Por qué confiar en mygloven?</h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{(config?.features || [
-						{ title: 'Busca', description: 'Utiliza la búsqueda inteligente impulsada por IA de my\'G para encontrar exactamente lo que necesitas en segundos. Describe tu evento, aplica filtros o introduce tus criterios y la plataforma analizará múltiples variables para mostrarte las opciones más relevantes, optimizando el proceso de planificación desde el primer momento.' },
-						{ title: 'Elige', description: 'Accede a una amplia base de datos de espacios, artistas y proveedores dentro de la industria. Explora perfiles verificados, compara opciones y conecta directamente con los profesionales y recursos que mejor se adaptan a tu proyecto o evento.' },
-						{ title: 'Unifica', description: 'Centraliza todo el proceso en un solo lugar. my\'G reúne tus búsquedas, resultados y contactos en un mismo portal, facilitando la gestión y la comunicación con todos los proveedores implicados en la producción de tu evento.' },
+						{ title: 'Descubre nuevos espacios', description: 'Encuentra nuevos espacios para tus eventos con nuestra búsqueda inteligente impulsada por IA, diseñada para ayudarte a descubrir las mejores opciones de forma rápida y sencilla.' },
+						{ title: 'Conecta', description: 'Conecta fácilmente con espacios, artistas, proveedores y profesionales de la industria musical para colaborar, crear nuevas oportunidades y hacer realidad tus eventos.' },
+						{ title: 'Información clara y útil', description: 'Accede a toda la información que necesitas en un solo lugar: riders técnicos, aforos, contactos directos, visualización de espacios y mucho más para planificar tu evento con total claridad.' },
 					]).map((f: any, i: number) => (
 						<div class="text-center">
 							<div class="text-4xl font-black text-[#e4665c] mb-2">{i + 1}</div>
@@ -79,7 +79,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				<p class="text-gray-400 text-sm">Descubre nuevos espacios para tus eventos.</p>
 			</div>
 			<SearchBox client:load />
-			<div class="text-center mt-14 flex flex-col sm:flex-row gap-4 justify-center">
+			<div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
 				<a href={`mailto:${contactEmail}`} class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
 					¿Tienes un espacio? Regístrate →
 				</a>
@@ -91,7 +91,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 			<div class="max-w-7xl mx-auto px-4">
 				<div class="text-center mb-14">
 					<h2 class="text-3xl font-black text-[#1a1a2a] mb-2">Artistas</h2>
-					<p class="text-gray-400 text-sm">DJs, bandas y productores. Haz click para ver sus perfiles y enlaces.</p>
+					<p class="text-gray-400 text-sm">Descubre nuestros talentos.</p>
 				</div>
 				<ArtistGrid client:load />
 				<div class="text-center mt-14 flex flex-col sm:flex-row gap-4 justify-center">
@@ -110,8 +110,8 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 			<div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 				<div>
 					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Sobre mygloven</h2>
-					<p class="text-gray-500 leading-relaxed text-sm mb-3">{config?.aboutText || 'MyGloven nace con una idea sencilla: facilitar la conexión entre espacios, artistas y promotores para hacer posible más eventos de música en vivo.'}</p>
-					<p class="text-gray-500 leading-relaxed text-sm">{config?.aboutSecondary || 'Estamos incorporando búsqueda inteligente con IA y herramientas visuales para explorar espacios según la visión de cada evento.'}</p>
+					<p class="text-gray-500 leading-relaxed text-sm mb-3">{config?.aboutText || 'mygloven nace con una idea sencilla: facilitar la conexión entre espacios, artistas y promotores para impulsar la música en vivo.'}</p>
+					<p class="text-gray-500 leading-relaxed text-sm">{config?.aboutSecondary || 'La plataforma reúne todo lo necesario para la producción de un evento, incorporando herramientas de búsqueda inteligente con IA que ayudan a descubrir espacios y colaboradores de forma rápida y eficiente.'}</p>
 					<img src="/images/about-team.jpg" alt="Álvaro y Nayara — equipo mygloven" class="mt-6 rounded-xl shadow-md w-full object-cover" loading="lazy" />
 				</div>
 				<div class="bg-[#1a1a2a] rounded-2xl p-10 text-center">
