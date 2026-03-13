@@ -27,10 +27,7 @@ const venues = await getAllVenues();
 				</div>
 				<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
 					{venues.map((venue: any) => {
-						const img = venue.images?.[0] || venue.logo;
-						const imageUrl = img
-							? `https://cdn.sanity.io/images/81mezrx9/production/${img.asset._ref.replace('image-', '').replace(/-([a-z]+)$/, '.$1')}`
-							: null;
+						const imageUrl = venue.images?.[0]?.url || venue.logo || null;
 						return (
 							<a href={`/venue/${venue.slug}`} class="group cursor-pointer block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-100">
 								<div class="aspect-video overflow-hidden bg-[#1a1a2a]">
