@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="my'G agency · mygloven">
+	<main>
+		<!-- Navbar -->
+		<nav class="fixed top-0 w-full z-50 bg-[#1a1a2a] shadow-sm">
+			<div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+				<a href="/" class="text-xl font-light text-white tracking-tight">mygloven.com</a>
+				<div class="hidden md:flex items-center gap-6 text-sm">
+					<a href="/espacios" class="text-gray-300 hover:text-white transition">Espacios</a>
+					<a href="/artistas" class="text-gray-300 hover:text-white transition">Artistas</a>
+					<a href="/agency" class="text-white font-semibold">Agency</a>
+					<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-4 py-1.5 rounded-full text-sm font-semibold transition">Contacto</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero -->
+		<section class="pt-32 pb-20 bg-[#1a1a2a] text-center px-4">
+			<div class="max-w-3xl mx-auto">
+				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Servicio integral</p>
+				<h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">my'G <span class="text-[#e4665c]">agency</span></h1>
+				<p class="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+					Gestionamos y producimos tu evento de principio a fin. Tú imaginas, nosotros lo hacemos realidad.
+				</p>
+				<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-4 rounded-full font-bold inline-block transition-all text-sm">
+					Habla con nuestro equipo →
+				</a>
+			</div>
+		</section>
+
+		<!-- Intro -->
+		<section class="py-20 bg-white">
+			<div class="max-w-4xl mx-auto px-4 text-center">
+				<h2 class="text-2xl font-black text-[#1a1a2a] mb-6">Un servicio 360º para tus eventos</h2>
+				<p class="text-gray-500 leading-relaxed text-base max-w-2xl mx-auto">
+					my'G agency ofrece un servicio integral de gestión y producción de eventos desde el primer concepto hasta el último detalle. Trabajamos con profesionales especializados en cada área para que tu evento sea exactamente como lo imaginas.
+				</p>
+			</div>
+		</section>
+
+		<!-- Services grid -->
+		<section class="py-16 bg-[#fafafa]">
+			<div class="max-w-5xl mx-auto px-4">
+				<h2 class="text-xl font-black text-[#1a1a2a] mb-10 text-center uppercase tracking-widest text-sm">Nuestros servicios</h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+					{[
+						{ icon: '📍', title: 'Búsqueda y localización del espacio', desc: 'Encontramos el venue perfecto para tu evento, sea cual sea el formato, el aforo o la ciudad.' },
+						{ icon: '🎛️', title: 'Producción técnica', desc: 'Sonido, iluminación, escenografía y todo lo técnico necesario para una experiencia impecable.' },
+						{ icon: '🚛', title: 'Logística', desc: 'Coordinamos los tiempos, los traslados y los montajes para que todo fluya sin imprevistos.' },
+						{ icon: '🤝', title: 'Coordinación de proveedores', desc: 'Gestionamos todos los proveedores del evento: técnicos, catering, seguridad, mobiliario y más.' },
+						{ icon: '📋', title: 'Gestión de permisos', desc: 'Nos encargamos de toda la parte legal y administrativa: licencias, seguros y autorizaciones.' },
+						{ icon: '📡', title: 'Streaming y contenido', desc: 'Producción audiovisual y retransmisión en directo para ampliar el alcance de tu evento.' },
+						{ icon: '🍽️', title: 'Catering', desc: 'Seleccionamos y coordinamos el servicio gastronómico más adecuado para tu evento y tu audiencia.' },
+						{ icon: '✨', title: 'Cualquier otro servicio', desc: 'Cada evento es único. Cuéntanos lo que necesitas y encontraremos la solución.' },
+					].map((service) => (
+						<div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+							<div class="text-3xl mb-3">{service.icon}</div>
+							<h3 class="font-bold text-[#1a1a2a] text-sm mb-2">{service.title}</h3>
+							<p class="text-gray-400 text-xs leading-relaxed">{service.desc}</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA final -->
+		<section class="py-20 bg-[#1a1a2a] text-center px-4">
+			<div class="max-w-xl mx-auto">
+				<h2 class="text-2xl font-black text-white mb-4">¿Tienes un evento en mente?</h2>
+				<p class="text-gray-400 text-sm mb-8">Cuéntanos tu proyecto y te diseñamos una propuesta a medida, sin compromiso.</p>
+				<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
+					Contactar con my'G agency →
+				</a>
+			</div>
+		</section>
+
+		<footer class="py-8 text-center bg-[#fafafa] border-t border-gray-100">
+			<div class="flex justify-center gap-4 mb-4">
+				<a href="https://www.instagram.com/mygloven/" target="_blank" rel="noopener" class="text-gray-400 hover:text-[#e4665c] transition flex items-center gap-2">
+					<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+					<span class="text-sm">@mygloven</span>
+				</a>
+			</div>
+			<p class="text-[10px] text-gray-400 uppercase tracking-[0.15em]">
+				&copy; 2026 MyGloven &bull; Powered by <span class="text-[#e4665c]">Aeon Infinitive</span>
+			</p>
+		</footer>
+	</main>
+</Layout>

@@ -19,7 +19,7 @@ const API_URL = 'https://mygloven-api.aeoninfinitive.com/api/chat';
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', text: '¡Hola! Soy **my\'G**, tu asistente musical. Pregúntame por venues o artistas en cualquier ciudad 🎵' }
+    { role: 'assistant', text: '¡Hola! Soy **my\'G**, tu nuevo ayudante de producción. Pregúntame por venues, artistas, promotores o cualquier cosa que necesites para tu próximo evento 🎵' }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
