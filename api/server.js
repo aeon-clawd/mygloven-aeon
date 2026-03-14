@@ -27,16 +27,11 @@ const fuse = new Fuse(allData, {
   includeScore: true,
 });
 
-// Use OpenClaw gateway as OpenAI-compatible proxy (no external API key needed)
-const OPENCLAW_URL = process.env.OPENCLAW_URL || 'http://127.0.0.1:18789/v1/chat/completions';
-const OPENCLAW_TOKEN = process.env.OPENCLAW_TOKEN;
-if (!OPENCLAW_TOKEN) {
-  console.error('⚠️  OPENCLAW_TOKEN not set — chat will use fallback only');
-}
+// Use local Ollama with Qwen 3.5 0.8B (free, no API costs)
+const OLLAMA_URL = process.env.OLLAMA_URL || 'http://127.0.0.1:11434/api/chat';
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'qwen3.5:0.8b';
 
-async function askClaude(prompt, context) {
-  if (!OPENCLAW_TOKEN) return null;
-
+async function askLLM(prompt, context) {
   const systemPrompt = `Eres my'G, el asistente IA de MyGloven — la plataforma que conecta venues de música en vivo con artistas.
 Respondes SIEMPRE en español, de forma breve, útil y con personalidad.
 Usa SOLO la información proporcionada en los datos. NO inventes venues, artistas ni datos que no estén en el contexto.
@@ -44,38 +39,36 @@ Si no encuentras resultados relevantes, dilo honestamente y sugiere reformular l
 Cuando recomiendes venues o artistas, menciona su nombre y ciudad.`;
 
   try {
-    console.log('[claude] calling gateway...');
+    console.log(`[ollama] calling ${OLLAMA_MODEL}...`);
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 30000);
+    const timeout = setTimeout(() => controller.abort(), 60000);
 
-    const res = await fetch(OPENCLAW_URL, {
+    const res = await fetch(OLLAMA_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${OPENCLAW_TOKEN}`,
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-haiku-4-5',
-        max_tokens: 300,
+        model: OLLAMA_MODEL,
+        stream: false,
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: `Datos disponibles:\n${context}\n\nPregunta del usuario: ${prompt}` }
         ],
+        options: { num_predict: 300 },
       }),
       signal: controller.signal,
     });
     clearTimeout(timeout);
 
     if (!res.ok) {
-      console.error(`Claude API error: ${res.status} ${res.statusText}`);
+      console.error(`Ollama error: ${res.status} ${res.statusText}`);
       return null;
     }
 
     const data = await res.json();
-    console.log('[claude] response received');
-    return data.choices?.[0]?.message?.content || null;
+    console.log('[ollama] response received');
+    return data.message?.content || null;
   } catch (e) {
-    console.error('[claude] error:', e.message);
+    console.error('[ollama] error:', e.message);
     return null;
   }
 }
@@ -130,8 +123,8 @@ app.post('/api/chat', async (req, res) => {
     return s;
   }).join('\n');
 
-  // Try Qwen, fallback to structured response
-  const aiAnswer = await askClaude(message, context);
+  // Try local Qwen, fallback to structured response
+  const aiAnswer = await askLLM(message, context);
   const answer = aiAnswer || buildFallback(results, message);
 
   res.json({ answer, sources });

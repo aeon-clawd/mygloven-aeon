@@ -23,6 +23,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 					<a href="/espacios" class="text-gray-300 hover:text-white transition">Espacios</a>
 					<a href="/artistas" class="text-gray-300 hover:text-white transition">Artistas</a>
 					<a href="/agency" class="text-gray-300 hover:text-white transition">Agency</a>
+					<a href="/proveedores" class="text-gray-300 hover:text-white transition">Proveedores</a>
 					<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-4 py-1.5 rounded-full text-sm font-semibold transition">Contacto</a>
 				</div>
 				<!-- Mobile hamburger -->
@@ -35,6 +36,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				<a href="/espacios" class="block py-3 text-gray-300 hover:text-white transition text-sm border-b border-gray-700/50">Espacios</a>
 				<a href="/artistas" class="block py-3 text-gray-300 hover:text-white transition text-sm border-b border-gray-700/50">Artistas</a>
 				<a href="/agency" class="block py-3 text-gray-300 hover:text-white transition text-sm border-b border-gray-700/50">my'G agency</a>
+				<a href="/proveedores" class="block py-3 text-gray-300 hover:text-white transition text-sm border-b border-gray-700/50">Proveedores</a>
 				<a href="/contacto" class="block py-3 text-[#e4665c] font-semibold text-sm">Contacto</a>
 			</div>
 		</nav>
@@ -74,9 +76,9 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">¿Por qué confiar en mygloven?</h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{(config?.features || [
-						{ title: 'Descubre nuevos espacios', description: 'Encuentra nuevos espacios para tus eventos con nuestra búsqueda inteligente impulsada por IA, diseñada para ayudarte a descubrir las mejores opciones de forma rápida y sencilla.' },
-						{ title: 'Conecta', description: 'Conecta fácilmente con espacios, artistas, proveedores y profesionales de la industria musical para colaborar, crear nuevas oportunidades y hacer realidad tus eventos.' },
-						{ title: 'Organiza con confianza', description: 'Planifica y gestiona tus eventos con herramientas pensadas para simplificar cada paso del proceso, desde la búsqueda del espacio hasta la coordinación del día del evento.' },
+						{ title: 'Descubre', description: 'Descubre espacios, artistas y proveedores con una búsqueda inteligente impulsada por IA que te sugiere opciones cercanas y relacionadas para organizar tu evento más fácilmente.' },
+						{ title: 'Conecta', description: 'Conecta fácilmente con espacios, artistas, proveedores y profesionales de la industria musical para colaborar, crear oportunidades y hacer realidad tus eventos.' },
+						{ title: 'Información clara y útil', description: 'Accede a toda la información necesaria en un solo lugar: riders técnicos, aforos, contactos directos, visualización de espacios y más herramientas para planificar tu evento con claridad.' },
 					]).map((f: any, i: number) => (
 						<div class="text-center">
 							<div class="text-4xl font-black text-[#e4665c] mb-2">{i + 1}</div>
@@ -142,7 +144,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 		<section id="about" class="py-16 bg-[#fafafa]">
 			<div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 				<div>
-					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">About "my'G"</h2>
+					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">About my'G</h2>
 					<p class="text-gray-500 leading-relaxed text-sm mb-3">mygloven nace con la misión de facilitar la organización de eventos conectando espacios, artistas, proveedores y promotores en una misma plataforma.</p>
 					<p class="text-gray-500 leading-relaxed text-sm mb-3">Estamos desarrollando herramientas de búsqueda inteligente y asistencia con IA para ayudar a descubrir venues, encontrar artistas, recomendar proveedores y planificar eventos de forma más sencilla.</p>
 					<p class="text-gray-500 leading-relaxed text-sm">Nuestro objetivo es crear un punto de encuentro donde se integren proyectos y recursos para eventos, reuniendo todo lo necesario en un solo lugar.</p>
