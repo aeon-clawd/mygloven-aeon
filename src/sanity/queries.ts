@@ -17,14 +17,14 @@ export async function getVenueBySlug(slug: string) {
 export async function getAllArtists() {
   return sanityClient.fetch(`*[_type == "artist"] | order(name asc) {
     _id, name, "slug": slug.current, description, email, telephone,
-    avatar, images, links, sourceUrl
+    "avatar": avatar.asset->url, images, links, sourceUrl
   }`);
 }
 
 export async function getArtistBySlug(slug: string) {
   return sanityClient.fetch(`*[_type == "artist" && slug.current == $slug][0] {
     _id, name, "slug": slug.current, description, email, telephone,
-    avatar, images, links, sourceUrl
+    "avatar": avatar.asset->url, images, links, sourceUrl
   }`, { slug });
 }
 
