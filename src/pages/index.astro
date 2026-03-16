@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ChatBot from "../components/ChatBot";
-import SearchBox from '../components/SearchBox';
+import HeroSearch from '../components/HeroSearch';
 import ArtistGrid from '../components/ArtistGrid';
 import { getAllVenues, getAllArtists, getSiteConfig } from '../sanity/queries';
 
@@ -58,16 +58,9 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 					{config?.heroSubtitle || "new AI tools coming soon.. my'G"}
 				</p>
 
-				<div class="bg-white rounded-2xl shadow-2xl p-6 max-w-2xl mx-auto">
-					<div class="flex gap-4 mb-4 justify-center">
-						<a href="/espacios" class="flex items-center gap-2 bg-[#e4665c] text-white px-5 py-2 rounded-full text-sm font-semibold">
-							Espacios <span class="bg-white/20 px-2 py-0.5 rounded-full text-xs">{venueCount}</span>
-						</a>
-						<a href="/artistas" class="flex items-center gap-2 bg-gray-100 text-[#1a1a2a] px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
-							Artistas <span class="bg-[#e4665c]/10 text-[#e4665c] px-2 py-0.5 rounded-full text-xs">{artistCount}</span>
-						</a>
-					</div>
-					<p class="text-gray-400 text-xs">Encuentra nuevos espacios y artistas</p>
+				<!-- Buscador (solo input, sin resultados) -->
+				<div class="mt-6 w-full max-w-2xl mx-auto">
+					<HeroSearch client:load />
 				</div>
 			</div>
 		</section>
@@ -92,23 +85,22 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 			</div>
 		</section>
 
-		<!-- Explore Venues -->
+		<!-- Espacios -->
 		<section id="explore" class="py-16 bg-[#fafafa]">
-			<div class="max-w-7xl mx-auto px-4 text-center mb-8">
+			<div class="max-w-7xl mx-auto px-4 text-center">
 				<h2 class="text-3xl font-black text-[#1a1a2a] mb-2">Espacios</h2>
 				<p class="text-gray-400 text-sm">Descubre nuevos espacios para tus eventos.</p>
 				<p class="text-gray-400 text-xs max-w-2xl mx-auto mt-4 leading-relaxed">
-					En mygloven estamos enfocando la plataforma hacia una selección más cuidada de venues. Próximamente trabajaremos principalmente con espacios muy especiales, característicos y polivalentes en Madrid y Barcelona, con información mucho más completa y detallada para facilitar la organización de eventos. Además, mantendremos una sección aparte con otros espacios compatibles en diferentes ciudades de España.
+					En mygloven estamos enfocando la plataforma hacia una selección más cuidada de venues. Próximamente trabajaremos principalmente con espacios muy especiales, característicos y polivalentes en Madrid y Barcelona, con información mucho más completa y detallada para facilitar la producción de eventos. Además, mantendremos esta sección aparte con otros espacios compatibles en diferentes ciudades de España.
 				</p>
-			</div>
-			<SearchBox client:load />
-			<div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="/espacios" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
-					Ver todos los espacios →
-				</a>
-				<a href={`mailto:${contactEmail}`} class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
-					¿Tienes un espacio? Regístrate →
-				</a>
+				<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/espacios" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
+						Ver todos los espacios →
+					</a>
+					<a href={`mailto:${contactEmail}`} class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
+						¿Tienes un espacio? Regístrate →
+					</a>
+				</div>
 			</div>
 		</section>
 

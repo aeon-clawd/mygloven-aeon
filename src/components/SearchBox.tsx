@@ -69,15 +69,7 @@ export default function SearchBox() {
       </div>
 
       <div className="flex flex-wrap gap-3 mb-8">
-        <select
-          className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-[#1a1a2a] focus:outline-none focus:ring-1 focus:ring-[#e4665c]"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        >
-          <option value="">Todas las ciudades</option>
-          {allCities.map(c => <option key={c} value={c}>{c}</option>)}
-        </select>
-        {(query || city) && (
+        {query && (
           <button className="text-sm text-[#e4665c] hover:text-[#d86259] px-3" onClick={() => { setQuery(''); setCity(''); }}>
             ✕ Limpiar filtros
           </button>
