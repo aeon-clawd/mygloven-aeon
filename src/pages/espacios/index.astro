@@ -1,8 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getAllVenues } from '../../sanity/queries';
-
-const venues = await getAllVenues();
+import SearchBox from '../../components/SearchBox';
 ---
 <Layout title="Espacios · mygloven">
 	<main>
@@ -41,43 +39,13 @@ const venues = await getAllVenues();
 
 		<section class="pt-24 pb-16 bg-[#fafafa]">
 			<div class="max-w-7xl mx-auto px-4">
-				<div class="text-center mb-14">
+				<div class="text-center mb-8">
 					<h1 class="text-3xl font-black text-[#1a1a2a] mb-2">Espacios</h1>
-					<p class="text-gray-400 text-sm">{venues.length} espacios registrados</p>
 					<p class="text-gray-400 text-xs max-w-2xl mx-auto mt-4 leading-relaxed">
 						En mygloven estamos enfocando la plataforma hacia una selección más cuidada de venues. Próximamente trabajaremos principalmente con espacios muy especiales, característicos y polivalentes en Madrid y Barcelona, con información mucho más completa y detallada para facilitar la producción de eventos. Además, mantendremos esta sección aparte con otros espacios compatibles en diferentes ciudades de España.
 					</p>
 				</div>
-				<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-					{venues.map((venue: any) => {
-						const imageUrl = venue.images?.[0]?.url || venue.logo || null;
-						return (
-							<a href={`/venue/${venue.slug}`} class="group cursor-pointer block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-100">
-								<div class="aspect-video overflow-hidden bg-[#1a1a2a]">
-									{imageUrl ? (
-										<img
-											src={imageUrl}
-											alt={venue.name}
-											class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-											loading="lazy"
-										/>
-									) : (
-										<div class="w-full h-full flex items-center justify-center">
-											<svg class="w-10 h-10 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-											</svg>
-										</div>
-									)}
-								</div>
-								<div class="p-3">
-									<h3 class="text-[#1a1a2a] font-bold text-sm group-hover:text-[#e4665c] transition-colors line-clamp-1">{venue.name}</h3>
-									{venue.city && <p class="text-gray-400 text-[11px] mt-0.5">{venue.city}{venue.country ? `, ${venue.country}` : ''}</p>}
-								</div>
-							</a>
-						);
-					})}
-				</div>
+				<SearchBox client:load />
 			</div>
 		</section>
 
