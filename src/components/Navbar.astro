@@ -1,0 +1,85 @@
+---
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage } = Astro.props;
+
+const navItems = [
+  { href: '/espacios', label: 'Espacios' },
+  { href: '/artistas', label: 'Artistas' },
+  { href: '/proveedores', label: 'Proveedores' },
+  { href: '/agency', label: "my'G agency" },
+  { href: '/space-studio', label: "my'G space studio" },
+];
+
+const isActive = (href: string) => currentPage === href;
+---
+
+<nav class="fixed top-0 w-full z-50 bg-[#1a1a2a] shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+    <a href="/" class="text-xl font-light text-white tracking-tight">mygloven.com</a>
+    
+    <div class="hidden md:flex items-center gap-6 text-sm">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class={`transition ${
+            isActive(item.href)
+              ? 'bg-[#e4665c] hover:bg-[#d86259] text-white px-4 py-1.5 rounded-full font-semibold'
+              : 'text-gray-300 hover:text-white'
+          }`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a
+        href="/contacto"
+        class={`transition px-4 py-1.5 rounded-full text-sm font-semibold ${
+          isActive('/contacto')
+            ? 'bg-[#e4665c] hover:bg-[#d86259] text-white'
+            : 'bg-[#e4665c] hover:bg-[#d86259] text-white'
+        }`}
+      >
+        Contacto
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Menú">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[#1a1a2a] border-t border-gray-700 px-4 pb-4">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class={`block py-3 text-sm border-b border-gray-700/50 transition ${
+          isActive(item.href)
+            ? 'text-[#e4665c] font-semibold'
+            : 'text-gray-300 hover:text-white'
+        }`}
+      >
+        {item.label}
+      </a>
+    ))}
+    <a
+      href="/contacto"
+      class={`block py-3 text-sm font-semibold ${
+        isActive('/contacto') ? 'text-[#e4665c]' : 'text-[#e4665c]'
+      }`}
+    >
+      Contacto
+    </a>
+  </div>
+</nav>
+
+<script>
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+</script>

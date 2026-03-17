@@ -67,20 +67,24 @@ CRITICAL RULES:
 
 Return ONLY the JSON, no explanation.`;
 
-    const response = await fetch('http://localhost:18789/v1/chat/completions', {
+    // Use Gemini Flash for vision (free, fast, good at structured extraction)
+    const GEMINI_KEY = process.env.GEMINI_API_KEY || 'AIzaSyBcFI0aMCbTTNtlmGum0ogM-ZOFDyU-zI4';
+    
+    if (!GEMINI_KEY) {
+      return res.status(500).json({ error: 'No Gemini API key configured' });
+    }
+
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'anthropic/claude-sonnet-4-6',
-        messages: [{
-          role: 'user',
-          content: [
-            { type: 'text', text: prompt },
-            { type: 'image_url', image_url: { url: `data:${mimeType};base64,${base64Image}` } }
+        contents: [{
+          parts: [
+            { inlineData: { mimeType, data: base64Image } },
+            { text: prompt }
           ]
         }],
-        max_tokens: 8000,
-        temperature: 0.1
+        generationConfig: { temperature: 0.1, maxOutputTokens: 8000 }
       })
     });
 
@@ -91,7 +95,7 @@ Return ONLY the JSON, no explanation.`;
     }
 
     const data = await response.json();
-    const content = data.choices?.[0]?.message?.content || '';
+    const content = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
     
     // Extract JSON from response
     let geometry;
