@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
 import SpaceCreator from '../../components/SpaceCreator';
 ---
 <Layout title="Create Space · my'G Space Studio">
@@ -9,10 +10,6 @@ import SpaceCreator from '../../components/SpaceCreator';
 
 		<SpaceCreator client:only="react" />
 
-		<footer class="py-8 text-center bg-[#1a1a2a] border-t border-gray-700">
-			<p class="text-[10px] text-gray-400 uppercase tracking-[0.15em]">
-				&copy; 2026 MyGloven &bull; Powered by <span class="text-[#e4665c]">Aeon Infinitive</span>
-			</p>
-		</footer>
+		<Footer />
 	</main>
 </Layout>

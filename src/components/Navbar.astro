@@ -38,7 +38,7 @@ const isActive = (href: string) => currentPage === href;
         class={`transition px-4 py-1.5 rounded-full text-sm font-semibold ${
           isActive('/contacto')
             ? 'bg-[#e4665c] hover:bg-[#d86259] text-white'
-            : 'bg-[#e4665c] hover:bg-[#d86259] text-white'
+            : 'border border-gray-500 text-gray-300 hover:text-white hover:border-white'
         }`}
       >
         Contacto
@@ -70,7 +70,7 @@ const isActive = (href: string) => currentPage === href;
     <a
       href="/contacto"
       class={`block py-3 text-sm font-semibold ${
-        isActive('/contacto') ? 'text-[#e4665c]' : 'text-[#e4665c]'
+        isActive('/contacto') ? 'text-[#e4665c]' : 'text-gray-300 hover:text-white'
       }`}
     >
       Contacto

@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
 import VenueMap from '../../components/VenueMap';
 import { getAllVenues, getVenueBySlug } from '../../sanity/queries';
 
@@ -23,8 +25,9 @@ const addr = venue.address || '';
 ---
 
 <Layout title={`${venue.name} - MyGloven`}>
-  <main class="max-w-5xl mx-auto px-4 py-8">
-    <a href="/#explore" class="text-[#e4665c] hover:text-[#d86259] text-sm mb-6 inline-block">← Volver</a>
+  <Navbar currentPage="/espacios" />
+  <main class="max-w-5xl mx-auto px-4 pt-20 pb-8">
+    <a href="/espacios" class="text-[#e4665c] hover:text-[#d86259] text-sm mb-6 inline-block">← Volver a espacios</a>
 
     <div class="flex items-center gap-4 mb-6">
       {logo && <img src={logo} alt="" class="w-14 h-14 rounded-xl object-cover bg-gray-50 border border-gray-100" />}
@@ -79,7 +82,5 @@ const addr = venue.address || '';
     </div>
   </main>
 
-  <footer class="py-10 text-center border-t border-gray-100 mt-20">
-    <p class="text-xs text-gray-400">&copy; 2026 MyGloven &bull; Powered by <span class="text-[#e4665c]">Aeon Infinitive</span></p>
-  </footer>
+  <Footer />
 </Layout>
