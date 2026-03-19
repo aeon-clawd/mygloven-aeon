@@ -1,36 +1,45 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { createClient } from '@sanity/client';
 
-const client = createClient({
-  projectId: '81mezrx9',
-  dataset: 'production',
-  apiVersion: '2024-01-01',
-  useCdn: true,
-});
+interface Venue {
+  _id: string;
+  name: string;
+  slug: string;
+  description?: string;
+  city?: string;
+  country?: string;
+  address?: string;
+  telephone?: string;
+  email?: string;
+  logo?: string;
+  images?: { url: string }[];
+  geo?: { lat: number; lng: number };
+}
 
-export default function SearchBox() {
-  const [venuesData, setVenuesData] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+interface Props {
+  venues: Venue[];
+}
+
+export default function SearchBox({ venues: venuesData }: Props) {
   const [query, setQuery] = useState('');
   const [city, setCity] = useState('');
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<Venue[]>([]);
   const [showCount, setShowCount] = useState(10);
 
+  // Read initial query from URL
   useEffect(() => {
-    client.fetch(`*[_type == "venue"] {
-      _id, name, "slug": slug.current, description, city, country, address,
-      telephone, email, logo, images, geo
-    }`).then((data) => {
-      // Shuffle for random order on each load
-      const shuffled = [...data].sort(() => Math.random() - 0.5);
-      setVenuesData(shuffled);
-      setResults(shuffled.slice(0, 10));
-      setLoading(false);
-    });
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) setQuery(q);
   }, []);
 
-  const allCities = useMemo(() => [...new Set(venuesData.map(v => v.city).filter(c => c && c.length > 2 && !c.startsWith('-') && !/^\d+$/.test(c)))].sort() as string[], [venuesData]);
+  // Shuffle once on mount
+  const shuffled = useMemo(() => [...venuesData].sort(() => Math.random() - 0.5), [venuesData]);
+
+  const allCities = useMemo(() =>
+    [...new Set(venuesData.map(v => v.city).filter(c => c && c.length > 2 && !c.startsWith('-') && !/^\d+$/.test(c)))].sort() as string[],
+    [venuesData]
+  );
 
   const fuse = useMemo(() => new Fuse(venuesData, {
     keys: [
@@ -43,17 +52,14 @@ export default function SearchBox() {
   }), [venuesData]);
 
   useEffect(() => {
-    if (venuesData.length === 0) return;
-    let filtered = venuesData;
+    let filtered: Venue[] = shuffled;
     if (query.length > 1) {
       filtered = fuse.search(query).map(r => r.item);
     }
     if (city) filtered = filtered.filter(v => v.city === city);
     setResults(filtered);
     setShowCount(10);
-  }, [query, city, venuesData]);
-
-  if (loading) return <div className="text-center py-16 text-gray-400">Cargando venues...</div>;
+  }, [query, city, shuffled, fuse]);
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
@@ -69,7 +75,17 @@ export default function SearchBox() {
       </div>
 
       <div className="flex flex-wrap gap-3 mb-8">
-        {query && (
+        <select
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          className="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm text-[#1a1a2a] focus:outline-none focus:ring-2 focus:ring-[#e4665c]"
+        >
+          <option value="">Todas las ciudades</option>
+          {allCities.map((c) => (
+            <option key={c} value={c}>{c}</option>
+          ))}
+        </select>
+        {(query || city) && (
           <button className="text-sm text-[#e4665c] hover:text-[#d86259] px-3" onClick={() => { setQuery(''); setCity(''); }}>
             ✕ Limpiar filtros
           </button>
@@ -78,7 +94,7 @@ export default function SearchBox() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {results.slice(0, showCount).map((venue: any) => {
+        {results.slice(0, showCount).map((venue) => {
           const img = venue.images?.[0]?.url || 'https://images.unsplash.com/photo-1514525253361-bee8a48790c3?w=600';
           return (
             <a key={venue.slug} href={`/venue/${venue.slug}`}

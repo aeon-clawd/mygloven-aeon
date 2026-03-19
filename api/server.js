@@ -49,11 +49,13 @@ Cuando recomiendes venues o artistas, menciona su nombre y ciudad.`;
       body: JSON.stringify({
         model: OLLAMA_MODEL,
         stream: false,
+        keep_alive: -1,
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: `Datos disponibles:\n${context}\n\nPregunta del usuario: ${prompt}` }
         ],
         options: { num_predict: 300 },
+        think: false,
       }),
       signal: controller.signal,
     });

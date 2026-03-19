@@ -3,6 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import SearchBox from '../../components/SearchBox';
+import { getAllVenues } from '../../sanity/queries';
+
+const venues = await getAllVenues();
 ---
 <Layout title="Espacios · mygloven">
 	<main>
@@ -16,7 +19,7 @@ import SearchBox from '../../components/SearchBox';
 						En mygloven estamos enfocando la plataforma hacia una selección más cuidada de venues. Próximamente trabajaremos principalmente con espacios muy especiales, característicos y polivalentes en Madrid y Barcelona, con información mucho más completa y detallada para facilitar la producción de eventos. Además, mantendremos esta sección aparte con otros espacios compatibles en diferentes ciudades de España.
 					</p>
 				</div>
-				<SearchBox client:load />
+				<SearchBox client:load venues={venues} />
 			</div>
 		</section>
 

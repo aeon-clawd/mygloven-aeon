@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Planes — Empieza a crear | mygloven">
+	<main>
+		<Navbar currentPage="/planes" />
+
+		<!-- Hero -->
+		<section class="relative min-h-[50vh] flex flex-col items-center justify-center text-center px-4 pt-20 pb-16 bg-[#1a1a2a]">
+			<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Tu evento empieza aquí</p>
+			<h1 class="text-4xl md:text-6xl font-extralight text-white mb-6 leading-tight tracking-tight">
+				Empieza a <span class="text-[#e4665c] font-bold">crear</span>
+			</h1>
+			<p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+				Desde la primera idea hasta el evento real. La IA te ayuda a diseñar, visualizar y planificar — tú decides hasta dónde llegar.
+			</p>
+		</section>
+
+		<!-- Plans grid -->
+		<section class="py-16 bg-white">
+			<div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+				<!-- Explorador -->
+				<div class="rounded-2xl border border-gray-100 p-8 hover:shadow-lg transition-all relative">
+					<h3 class="text-xl font-black text-[#1a1a2a] mb-1">Explorador</h3>
+					<p class="text-[#e4665c] text-sm font-bold mb-6">Gratis</p>
+					<ul class="space-y-3 text-sm text-gray-600 mb-8">
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Acceso a la plataforma y búsqueda de espacios</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Prueba renders básicos con IA</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Ideas y sugerencias para tu evento</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-gray-300 mt-0.5">✗</span>
+							<span class="text-gray-400">Sin acceso a contactos reales</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-gray-300 mt-0.5">✗</span>
+							<span class="text-gray-400">Renders con marca de agua</span>
+						</li>
+					</ul>
+					<a href="/space-studio" class="block text-center border-2 border-[#1a1a2a] text-[#1a1a2a] hover:bg-[#1a1a2a] hover:text-white px-6 py-3 rounded-full font-bold transition-all text-sm">
+						Explorar gratis →
+					</a>
+				</div>
+
+				<!-- Creador -->
+				<div class="rounded-2xl border-2 border-[#e4665c] p-8 shadow-lg relative bg-white">
+					<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#e4665c] text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+						Recomendado
+					</div>
+					<h3 class="text-xl font-black text-[#1a1a2a] mb-1">Creador</h3>
+					<p class="text-[#e4665c] text-sm font-bold mb-6">Suscripción mensual</p>
+					<ul class="space-y-3 text-sm text-gray-600 mb-8">
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Renders ilimitados sin marca de agua</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Herramientas avanzadas de diseño</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Configuraciones de espacio detalladas</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Acceso anticipado a funcionalidades Agency</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-gray-300 mt-0.5">✗</span>
+							<span class="text-gray-400">Sin producción ni contratación</span>
+						</li>
+					</ul>
+					<a href="/contacto" class="block text-center bg-[#e4665c] hover:bg-[#d86259] text-white px-6 py-3 rounded-full font-bold transition-all text-sm">
+						Empezar a crear →
+					</a>
+				</div>
+
+				<!-- Promotor -->
+				<div class="rounded-2xl border border-gray-100 p-8 hover:shadow-lg transition-all relative bg-[#1a1a2a]">
+					<h3 class="text-xl font-black text-white mb-1">Promotor</h3>
+					<p class="text-[#e4665c] text-sm font-bold mb-6">Pago por proyecto</p>
+					<ul class="space-y-3 text-sm text-gray-300 mb-8">
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Todo lo del plan Creador</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Presupuesto completo del evento</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Conexión directa con venues y artistas</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Contratación y producción real</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#e4665c] mt-0.5">✓</span>
+							<span>Servicio integral my'G agency</span>
+						</li>
+					</ul>
+					<a href="/contacto" class="block text-center bg-[#e4665c] hover:bg-[#d86259] text-white px-6 py-3 rounded-full font-bold transition-all text-sm">
+						Hablar con el equipo →
+					</a>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Bottom message -->
+		<section class="py-16 bg-[#fafafa] border-t border-gray-100">
+			<div class="max-w-3xl mx-auto px-4 text-center">
+				<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">No vendemos renders.<br>Creamos eventos.</h2>
+				<p class="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto mb-8">
+					La IA es el punto de entrada: te ayuda a imaginar, diseñar y visualizar. Pero el objetivo real es que tu evento suceda. Desde la idea hasta la producción, my'G te acompaña en todo el camino.
+				</p>
+				<a href="/contacto" class="bg-[#1a1a2a] hover:bg-[#2a2a3a] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
+					Cuéntanos tu idea →
+				</a>
+			</div>
+		</section>
+
+		<Footer />
+	</main>
+</Layout>

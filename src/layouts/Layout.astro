@@ -1,6 +1,6 @@
 ---
-interface Props { title: string; }
-const { title } = Astro.props;
+interface Props { title: string; description?: string; }
+const { title, description = 'mygloven | myglobalvenue my\'G — Espacios y artistas para tu próximo evento.' } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
@@ -10,10 +10,11 @@ const { title } = Astro.props;
 	<title>{title}</title>
 	<meta property="og:title" content="mygloven | myglobalvenue my'G" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://mygloves.aeoninfinitive.com" />
-	<meta property="og:description" content="Espacios y artistas para tu próximo evento." />
-	<meta name="description" content="mygloven | myglobalvenue my'G — Espacios y artistas para tu próximo evento." />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta property="og:url" content="https://mygloven.com" />
+	<meta property="og:description" content={description} />
+	<meta name="description" content={description} />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />

@@ -5,7 +5,7 @@ import sanity from '@sanity/astro';
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  site: 'https://mygloves.aeoninfinitive.com',
+  site: 'https://mygloven.com',
   output: 'static',
   adapter: vercel(),
   integrations: [

@@ -68,7 +68,7 @@ CRITICAL RULES:
 Return ONLY the JSON, no explanation.`;
 
     // Use Gemini Flash for vision (free, fast, good at structured extraction)
-    const GEMINI_KEY = process.env.GEMINI_API_KEY || 'AIzaSyBcFI0aMCbTTNtlmGum0ogM-ZOFDyU-zI4';
+    const GEMINI_KEY = process.env.GEMINI_API_KEY;
     
     if (!GEMINI_KEY) {
       return res.status(500).json({ error: 'No Gemini API key configured' });

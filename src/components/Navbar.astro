@@ -11,6 +11,7 @@ const navItems = [
   { href: '/proveedores', label: 'Proveedores' },
   { href: '/agency', label: "my'G agency" },
   { href: '/space-studio', label: "my'G space studio" },
+  { href: '/planes', label: 'Planes' },
 ];
 
 const isActive = (href: string) => currentPage === href;
@@ -18,7 +19,9 @@ const isActive = (href: string) => currentPage === href;
 
 <nav class="fixed top-0 w-full z-50 bg-[#1a1a2a] shadow-sm">
   <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-    <a href="/" class="text-xl font-light text-white tracking-tight">mygloven.com</a>
+    <a href="/" class="flex items-center">
+      <img src="/images/mygloven-logo-white.svg" alt="mygloven" class="h-20" />
+    </a>
     
     <div class="hidden md:flex items-center gap-6 text-sm">
       {navItems.map((item) => (
