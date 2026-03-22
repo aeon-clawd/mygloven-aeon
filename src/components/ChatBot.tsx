@@ -19,7 +19,7 @@ const API_URL = 'https://mygloven-api.aeoninfinitive.com/api/chat';
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', text: '¡Hola! Soy **my\'G**, tu nuevo ayudante de producción. Pregúntame por venues, artistas, proveedores o cualquier cosa que necesites para tu próximo evento 🎵' }
+    { role: 'assistant', text: '¡Hola! Soy **myG**, tu asistente de producción 👋\n\nEstamos terminando de construir la nueva versión de mygloven, con una selección curada de venues en Madrid y Barcelona, nuevos proveedores y una IA mejorada para ayudarte a producir eventos de forma más eficiente.\n\nLo presentaremos en **Primavera Pro el 5 de junio** 🚀\n\n👉 Cuéntanos qué evento estás organizando y sé de los primeros en acceder:\n[mygloven.com/contacto](https://mygloven.com/contacto)' }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
