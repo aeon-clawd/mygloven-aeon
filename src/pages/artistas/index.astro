@@ -2,9 +2,25 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import SearchBox from '../../components/SearchBox';
 import { getAllArtists } from '../../sanity/queries';
 
 const artists = await getAllArtists();
+
+// Map artists to the same shape SearchBox expects
+const artistsAsVenues = artists.map((a: any) => ({
+	_id: a._id,
+	name: a.name,
+	slug: a.slug,
+	description: a.description,
+	city: '',
+	country: '',
+	telephone: a.telephone,
+	email: a.email,
+	logo: null,
+	avatar: a.avatar,
+	images: a.avatar ? [{ url: a.avatar }] : [],
+}));
 ---
 <Layout title="Artistas · mygloven">
 	<main>
@@ -12,28 +28,11 @@ const artists = await getAllArtists();
 
 		<section class="pt-24 pb-16 bg-[#fafafa]">
 			<div class="max-w-7xl mx-auto px-4">
-				<div class="text-center mb-14">
+				<div class="text-center mb-8">
 					<h1 class="text-3xl font-black text-[#1a1a2a] mb-2">Artistas</h1>
 					<p class="text-gray-400 text-sm">{artists.length} artistas registrados</p>
 				</div>
-				<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-					{artists.map((artist: any) => (
-						<a href={`/artist/${artist.slug}`} class="group cursor-pointer block">
-							<div class="aspect-square rounded-full overflow-hidden mb-4 border-2 border-transparent group-hover:border-[#e4665c] transition-all shadow-md">
-								<img
-									src={artist.avatar || 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400'}
-									alt={artist.name}
-									class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-									loading="lazy"
-								/>
-							</div>
-							<div class="text-center">
-								<h3 class="text-[#1a1a2a] font-bold text-sm group-hover:text-[#e4665c] transition-colors line-clamp-1">{artist.name}</h3>
-								<p class="text-gray-400 text-[10px] mt-1 uppercase tracking-widest">Artista</p>
-							</div>
-						</a>
-					))}
-				</div>
+				<SearchBox client:load venues={artistsAsVenues} searchType="artist" />
 			</div>
 		</section>
 

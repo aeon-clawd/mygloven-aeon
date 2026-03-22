@@ -10,18 +10,34 @@ import Footer from '../../components/Footer.astro';
 		<!-- Hero -->
 		<section class="pt-32 pb-20 bg-[#1a1a2a] text-center px-4">
 			<div class="max-w-3xl mx-auto">
-				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Próximamente</p>
+				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Integrados en tu evento</p>
 				<h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">Proveedores</h1>
 				<p class="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
-					Próximamente podrás encontrar todo tipo de proveedores para eventos en Madrid y Barcelona: producción técnica, sonido, iluminación, streaming, catering, logística y muchos más servicios necesarios para desarrollar un evento completo.
+					En my'G los proveedores no se buscan: se integran directamente en tu evento.
+				</p>
+				<p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto mt-4">
+					Trabajamos con una selección cuidada de profesionales y empresas que se activan en función de las necesidades de cada proyecto, dentro de nuestros planes.
 				</p>
 			</div>
 		</section>
 
-		<!-- Categorías preview -->
-		<section class="py-20 bg-white">
+		<!-- Acceso via planes -->
+		<section class="py-16 bg-white">
+			<div class="max-w-3xl mx-auto px-4 text-center">
+				<h2 class="text-xl font-black text-[#1a1a2a] mb-6">Parte de la experiencia my'G</h2>
+				<p class="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto mb-4">
+					El acceso a proveedores forma parte de la experiencia my'G y se desbloquea a través de los planes.
+				</p>
+				<p class="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto">
+					Desde producción técnica hasta catering o logística, te proponemos las mejores opciones ya adaptadas a tu evento, sin necesidad de gestionar múltiples contactos.
+				</p>
+			</div>
+		</section>
+
+		<!-- Categorías -->
+		<section class="py-20 bg-[#fafafa]">
 			<div class="max-w-5xl mx-auto px-4">
-				<h2 class="text-xl font-black text-[#1a1a2a] mb-10 text-center uppercase tracking-widest text-sm">Categorías que encontrarás</h2>
+				<h2 class="text-xl font-black text-[#1a1a2a] mb-10 text-center uppercase tracking-widest text-sm">Servicios integrados</h2>
 				<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
 					{[
 						{ icon: '🎛️', title: 'Producción técnica' },
@@ -31,9 +47,9 @@ import Footer from '../../components/Footer.astro';
 						{ icon: '🍽️', title: 'Catering' },
 						{ icon: '🚛', title: 'Logística' },
 						{ icon: '🛡️', title: 'Seguridad' },
-						{ icon: '✨', title: 'Y mucho más' },
+						{ icon: '✨', title: 'Y todos los servicios necesarios para producir un evento completo' },
 					].map((cat) => (
-						<div class="bg-[#fafafa] rounded-xl p-5 text-center border border-gray-100">
+						<div class="bg-white rounded-xl p-5 text-center border border-gray-100">
 							<div class="text-2xl mb-2">{cat.icon}</div>
 							<p class="text-sm font-semibold text-[#1a1a2a]">{cat.title}</p>
 						</div>
@@ -42,11 +58,23 @@ import Footer from '../../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- CTA -->
-		<section class="py-20 bg-[#1a1a2a] text-center px-4">
+		<!-- Cierre + CTA Planes -->
+		<section class="py-20 bg-white text-center px-4">
+			<div class="max-w-2xl mx-auto">
+				<p class="text-gray-500 text-sm leading-relaxed mb-8">
+					my'G centraliza todo el proceso y conecta los servicios necesarios dentro de una misma propuesta, simplificando la producción de principio a fin.
+				</p>
+				<a href="/planes" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
+					Descubrir planes →
+				</a>
+			</div>
+		</section>
+
+		<!-- CTA proveedor -->
+		<section class="py-16 bg-[#1a1a2a] text-center px-4">
 			<div class="max-w-xl mx-auto">
 				<h2 class="text-2xl font-black text-white mb-4">¿Eres proveedor de eventos?</h2>
-				<p class="text-gray-400 text-sm mb-8">Regístrate para aparecer en nuestra plataforma cuando lancemos esta sección.</p>
+				<p class="text-gray-400 text-sm mb-8">Contacta con nosotros para formar parte de nuestra red de profesionales.</p>
 				<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
 					Contactar →
 				</a>

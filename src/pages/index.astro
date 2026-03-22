@@ -39,12 +39,12 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 		<!-- Why trust MyGloven -->
 		<section class="py-16 bg-white border-b border-gray-100">
 			<div class="max-w-5xl mx-auto px-4">
-				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">¿Por qué confiar en mygloven?</h2>
+				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">Cómo funciona</h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{(config?.features || [
-						{ title: 'Descubre', description: 'Descubre espacios, artistas y proveedores con una búsqueda inteligente impulsada por IA que te sugiere opciones cercanas y relacionadas para organizar tu evento más fácilmente.' },
-						{ title: 'Conecta', description: 'Conecta fácilmente con espacios, artistas, proveedores y profesionales de la industria musical para colaborar, crear oportunidades y hacer realidad tus eventos.' },
-						{ title: 'Información clara y útil', description: 'Accede a toda la información necesaria en un solo lugar: riders técnicos, aforos, contactos directos, visualización de espacios y más herramientas para planificar tu evento con claridad.' },
+						{ title: 'Define tu evento', description: "Cuéntanos qué quieres hacer —tipo de evento, ciudad, público o idea inicial y my'G empieza a construir contigo la producción desde el primer momento.\n\nNo es solo una búsqueda: es el punto de partida de un evento real." },
+						{ title: 'Recibe una propuesta completa', description: "my'G combina su selección curada de espacios, artistas y proveedores con asistencia inteligente para proponerte opciones concretas, viables y adaptadas a tu evento.\n\nDesde venues únicos hasta necesidades técnicas: todo conectado en una misma propuesta." },
+						{ title: 'Activa tu plan y produce tu evento', description: "Elige el plan que mejor se adapte a tu proyecto y desbloquea herramientas para producir tu evento de forma eficiente.\n\nDesde contacto directo con todos los agentes hasta funcionalidades como my'G Space Studio, que te ayuda a organizar, visualizar y coordinar toda la producción en un solo lugar." },
 					]).map((f: any, i: number) => (
 						<div class="text-center">
 							<div class="text-4xl font-black text-[#e4665c] mb-2">{i + 1}</div>
@@ -52,6 +52,11 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 							<p class="text-sm text-gray-500">{f.description}</p>
 						</div>
 					))}
+				</div>
+				<div class="mt-10 text-center">
+					<a href="/planes" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
+						Ver planes →
+					</a>
 				</div>
 			</div>
 		</section>
@@ -62,7 +67,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				<h2 class="text-3xl font-black text-[#1a1a2a] mb-2">Espacios</h2>
 				<p class="text-gray-400 text-sm">Descubre nuevos espacios para tus eventos.</p>
 				<p class="text-gray-400 text-xs max-w-2xl mx-auto mt-4 leading-relaxed">
-					En mygloven estamos enfocando la plataforma hacia una selección más cuidada de venues. Próximamente trabajaremos principalmente con espacios muy especiales, característicos y polivalentes en Madrid y Barcelona, con información mucho más completa y detallada para facilitar la producción de eventos. Además, mantendremos esta sección aparte con otros espacios compatibles en diferentes ciudades de España.
+					En mygloven estamos enfocando la plataforma hacia una selección más cuidada de venues. Próximamente trabajaremos principalmente con espacios muy especiales, característicos y polivalentes en Madrid y Barcelona, con información mucho más completa y detallada para facilitar la producción de eventos. Además, mantendremos una base informativa con otros espacios en distintas ciudades.
 				</p>
 				<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
 					<a href="/espacios" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
@@ -114,7 +119,7 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				<div>
 					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">About my'G</h2>
 					<p class="text-gray-500 leading-relaxed text-sm mb-3">mygloven nace con la misión de facilitar la organización de eventos conectando espacios, artistas, proveedores y promotores en una misma plataforma.</p>
-					<p class="text-gray-500 leading-relaxed text-sm mb-3">Estamos desarrollando herramientas de búsqueda inteligente y asistencia con IA para ayudar a descubrir venues, encontrar artistas, recomendar proveedores y planificar eventos de forma más sencilla.</p>
+					<p class="text-gray-500 leading-relaxed text-sm mb-3">Estamos desarrollando herramientas inteligentes con IA que conectan espacios, artistas y proveedores en propuestas adaptadas a cada evento, simplificando toda la producción.</p>
 					<p class="text-gray-500 leading-relaxed text-sm">Nuestro objetivo es crear un punto de encuentro donde se integren proyectos y recursos para eventos, reuniendo todo lo necesario en un solo lugar.</p>
 				</div>
 				<div class="bg-[#1a1a2a] rounded-2xl p-10 text-center">
@@ -128,23 +133,12 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 			</div>
 		</section>
 
-		<!-- CTA -->
-		<section class="py-16 bg-[#1a1a2a] text-center">
-			<div class="max-w-xl mx-auto px-4">
-				<h2 class="text-2xl font-black text-white mb-4">{config?.ctaTitle || '¿Quieres formar parte?'}</h2>
-				<p class="text-gray-400 text-sm mb-8">{config?.ctaSubtitle || 'Espacios, artistas y promotores — únete a la comunidad.'}</p>
-				<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
-					Contactar →
-				</a>
-			</div>
-		</section>
-
-		<!-- Planes CTA -->
-		<section class="py-16 bg-[#fafafa] border-t border-gray-100">
+		<!-- Planes CTA (fondo negro) -->
+		<section class="py-16 bg-[#1a1a2a]">
 			<div class="max-w-3xl mx-auto px-4 text-center">
 				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">De explorar a crear</p>
-				<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Planes — Empieza a crear</h2>
-				<p class="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto mb-8">
+				<h2 class="text-2xl font-black text-white mb-4">Planes — Empieza a crear</h2>
+				<p class="text-gray-300 text-sm leading-relaxed max-w-xl mx-auto mb-8">
 					Elige cómo quieres usar mygloven. Desde explorar gratis hasta producir tu evento con nuestro equipo.
 				</p>
 				<a href="/planes" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
@@ -153,8 +147,8 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 			</div>
 		</section>
 
-		<!-- Space Studio teaser -->
-		<section class="py-16 bg-white">
+		<!-- Space Studio teaser (fondo gris) -->
+		<section class="py-16 bg-[#f0f0f0]">
 			<div class="max-w-3xl mx-auto px-4 text-center">
 				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Próximamente</p>
 				<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">my'G <span class="text-[#e4665c]">Space Studio</span></h2>
@@ -163,6 +157,17 @@ const contactEmail = config?.contactEmail || 'info@mygloven.com';
 				</p>
 				<a href="/space-studio" class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
 					Descubre más →
+				</a>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="py-16 bg-white text-center">
+			<div class="max-w-xl mx-auto px-4">
+				<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">{config?.ctaTitle || '¿Quieres formar parte?'}</h2>
+				<p class="text-gray-500 text-sm mb-8">{config?.ctaSubtitle || 'Espacios, artistas y promotores — únete a la comunidad.'}</p>
+				<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
+					Contactar →
 				</a>
 			</div>
 		</section>
