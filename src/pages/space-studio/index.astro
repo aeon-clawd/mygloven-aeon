@@ -10,45 +10,113 @@ import Footer from '../../components/Footer.astro';
 		<!-- Hero -->
 		<section class="pt-32 pb-20 bg-[#1a1a2a] text-center px-4">
 			<div class="max-w-3xl mx-auto">
-				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Próximamente</p>
+				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Herramienta IA</p>
 				<h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">my'G <span class="text-[#e4665c]">Space Studio</span></h1>
 				<p class="text-gray-300 text-xl leading-relaxed max-w-2xl mx-auto">
-					Diseña y visualiza tu evento antes de que suceda.
+					Visualiza tu evento antes de que suceda.
+				</p>
+				<p class="text-gray-400 text-sm mt-4 max-w-xl mx-auto">
+					Sube una foto de cualquier espacio, describe lo que imaginas y la IA genera una visualización real de tu evento en segundos.
 				</p>
 			</div>
 		</section>
 
-		<!-- Descripción -->
+		<!-- Storytelling visual: Before → Interaction → Result -->
 		<section class="py-20 bg-white">
-			<div class="max-w-3xl mx-auto px-4">
-				<p class="text-gray-600 text-base leading-relaxed mb-6">
-					my'G Space Studio será una herramienta impulsada por inteligencia artificial que permitirá imaginar cómo podría ser un evento dentro de cualquier espacio.
-				</p>
-				<p class="text-gray-600 text-base leading-relaxed mb-6">
-					Los usuarios podrán subir una foto de un venue o seleccionar uno de la plataforma, describir el tipo de evento que quieren crear y la IA generará diferentes renders y configuraciones posibles, como escenarios, iluminación, distribución del público o producción técnica.
-				</p>
-				<p class="text-gray-600 text-base leading-relaxed">
-					Además, el sistema podrá sugerir artistas, proveedores y soluciones técnicas compatibles con ese espacio, ayudando a planificar eventos de forma más visual, rápida y creativa.
-				</p>
+			<div class="max-w-6xl mx-auto px-4">
+
+				<!-- Step 1: Before -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+					<div class="order-2 md:order-1">
+						<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Paso 1</p>
+						<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Un espacio vacío con potencial</h2>
+						<p class="text-gray-500 text-sm leading-relaxed mb-3">
+							Todo evento empieza con un espacio. Puede ser una nave industrial, un salón clásico, una terraza o cualquier lugar que imagines.
+						</p>
+						<p class="text-gray-500 text-sm leading-relaxed">
+							Sube una foto real del venue y my'G Space Studio convierte ese lienzo en blanco en el punto de partida de tu producción.
+						</p>
+					</div>
+					<div class="order-1 md:order-2">
+						<img src="/images/space-before-opt.jpg" alt="Espacio vacío — venue antes del evento" class="rounded-2xl shadow-lg w-full" loading="lazy" />
+					</div>
+				</div>
+
+				<!-- Step 2: Interaction -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+					<div>
+						<img src="/images/space-tool-result-opt.png" alt="my'G Space Studio — herramienta de visualización IA" class="rounded-2xl shadow-lg w-full border border-gray-100" loading="lazy" />
+					</div>
+					<div>
+						<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Paso 2</p>
+						<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Describe tu visión</h2>
+						<p class="text-gray-500 text-sm leading-relaxed mb-3">
+							Escribe lo que imaginas: mesas de cóctel, un escenario, iluminación cálida, una pista de baile… lo que necesites.
+						</p>
+						<p class="text-gray-500 text-sm leading-relaxed">
+							La IA interpreta tu descripción y genera una propuesta visual directamente sobre el espacio real. Sin renders genéricos — tu evento, en tu venue.
+						</p>
+					</div>
+				</div>
+
+				<!-- Step 3: Result -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+					<div class="order-2 md:order-1">
+						<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Resultado</p>
+						<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Tu evento cobra vida</h2>
+						<p class="text-gray-500 text-sm leading-relaxed mb-3">
+							En segundos obtienes una visualización realista de cómo quedaría tu evento montado. Las paredes, la luz, la estructura del espacio se respetan — solo cambia lo que tú decides.
+						</p>
+						<p class="text-gray-500 text-sm leading-relaxed">
+							Comparte la imagen con tu equipo, itera sobre la idea o úsala como referencia para la producción real.
+						</p>
+					</div>
+					<div class="order-1 md:order-2">
+						<img src="/images/space-after.jpg" alt="Evento visualizado — resultado de Space Studio" class="rounded-2xl shadow-lg w-full" loading="lazy" />
+					</div>
+				</div>
+
 			</div>
 		</section>
 
-		<!-- Features preview -->
+		<!-- Before / After comparison -->
 		<section class="py-16 bg-[#fafafa]">
 			<div class="max-w-5xl mx-auto px-4">
-				<h2 class="text-xl font-black text-[#1a1a2a] mb-10 text-center uppercase tracking-widest text-sm">Qué podrás hacer</h2>
-				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-					{[
-						{ num: '01', title: 'Sube una foto del espacio', desc: 'Carga una imagen de cualquier venue o selecciona uno de la plataforma como punto de partida.' },
-						{ num: '02', title: 'Genera renders con IA', desc: 'Describe tu evento y obtén visualizaciones de escenarios, iluminación y distribución del público.' },
-						{ num: '03', title: 'Sugerencias inteligentes', desc: 'Recibe recomendaciones de artistas, proveedores y soluciones técnicas compatibles con el espacio.' },
-					].map((f) => (
-						<div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-							<span class="text-[#e4665c] text-xs font-black tracking-widest">{f.num}</span>
-							<h3 class="font-bold text-[#1a1a2a] text-base mt-3 mb-3">{f.title}</h3>
-							<p class="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
-						</div>
-					))}
+				<h2 class="text-xl font-black text-[#1a1a2a] mb-10 text-center">Antes y después</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div class="relative">
+						<img src="/images/space-before-opt.jpg" alt="Antes — espacio vacío" class="rounded-2xl w-full" loading="lazy" />
+						<span class="absolute top-4 left-4 bg-[#1a1a2a]/80 text-white text-xs font-bold px-3 py-1 rounded-full">Antes</span>
+					</div>
+					<div class="relative">
+						<img src="/images/space-after.jpg" alt="Después — evento visualizado con IA" class="rounded-2xl w-full" loading="lazy" />
+						<span class="absolute top-4 left-4 bg-[#e4665c]/90 text-white text-xs font-bold px-3 py-1 rounded-full">Después</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Potential / Roadmap -->
+		<section class="py-20 bg-white">
+			<div class="max-w-3xl mx-auto px-4 text-center">
+				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Esto es solo el principio</p>
+				<h2 class="text-2xl font-black text-[#1a1a2a] mb-6">Una primera versión de algo mucho más grande</h2>
+				<p class="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto mb-8">
+					Lo que ves ahora es la capa básica y gratuita de Space Studio. Estamos desarrollando una herramienta mucho más potente: múltiples opciones de configuración, personalización avanzada, outputs profesionales y conexión directa con proveedores y producción real.
+				</p>
+				<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left max-w-2xl mx-auto">
+					<div class="bg-[#fafafa] rounded-xl p-5 border border-gray-100">
+						<p class="text-[#e4665c] text-xs font-bold mb-2">AHORA</p>
+						<p class="text-gray-600 text-sm">Visualización IA básica desde foto + texto</p>
+					</div>
+					<div class="bg-[#fafafa] rounded-xl p-5 border border-gray-100">
+						<p class="text-[#e4665c] text-xs font-bold mb-2">PRÓXIMAMENTE</p>
+						<p class="text-gray-600 text-sm">Múltiples configuraciones, estilos y outputs profesionales</p>
+					</div>
+					<div class="bg-[#fafafa] rounded-xl p-5 border border-gray-100">
+						<p class="text-[#e4665c] text-xs font-bold mb-2">FUTURO</p>
+						<p class="text-gray-600 text-sm">Conexión directa con proveedores y producción real</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -57,9 +125,9 @@ import Footer from '../../components/Footer.astro';
 		<section class="py-20 bg-[#1a1a2a] text-center px-4">
 			<div class="max-w-xl mx-auto">
 				<h2 class="text-2xl font-black text-white mb-4">¿Quieres ser de los primeros en probarlo?</h2>
-				<p class="text-gray-400 text-sm mb-8">Déjanos tu contacto y te avisaremos cuando esté disponible.</p>
+				<p class="text-gray-400 text-sm mb-8">Cuéntanos tu evento y te enseñamos cómo Space Studio puede ayudarte a planificarlo.</p>
 				<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
-					Contactar →
+					Describe tu evento →
 				</a>
 			</div>
 		</section>
