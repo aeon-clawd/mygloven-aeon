@@ -28,10 +28,24 @@ const artistsAsVenues = artists.map((a: any) => ({
 
 		<section class="pt-24 pb-16 bg-[#fafafa]">
 			<div class="max-w-7xl mx-auto px-4">
-				<div class="text-center mb-8">
+				<div class="text-center mb-6">
 					<h1 class="text-3xl font-black text-[#1a1a2a] mb-2">Artistas</h1>
-					<p class="text-gray-400 text-sm">{artists.length} artistas registrados</p>
+					<p class="text-gray-400 text-sm">{artists.length} artistas</p>
 				</div>
+
+				<!-- Bloque introductorio -->
+				<div class="max-w-2xl mx-auto text-center mb-10">
+					<p class="text-gray-500 text-sm leading-relaxed mb-3">
+						La sección de artistas es la parte más personal de my'G.
+					</p>
+					<p class="text-gray-500 text-sm leading-relaxed mb-3">
+						Aquí no hay comisiones ni intermediación. No es un servicio ni una fuente de ingresos. Es un espacio donde damos visibilidad a talento en el que creemos, conectando artistas con proyectos y oportunidades reales dentro del ecosistema de eventos.
+					</p>
+					<p class="text-gray-400 text-xs leading-relaxed italic">
+						Una forma de apoyar la escena y mantener viva la parte más creativa de my'G.
+					</p>
+				</div>
+
 				<SearchBox client:load venues={artistsAsVenues} searchType="artist" />
 			</div>
 		</section>

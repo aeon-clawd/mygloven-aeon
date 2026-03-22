@@ -1,6 +1,6 @@
 ---
 interface Props { title: string; description?: string; }
-const { title, description = "my'G — tu asistente para producir eventos" } = Astro.props;
+const { title, description = "my'G — your event production assistant" } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
@@ -8,13 +8,14 @@ const { title, description = "my'G — tu asistente para producir eventos" } = A
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 	<title>{title}</title>
-	<meta property="og:title" content="mygloven" />
+	<meta property="og:title" content="mygloven | my'G your event production assistant" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://mygloven.com" />
 	<meta property="og:description" content={description} />
 	<meta name="description" content={description} />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 	<link rel="manifest" href="/manifest.json" />
 	<meta name="theme-color" content="#1a1a2a" />
