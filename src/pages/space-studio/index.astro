@@ -10,7 +10,7 @@ import Footer from '../../components/Footer.astro';
 		<!-- Hero -->
 		<section class="pt-32 pb-20 bg-[#1a1a2a] text-center px-4">
 			<div class="max-w-3xl mx-auto">
-				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Herramienta IA</p>
+				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Próximamente</p>
 				<h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">my'G <span class="text-[#e4665c]">Space Studio</span></h1>
 				<p class="text-gray-300 text-xl leading-relaxed max-w-2xl mx-auto">
 					Visualiza tu evento antes de que suceda.
@@ -21,31 +21,48 @@ import Footer from '../../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- Storytelling visual: Before → Interaction → Result -->
+		<!-- Storytelling visual: 3 steps -->
 		<section class="py-20 bg-white">
 			<div class="max-w-6xl mx-auto px-4">
 
-				<!-- Step 1: Interaction -->
+				<!-- Sube tu espacio -->
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
 					<div>
-						<img src="/images/space-before-opt.jpg" alt="my'G Space Studio — sube tu espacio" class="rounded-2xl shadow-lg w-full" loading="lazy" />
+						<img src="/images/space-studio-step1.png" alt="my'G Space Studio — sube tu espacio" class="rounded-2xl shadow-lg w-full" loading="lazy" />
 					</div>
 					<div>
-						<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Paso 2</p>
+						<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Sube tu espacio</h2>
+						<p class="text-gray-500 text-sm leading-relaxed mb-3">
+							Todo evento empieza con un espacio. Puede ser una nave industrial, un salón clásico, una terraza o cualquier lugar que imagines.
+						</p>
+						<p class="text-gray-500 text-sm leading-relaxed">
+							Arrastra o selecciona una foto real del venue y my'G Space Studio lo convierte en el punto de partida de tu producción.
+						</p>
+					</div>
+				</div>
+
+				<!-- Describe tu visión -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+					<div class="order-2 md:order-1">
 						<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Describe tu visión</h2>
 						<p class="text-gray-500 text-sm leading-relaxed mb-3">
-							Escribe lo que imaginas: mesas de cóctel, un escenario, iluminación cálida, una pista de baile… lo que necesites.
+							Pinta la zona que quieres transformar y escribe lo que imaginas: mesas de cóctel, un escenario, iluminación cálida, una pista de baile… lo que necesites.
 						</p>
 						<p class="text-gray-500 text-sm leading-relaxed">
 							La IA interpreta tu descripción y genera una propuesta visual directamente sobre el espacio real. Sin renders genéricos — tu evento, en tu venue.
 						</p>
 					</div>
+					<div class="order-1 md:order-2">
+						<img src="/images/space-studio-step2.png" alt="my'G Space Studio — describe tu visión" class="rounded-2xl shadow-lg w-full" loading="lazy" />
+					</div>
 				</div>
 
-				<!-- Step 3: Result -->
+				<!-- Tu evento cobra vida -->
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-					<div class="order-2 md:order-1">
-						<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Resultado</p>
+					<div>
+						<img src="/images/space-studio-step3.png" alt="my'G Space Studio — resultado generado" class="rounded-2xl shadow-lg w-full" loading="lazy" />
+					</div>
+					<div>
 						<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">Tu evento cobra vida</h2>
 						<p class="text-gray-500 text-sm leading-relaxed mb-3">
 							En segundos obtienes una visualización realista de cómo quedaría tu evento montado. Las paredes, la luz, la estructura del espacio se respetan — solo cambia lo que tú decides.
@@ -53,9 +70,6 @@ import Footer from '../../components/Footer.astro';
 						<p class="text-gray-500 text-sm leading-relaxed">
 							Comparte la imagen con tu equipo, itera sobre la idea o úsala como referencia para la producción real.
 						</p>
-					</div>
-					<div class="order-1 md:order-2">
-						<img src="/images/space-after.jpg" alt="Evento visualizado — resultado de Space Studio" class="rounded-2xl shadow-lg w-full" loading="lazy" />
 					</div>
 				</div>
 
@@ -67,12 +81,12 @@ import Footer from '../../components/Footer.astro';
 			<div class="max-w-5xl mx-auto px-4">
 				<h2 class="text-xl font-black text-[#1a1a2a] mb-10 text-center">Antes y después</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<div class="relative">
-						<img src="/images/space-before-opt.jpg" alt="Antes — espacio vacío" class="rounded-2xl w-full" loading="lazy" />
+					<div class="relative aspect-[3/2]">
+						<img src="/images/space-before-opt.jpg" alt="Antes — espacio vacío" class="rounded-2xl w-full h-full object-cover" loading="lazy" />
 						<span class="absolute top-4 left-4 bg-[#1a1a2a]/80 text-white text-xs font-bold px-3 py-1 rounded-full">Antes</span>
 					</div>
-					<div class="relative">
-						<img src="/images/space-after.jpg" alt="Después — evento visualizado con IA" class="rounded-2xl w-full" loading="lazy" />
+					<div class="relative aspect-[3/2]">
+						<img src="/images/space-after.jpg" alt="Después — evento visualizado con IA" class="rounded-2xl w-full h-full object-cover" loading="lazy" />
 						<span class="absolute top-4 left-4 bg-[#e4665c]/90 text-white text-xs font-bold px-3 py-1 rounded-full">Después</span>
 					</div>
 				</div>
