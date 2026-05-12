@@ -32,9 +32,51 @@ const links = [
   <div class="header-cta">
     <ThemeToggle client:load />
     <AccentPicker client:load />
-    <a class="btn primary" href="/contacto?type=login" data-cursor="login →">
+    <a class="btn primary header-login" href="/contacto?type=login" data-cursor="login →">
+      Login
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-drawer" data-cursor="menú">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <div class="mobile-drawer-inner">
+    <nav class="mobile-nav">
+      {links.map((l) => (
+        <a href={l.href} class={`mobile-nav-link${current === l.id ? " active" : ""}`} data-cursor="ir →">{l.label}</a>
+      ))}
+    </nav>
+    <a class="btn primary lg" href="/contacto?type=login" data-cursor="login →" style="width: 100%; justify-content: center; margin-top: 16px;">
       Login
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
   </div>
-</header>
+</div>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById("nav-toggle");
+    var drawer = document.getElementById("mobile-drawer");
+    if (!btn || !drawer) return;
+    function setOpen(open) {
+      btn.setAttribute("aria-expanded", String(open));
+      drawer.setAttribute("aria-hidden", String(!open));
+      document.body.classList.toggle("nav-open", open);
+    }
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") !== "true";
+      setOpen(open);
+    });
+    drawer.addEventListener("click", function (e) {
+      if (e.target instanceof HTMLAnchorElement) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") setOpen(false);
+    });
+  })();
+</script>
