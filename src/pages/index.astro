@@ -4,17 +4,23 @@ import CTA from "../components/CTA.astro";
 import AccentPicker from "../components/AccentPicker.tsx";
 import VenueCard from "../components/VenueCard.astro";
 import { SITE } from "../data/site";
-import { getAllArtistas, getAllVenues, getArtistaCoverUrl } from "../lib/queries";
+import { getAllVenues } from "../lib/queries";
 
-const [artistas, venues] = await Promise.all([getAllArtistas(), getAllVenues()]);
+const venues = await getAllVenues();
 
-function pickByCity(city: string, max: number) {
-  return venues.filter((v) => (v.ciudad || "").trim().toLowerCase() === city.toLowerCase()).slice(0, max);
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
-const venuesBCN = pickByCity("Barcelona", 10);
-const venuesMAD = pickByCity("Madrid", 10);
-const featuredVenues = [...venuesBCN, ...venuesMAD];
-const featuredArtists = artistas.slice(0, 12);
+function pickRandom(city: string, max: number) {
+  const inCity = venues.filter((v) => (v.ciudad || "").trim().toLowerCase() === city.toLowerCase());
+  return shuffle(inCity).slice(0, max);
+}
+const featuredVenues = [...pickRandom("Barcelona", 3), ...pickRandom("Madrid", 3)];
 ---
 <Layout title={`my'G — ${SITE.brandSuffix}`} current="home">
   <!-- HERO 2 COLUMNAS -->
@@ -35,7 +41,6 @@ const featuredArtists = artistas.slice(0, 12);
           <p class="hero-sub">{SITE.hero.subtitle}</p>
           <AccentPicker client:load />
         </div>
-        <p class="hero-body">{SITE.hero.body}</p>
         <div class="hero-actions">
           <a class="btn primary lg" href={SITE.hero.cta.href} data-cursor={SITE.hero.cta.cursor}>
             {SITE.hero.cta.label}
@@ -113,9 +118,24 @@ const featuredArtists = artistas.slice(0, 12);
     </div>
   </section>
 
-  <!-- ESPACIOS -->
+  <!-- PLANES CTA (debajo de Cómo funciona) -->
+  <section class="section dark">
+    <div class="container" style="text-align: center;">
+      <div class="eyebrow" style="justify-content: center;">{SITE.planesCTA.eyebrow}</div>
+      <h2 class="h-section">{SITE.planesCTA.title}<span style="color: var(--color-accent);">.</span></h2>
+      <p style="margin: 32px auto 0; max-width: 60ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
+        {SITE.planesCTA.body}
+      </p>
+      <a class="btn primary lg" href={SITE.planesCTA.cta.href} style="margin-top: 32px;" data-cursor={SITE.planesCTA.cta.cursor}>
+        {SITE.planesCTA.cta.label}
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ESPACIOS (3 BCN + 3 MAD aleatorios) -->
   {featuredVenues.length > 0 && (
-    <section class="section dark">
+    <section class="section">
       <div class="container">
         <div class="list-head">
           <div>
@@ -133,44 +153,6 @@ const featuredArtists = artistas.slice(0, 12);
         </p>
         <div class="venues-grid">
           {featuredVenues.map((v, i) => <VenueCard venue={v} index={i} />)}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- ARTISTAS (grid circular) -->
-  {featuredArtists.length > 0 && (
-    <section class="section">
-      <div class="container">
-        <div class="list-head">
-          <div>
-            <div class="eyebrow">{SITE.artistas.eyebrow}</div>
-            <h2 class="h-section">{SITE.artistas.title}<span style="color: var(--color-accent);">.</span></h2>
-            <p style="margin-top: 16px; max-width: 60ch; color: var(--color-text-secondary);">{SITE.artistas.subtitle}</p>
-          </div>
-        </div>
-        <div class="circle-grid">
-          {featuredArtists.map((a) => {
-            const cover = getArtistaCoverUrl(a);
-            return (
-              <a class="circle-card" href={`/artistas/${a.slug}`} data-cursor="abrir →">
-                <div class="circle-img">
-                  {cover && <img src={cover} alt={a.nombre} loading="lazy" />}
-                </div>
-                <div class="circle-name">{a.nombre}</div>
-                <div class="circle-disc">{a.genero_musical || a.descripcion_corta || "Artista"}</div>
-              </a>
-            );
-          })}
-        </div>
-        <div class="hero-actions" style="margin-top: 40px;">
-          <a class="btn primary lg" href={SITE.artistas.ctaMore.href} data-cursor={SITE.artistas.ctaMore.cursor}>
-            {SITE.artistas.ctaMore.label}
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn lg" href={SITE.artistas.ctaJoin.href} data-cursor={SITE.artistas.ctaJoin.cursor}>
-            {SITE.artistas.ctaJoin.label}
-          </a>
         </div>
       </div>
     </section>
@@ -225,23 +207,8 @@ const featuredArtists = artistas.slice(0, 12);
     </div>
   </section>
 
-  <!-- PLANES CTA -->
-  <section class="section dark">
-    <div class="container" style="text-align: center;">
-      <div class="eyebrow" style="justify-content: center;">{SITE.planesCTA.eyebrow}</div>
-      <h2 class="h-section">{SITE.planesCTA.title}<span style="color: var(--color-accent);">.</span></h2>
-      <p style="margin: 32px auto 0; max-width: 60ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
-        {SITE.planesCTA.body}
-      </p>
-      <a class="btn primary lg" href={SITE.planesCTA.cta.href} style="margin-top: 32px;" data-cursor={SITE.planesCTA.cta.cursor}>
-        {SITE.planesCTA.cta.label}
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </section>
-
   <!-- SPACE STUDIO TEASER -->
-  <section class="section">
+  <section class="section dark">
     <div class="container">
       <div class="two-col">
         <div>
