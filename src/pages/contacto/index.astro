@@ -1,230 +1,100 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from "../../layouts/Layout.astro";
+import { SITE } from "../../data/site";
 ---
-<Layout title="Empieza tu evento · mygloven">
-	<main>
-		<Navbar currentPage="/contacto" />
+<Layout title="Contacto — MYGLOVEN" current="contacto">
+  <section class="detail-hero">
+    <div class="container">
+      <div class="eyebrow">— Hablemos</div>
+      <h1>Contacto<span class="ap">.</span></h1>
+      <p class="lead" style="margin-top: 32px; max-width: 60ch; font-size: 22px;">
+        Booking, prensa, partnerships. Lo más probable es que respondamos hoy.
+      </p>
+    </div>
+  </section>
 
-		<section class="min-h-screen pt-24 pb-16 bg-[#fafafa] flex items-center justify-center px-4">
-			<div class="w-full max-w-lg" id="form-container">
-				<div class="text-center mb-10">
-					<h1 class="text-3xl font-black text-[#1a1a2a] mb-3">Empieza tu evento con my'G</h1>
-					<p class="text-gray-500 text-sm leading-relaxed max-w-md mx-auto mb-2">
-						Cuéntanos qué tienes en mente —una idea, un proyecto o un evento en marcha— y empezaremos a construir contigo una propuesta real.
-					</p>
-				</div>
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;" id="contact-grid">
+        <div>
+          <div class="eyebrow">— Vías directas</div>
+          <div style="display: flex; flex-direction: column; gap: 24px; margin-top: 24px;">
+            {SITE.contact.channels.map((c) => (
+              <a href={`mailto:${c.v}`} data-cursor="email →" style="display: block; padding: 20px 0; border-bottom: 1px solid var(--color-rule);">
+                <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); color: var(--color-text-muted); margin-bottom: 6px;">— {c.l}</div>
+                <div style="font-family: var(--font-display); font-size: 28px; font-weight: 600; letter-spacing: -.02em; color: var(--color-text-primary);">{c.v}</div>
+              </a>
+            ))}
+          </div>
 
-				<form
-					id="event-form"
-					action="https://formsubmit.co/info@mygloven.com"
-					method="POST"
-					class="bg-white rounded-2xl shadow-md border border-gray-100 p-8 space-y-5"
-				>
-					<!-- Formsubmit config -->
-					<input type="hidden" name="_subject" value="Nueva solicitud de evento — mygloven.com" />
-					<input type="hidden" name="_captcha" value="false" />
-					<input type="hidden" name="_next" value="https://mygloven.com/contacto?enviado=1" />
+          <div class="eyebrow" style="margin-top: 40px;">— Estudios</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 16px;">
+            {SITE.contact.studios.map((s) => (
+              <div style="padding: 16px; border: 1px solid var(--color-rule); border-radius: 4px; background: var(--color-surface);">
+                <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: var(--tracking-extreme); color: var(--color-accent); margin-bottom: 8px;">{s.c}</div>
+                <div style="font-family: var(--font-mono); font-size: 11px; line-height: 1.6; white-space: pre-line; color: var(--color-text-secondary);">{s.a}</div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-						<div>
-							<label for="name" class="block text-xs font-semibold text-[#1a1a2a] mb-1.5 uppercase tracking-wide">Nombre</label>
-							<input
-								type="text"
-								id="name"
-								name="name"
-								required
-								placeholder="Tu nombre"
-								class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1a1a2a] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e4665c] focus:border-transparent transition"
-							/>
-						</div>
-						<div>
-							<label for="email" class="block text-xs font-semibold text-[#1a1a2a] mb-1.5 uppercase tracking-wide">Email</label>
-							<input
-								type="email"
-								id="email"
-								name="email"
-								required
-								placeholder="tu@email.com"
-								class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1a1a2a] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e4665c] focus:border-transparent transition"
-							/>
-						</div>
-					</div>
-
-					<div>
-						<label for="event_type" class="block text-xs font-semibold text-[#1a1a2a] mb-1.5 uppercase tracking-wide">Tipo de evento</label>
-						<select
-							id="event_type"
-							name="event_type"
-							required
-							class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1a1a2a] focus:outline-none focus:ring-2 focus:ring-[#e4665c] focus:border-transparent transition"
-						>
-							<option value="" disabled selected>Selecciona una opción</option>
-							<option value="musica">Música / Concierto</option>
-							<option value="corporativo">Corporativo / Empresa</option>
-							<option value="marca">Evento de marca</option>
-							<option value="privado">Evento privado</option>
-							<option value="otro">Otro</option>
-						</select>
-					</div>
-
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-						<div>
-							<label for="city" class="block text-xs font-semibold text-[#1a1a2a] mb-1.5 uppercase tracking-wide">Ciudad</label>
-							<input
-								type="text"
-								id="city"
-								name="city"
-								required
-								placeholder="Madrid, Barcelona..."
-								class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1a1a2a] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e4665c] focus:border-transparent transition"
-							/>
-						</div>
-						<div>
-							<label for="attendees" class="block text-xs font-semibold text-[#1a1a2a] mb-1.5 uppercase tracking-wide">Nº de personas</label>
-							<input
-								type="text"
-								id="attendees"
-								name="attendees"
-								placeholder="~200"
-								class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1a1a2a] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e4665c] focus:border-transparent transition"
-							/>
-						</div>
-					</div>
-
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-						<div>
-							<label for="date" class="block text-xs font-semibold text-[#1a1a2a] mb-1.5 uppercase tracking-wide">Fecha aproximada</label>
-							<input
-								type="text"
-								id="date"
-								name="date"
-								placeholder="Junio 2026, flexible..."
-								class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1a1a2a] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e4665c] focus:border-transparent transition"
-							/>
-						</div>
-						<div>
-							<label for="budget" class="block text-xs font-semibold text-[#1a1a2a] mb-1.5 uppercase tracking-wide">Presupuesto <span class="text-gray-400 font-normal normal-case">(opcional)</span></label>
-							<input
-								type="text"
-								id="budget"
-								name="budget"
-								placeholder="5.000€, por definir..."
-								class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1a1a2a] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e4665c] focus:border-transparent transition"
-							/>
-						</div>
-					</div>
-
-					<div>
-						<label for="description" class="block text-xs font-semibold text-[#1a1a2a] mb-1.5 uppercase tracking-wide">Cuéntanos tu idea</label>
-						<textarea
-							id="description"
-							name="description"
-							rows="4"
-							placeholder="Cuéntanos tu idea…"
-							class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1a1a2a] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e4665c] focus:border-transparent transition resize-none"
-						></textarea>
-					</div>
-
-					<button
-						type="submit"
-						class="w-full bg-[#e4665c] hover:bg-[#d86259] text-white font-bold py-3.5 rounded-xl transition-all text-sm"
-					>
-						Recibir propuesta →
-					</button>
-				</form>
-
-				<p class="text-center text-xs text-gray-400 mt-6">
-					También puedes escribirnos a <a href="mailto:info@mygloven.com" class="text-[#e4665c] hover:underline">info@mygloven.com</a>
-				</p>
-			</div>
-
-			<!-- Pantalla post-envío -->
-			<div class="w-full max-w-lg hidden" id="success-container">
-				<!-- Transición -->
-				<div id="transition-screen" class="text-center py-20">
-					<div class="inline-block mb-6">
-						<svg class="animate-spin h-10 w-10 text-[#e4665c]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-							<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-							<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-						</svg>
-					</div>
-					<h2 class="text-2xl font-black text-[#1a1a2a] mb-3">Estamos construyendo tu propuesta…</h2>
-					<p class="text-gray-400 text-sm">Analizando espacios, artistas y proveedores para tu evento</p>
-				</div>
-
-				<!-- Resultado final -->
-				<div id="final-screen" class="hidden">
-					<div class="text-center mb-10">
-						<div class="text-4xl mb-4">🎉</div>
-						<h2 class="text-3xl font-black text-[#1a1a2a] mb-3">Tu evento ya está en marcha</h2>
-						<p class="text-gray-500 text-sm leading-relaxed max-w-md mx-auto">
-							Hemos recibido tu información y estamos preparando una propuesta adaptada a tu evento.
-						</p>
-						<p class="text-gray-500 text-sm leading-relaxed max-w-md mx-auto mt-2">
-							En my'G no solo conectamos opciones: construimos soluciones completas para que puedas producir tu evento sin fricción.
-						</p>
-					</div>
-
-					<!-- Preview de lo que recibirá -->
-					<div class="bg-white rounded-2xl shadow-md border border-gray-100 p-8 mb-8">
-						<p class="text-xs font-semibold text-[#1a1a2a] uppercase tracking-wide mb-4">Ejemplo de lo que recibirás:</p>
-						<ul class="space-y-3 text-sm text-gray-600">
-							<li class="flex items-start gap-2">
-								<span class="text-[#e4665c] mt-0.5">✓</span>
-								<span>Espacios recomendados según tu evento</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-[#e4665c] mt-0.5">✓</span>
-								<span>Propuesta de artistas (si aplica)</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-[#e4665c] mt-0.5">✓</span>
-								<span>Proveedores adaptados (sonido, iluminación, etc.)</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-[#e4665c] mt-0.5">✓</span>
-								<span>Enfoque de producción</span>
-							</li>
-						</ul>
-					</div>
-
-					<!-- CTA Planes -->
-					<div class="text-center">
-						<p class="text-gray-400 text-xs mb-4">
-							El acceso a propuestas completas y conexión con todos los elementos del evento se realiza a través de los planes de my'G.
-						</p>
-						<a href="/planes" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
-							Ver planes →
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<Footer />
-	</main>
+        <div style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 32px; border-radius: 4px;" id="contact-card">
+          <div id="contact-form-block">
+            <div class="eyebrow">— Formulario</div>
+            <h3 style="font-family: var(--font-display); font-size: 32px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 24px;">
+              Cuéntanos qué tienes entre manos<span style="color: var(--color-accent);">.</span>
+            </h3>
+            <form id="contact-form" style="display: flex; flex-direction: column; gap: 16px;">
+              <label style="display: flex; flex-direction: column; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Tu nombre</span>
+                <input class="input-field" name="name" placeholder="Marta Vidal" required />
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Email</span>
+                <input class="input-field" name="email" type="email" placeholder="tu@email.com" required />
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Tipo de consulta</span>
+                <select class="input-field" name="type">
+                  <option>Booking de un artista</option>
+                  <option>Programar un venue</option>
+                  <option>Producción de evento</option>
+                  <option>Prensa</option>
+                  <option>Otra</option>
+                </select>
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Cuéntanos más</span>
+                <textarea class="input-field" name="message" rows="5" placeholder="Fecha, ciudad, presupuesto orientativo, lo que sepas."></textarea>
+              </label>
+              <button type="submit" class="btn primary lg" style="margin-top: 8px; width: 100%; justify-content: center;" data-cursor="enviar →">
+                Enviar mensaje
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </form>
+          </div>
+          <div id="contact-sent" style="display: none; text-align: center; padding: 60px 20px;">
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: var(--tracking-extreme); color: var(--color-accent); margin-bottom: 16px;">— RECIBIDO</div>
+            <div style="font-family: var(--font-display); font-size: 40px; font-weight: 600; letter-spacing: -.02em; line-height: 1; margin-bottom: 16px;">Gracias<span style="color: var(--color-accent);">.</span></div>
+            <p style="color: var(--color-text-secondary); max-width: 30ch; margin: 0 auto;">Te respondemos hoy. Si es urgente, escribe directamente a {SITE.contactEmail}.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 
-<script>
-	// Check if returning from FormSubmit redirect
-	const params = new URLSearchParams(window.location.search);
-	if (params.get('enviado') === '1') {
-		const formContainer = document.getElementById('form-container');
-		const successContainer = document.getElementById('success-container');
-		const transitionScreen = document.getElementById('transition-screen');
-		const finalScreen = document.getElementById('final-screen');
-		
-		if (formContainer && successContainer && transitionScreen && finalScreen) {
-			formContainer.classList.add('hidden');
-			successContainer.classList.remove('hidden');
-			
-			// Show transition for 3 seconds, then show final
-			setTimeout(() => {
-				transitionScreen.classList.add('hidden');
-				finalScreen.classList.remove('hidden');
-			}, 3000);
-		}
-	}
+<script is:inline>
+  (function () {
+    const form = document.getElementById("contact-form");
+    const block = document.getElementById("contact-form-block");
+    const sent = document.getElementById("contact-sent");
+    if (!form || !block || !sent) return;
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // TODO: cablear envío real (endpoint, Supabase, mailto, etc.)
+      block.style.display = "none";
+      sent.style.display = "block";
+    });
+  })();
 </script>

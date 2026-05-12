@@ -1,0 +1,97 @@
+erDiagram
+    Usuario {
+        string nombre
+        string email
+        string rol "admin | venue | artista | proveedor | cliente"
+        string plan "Explorador | Creador | Productor"
+        string estado "activo | pendiente | bloqueado"
+        date fecha_registro
+    }
+
+    Venue {
+        string nombre
+        string ciudad
+        string direccion
+        int capacidad
+        string tipo "sala | rooftop | restaurante | hotel | aire libre"
+        string descripcion
+        string telefono
+        string email
+        string web
+        string tags
+        boolean verificado
+    }
+
+    Artista {
+        string nombre
+        string bio
+        string genero_musical
+        string links "Spotify IG RA YouTube"
+        string telefono
+        string email
+        string tags
+        boolean verificado
+    }
+
+    Proveedor {
+        string nombre
+        string tipo_servicio "catering | sonido | foto | deco | seguridad"
+        string zona_cobertura
+        string descripcion
+        string precio_orientativo
+        string tags
+        boolean verificado
+    }
+
+    Evento {
+        string tipo "concierto | fiesta | corporativo | boda | festival"
+        string titulo
+        string descripcion
+        string ciudad
+        date fecha_deseada
+        int num_personas
+        float presupuesto
+        string estado "borrador | activo | en propuestas | cerrado"
+    }
+
+    Propuesta {
+        float precio_propuesto
+        boolean disponibilidad
+        string mensaje
+        string estado "pendiente | aceptada | rechazada | retirada"
+        date fecha_envio
+    }
+
+    Suscripcion {
+        string tipo "Explorador | Creador | Productor"
+        date fecha_inicio
+        date fecha_fin
+        string estado_pago "activo | cancelado | expirado"
+    }
+
+    Mensaje {
+        string contenido
+        date fecha
+        boolean leido
+    }
+
+    Notificacion {
+        string tipo "nueva solicitud | propuesta recibida | mensaje nuevo"
+        string contenido
+        date fecha
+        boolean leida
+    }
+
+    Usuario ||--o{ Venue : "gestiona"
+    Usuario ||--o{ Artista : "es"
+    Usuario ||--o{ Proveedor : "es"
+    Usuario ||--o{ Evento : "crea"
+    Usuario ||--o{ Suscripcion : "tiene"
+    Usuario ||--o{ Notificacion : "recibe"
+    Usuario ||--o{ Mensaje : "envia"
+    Usuario ||--o{ Mensaje : "recibe"
+    Evento ||--o{ Propuesta : "recibe"
+    Usuario ||--o{ Propuesta : "envia"
+    Propuesta }o--o| Venue : "propone"
+    Propuesta }o--o| Artista : "propone"
+    Propuesta }o--o| Proveedor : "propone"

@@ -1,186 +1,153 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import ChatBot from "../components/ChatBot";
-import HeroSearch from '../components/HeroSearch';
-import ArtistGrid from '../components/ArtistGrid';
-import { getAllVenues, getAllArtists, getSiteConfig } from '../sanity/queries';
+import Layout from "../layouts/Layout.astro";
+import CTA from "../components/CTA.astro";
+import VenueCard from "../components/VenueCard.astro";
+import ArtistRow from "../components/ArtistRow.astro";
+import { SITE } from "../data/site";
+import { getAllArtistas, getAllVenues } from "../lib/queries";
 
-const venuesData = await getAllVenues();
-const artistsData = await getAllArtists();
-const config = await getSiteConfig();
-
-const venueCount = venuesData.length;
-const artistCount = artistsData.length;
-const contactEmail = config?.contactEmail || 'info@mygloven.com';
+const [artistas, venues] = await Promise.all([getAllArtistas(), getAllVenues()]);
+const featuredArtists = artistas.slice(0, 5);
+const featuredVenues = venues.slice(0, 3);
 ---
-<Layout title="mygloven | my'G your event production assistant">
-	<main>
-		<Navbar currentPage="/" />
+<Layout title="MYGLOVEN — Booking, gestión y talento" current="home">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid">
+      <div class="hero-tag">
+        <span class="pulse"></span>
+        <span>{SITE.hero.hashtag}</span>
+        <span>—</span>
+        <span>{SITE.hero.activeLabel}</span>
+      </div>
+      <h1 class="hero-title">
+        Booking, gestión<br/>y talento<span class="ap">.</span>
+      </h1>
+      <p class="lead" style="font-size: 22px; max-width: 70ch;">
+        {SITE.hero.subtitle}
+      </p>
+      <div class="hero-foot">
+        <div class="hero-actions">
+          <a class="btn primary lg" href="/artistas" data-cursor="ver roster →">
+            Ver roster
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn lg" href="/contacto" data-cursor="contacto →">Contacto</a>
+        </div>
+        <div class="hero-stats">
+          {SITE.hero.stats.map((s) => (
+            <div class="hero-stat">
+              <div class="lbl">— {s.lbl}</div>
+              <div class="num">{s.num}<span class="ap">{s.suffix}</span></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Hero -->
-		<section class="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 pt-14" 
-			style={`background: linear-gradient(rgba(26,26,42,0.65), rgba(26,26,42,0.80)), url('/images/hero-bg.jpg') center/cover no-repeat;`}>
-			<div class="relative z-10 max-w-3xl">
-				<h1 class="text-4xl md:text-6xl font-extralight text-white mb-4 leading-tight tracking-tight" set:html={config?.heroTitle || 'Espacios y artistas<br>para tu próximo evento.'} />
-				<p class="text-base md:text-lg text-white max-w-xl mx-auto mb-8" style="color: #ffffff !important;">
-					<span class="text-[#e4665c] font-semibold">{config?.heroHashtag || 'myglobalvenue'}</span><br>
-					{config?.heroSubtitle || "new AI tools coming soon.. my'G"}
-				</p>
+  <div class="clients">
+    <span class="lbl">— Han confiado en nosotros</span>
+    <div class="clients-row">
+      {SITE.clients.map((c) => <span class="client-logo">{c}</span>)}
+    </div>
+  </div>
 
-				<!-- CTA principal -->
-				<div class="mt-8 mb-6">
-					<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-4 rounded-full font-bold inline-block transition-all text-base shadow-lg">
-						Describe tu evento →
-					</a>
-				</div>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">— Por qué confiar en nosotros</div>
+      <h2 class="h-section">Cuatro razones,<br/>sin más.</h2>
+      <div class="features-grid">
+        {SITE.features.map((f, i) => (
+          <div class="feature">
+            <div class="num">— 0{i + 1} / 0{SITE.features.length}</div>
+            <h3>{f.title}</h3>
+            <p>{f.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-				<!-- Buscador -->
-				<div class="w-full max-w-2xl mx-auto">
-					<HeroSearch client:load />
-				</div>
-			</div>
-		</section>
+  <section class="section dark">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="eyebrow">— Quiénes somos</div>
+          <h2 class="h-section">Una agencia<br/>operativa<span style="color: var(--color-accent);">.</span></h2>
+        </div>
+        <div>
+          <p>{SITE.about.primary}</p>
+          <p style="color: var(--color-text-primary);">{SITE.about.secondary}</p>
+          <a class="btn lg" href="/estudio" style="margin-top: 16px;" data-cursor="conoce el estudio →">
+            Conoce el estudio
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Why trust MyGloven -->
-		<section class="py-16 bg-white border-b border-gray-100">
-			<div class="max-w-5xl mx-auto px-4">
-				<h2 class="text-2xl font-black text-[#1a1a2a] mb-10 text-center">Cómo funciona</h2>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					{(config?.features || [
-						{ title: 'Define tu evento', description: "Cuéntanos qué quieres hacer —tipo de evento, ciudad, público o idea inicial y my'G empieza a construir contigo la producción desde el primer momento.\n\nNo es solo una búsqueda: es el punto de partida de un evento real." },
-						{ title: 'Recibe una propuesta completa', description: "my'G combina su selección curada de espacios, artistas y proveedores con asistencia inteligente para proponerte opciones concretas, viables y adaptadas a tu evento.\n\nDesde venues únicos hasta necesidades técnicas: todo conectado en una misma propuesta." },
-						{ title: 'Activa tu plan y produce tu evento', description: "Elige el plan que mejor se adapte a tu proyecto y desbloquea herramientas para producir tu evento de forma eficiente.\n\nDesde contacto directo con todos los agentes hasta funcionalidades como my'G Space Studio, que te ayuda a organizar, visualizar y coordinar toda la producción en un solo lugar." },
-					]).map((f: any, i: number) => (
-						<div class="text-center">
-							<div class="text-4xl font-black text-[#e4665c] mb-2">{i + 1}</div>
-							<h3 class="font-bold text-[#1a1a2a] mb-2">{f.title}</h3>
-							<p class="text-sm text-gray-500">{f.description}</p>
-						</div>
-					))}
-				</div>
-				<div class="mt-10 text-center">
-					<a href="/planes" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
-						Ver planes →
-					</a>
-				</div>
-			</div>
-		</section>
+  {featuredArtists.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">— Roster destacado</div>
+            <h2 class="h-section">Artistas.</h2>
+          </div>
+          <a class="btn" href="/artistas" data-cursor="ver todos →">
+            Ver todos los artistas
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="artists-list">
+          {featuredArtists.map((a, i) => <ArtistRow artista={a} index={i} />)}
+        </div>
+      </div>
+    </section>
+  )}
 
-		<!-- Espacios -->
-		<section id="explore" class="py-16 bg-[#fafafa]">
-			<div class="max-w-7xl mx-auto px-4 text-center">
-				<h2 class="text-3xl font-black text-[#1a1a2a] mb-2">Espacios</h2>
-				<p class="text-gray-400 text-sm">Espacios seleccionados para producir tu evento.</p>
-				<p class="text-gray-400 text-xs max-w-2xl mx-auto mt-4 leading-relaxed">
-					En mygloven estamos enfocando la plataforma hacia una selección más cuidada de venues. Próximamente trabajaremos principalmente con espacios muy especiales, característicos y polivalentes en Madrid y Barcelona, con información mucho más completa y detallada para facilitar la producción de eventos. Además, mantendremos una base informativa con otros espacios en distintas ciudades.
-				</p>
-				<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-					<a href="/espacios" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
-						Ver todos los espacios →
-					</a>
-					<a href={`mailto:${contactEmail}`} class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
-						¿Tienes un espacio? Regístrate →
-					</a>
-				</div>
-			</div>
-		</section>
+  <section class="primavera">
+    <div class="container">
+      <div class="year">{SITE.primaveraPro.year}<span class="accent">.</span></div>
+      <div>
+        <div class="lbl">— Primavera Pro</div>
+        <h2>{SITE.primaveraPro.subtitle}</h2>
+        <div class="date">{SITE.primaveraPro.date}</div>
+        <p style="font-size: 17px; color: var(--color-text-secondary); max-width: 50ch; line-height: 1.6;">
+          {SITE.primaveraPro.body}
+        </p>
+        <div style="display: flex; gap: 12px; margin-top: 32px;">
+          <a class="btn primary lg" href="/contacto" data-cursor="reunirnos →">
+            Pide reunión
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn lg" href="/contacto" data-cursor="programa →" style="border-color: rgba(255,255,255,.2); color: rgba(255,255,255,.7);">Ver programa</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Artists -->
-		<section id="artists" class="py-20 bg-white border-y border-gray-100">
-			<div class="max-w-7xl mx-auto px-4">
-				<div class="text-center mb-14">
-					<h2 class="text-3xl font-black text-[#1a1a2a] mb-2">Artistas</h2>
-					<p class="text-gray-400 text-sm">Talento conectado con tu evento.</p>
-				</div>
-				<ArtistGrid client:load artists={artistsData} />
-				<div class="text-center mt-14 flex flex-col sm:flex-row gap-4 justify-center">
-					<a href="/artistas" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
-						Ver más artistas →
-					</a>
-					<a href={`mailto:${contactEmail}`} class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
-						¿Eres artista? Regístrate →
-					</a>
-				</div>
-			</div>
-		</section>
+  {featuredVenues.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">— Espacios destacados</div>
+            <h2 class="h-section">Espacios.</h2>
+          </div>
+          <a class="btn" href="/espacios" data-cursor="ver todos →">
+            Ver todos los espacios
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="venues-grid">
+          {featuredVenues.map((v, i) => <VenueCard venue={v} index={i} />)}
+        </div>
+      </div>
+    </section>
+  )}
 
-		<!-- my'G agency block -->
-		<section class="py-20 bg-[#1a1a2a]">
-			<div class="max-w-4xl mx-auto px-4 text-center">
-				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Servicio integral</p>
-				<h2 class="text-3xl font-black text-white mb-6">my'G <span class="text-[#e4665c]">agency</span></h2>
-				<p class="text-gray-300 text-base leading-relaxed max-w-2xl mx-auto mb-10">
-					Creamos y producimos eventos de principio a fin. Desde la localización del espacio hasta la producción técnica, logística, coordinación de proveedores o catering. Un servicio 360º para que solo tengas que imaginar el evento.
-				</p>
-				<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
-					Cuéntanos tu evento →
-				</a>
-			</div>
-		</section>
-
-		<!-- About -->
-		<section id="about" class="py-16 bg-[#fafafa]">
-			<div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-				<div>
-					<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">About my'G</h2>
-					<p class="text-gray-500 leading-relaxed text-sm mb-3">mygloven nace con la misión de facilitar la organización de eventos conectando espacios, artistas, proveedores y promotores en una misma plataforma.</p>
-					<p class="text-gray-500 leading-relaxed text-sm mb-3">Estamos desarrollando herramientas inteligentes con IA que conectan espacios, artistas y proveedores en propuestas adaptadas a cada evento, simplificando toda la producción.</p>
-					<p class="text-gray-500 leading-relaxed text-sm">Nuestro objetivo es crear un punto de encuentro donde se integren proyectos y recursos para eventos, reuniendo todo lo necesario en un solo lugar.</p>
-				</div>
-				<div class="bg-[#1a1a2a] rounded-2xl p-10 text-center">
-					<p class="text-3xl font-black text-white mb-2">{config?.primaveraProYear || "Primavera Pro '26"}</p>
-					<p class="text-[#e4665c] font-semibold text-sm">{config?.primaveraProSubtitle || 'Proyecto seleccionado · Ideas Showroom'}</p>
-					<p class="text-gray-400 text-xs mt-2">{config?.primaveraProDate || 'Barcelona · 3-5 Junio 2026'}</p>
-					<a href="https://www.primaverasound.com/en/primavera-pro/meet-the-selected-proposals-for-ideas-showroom-2026" target="_blank" rel="noopener" class="inline-block mt-4 text-[#e4665c] hover:text-white text-xs font-semibold border border-[#e4665c] px-4 py-1.5 rounded-full transition-all hover:bg-[#e4665c]">
-						Ver Ideas Showroom →
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- Planes CTA (fondo negro) -->
-		<section class="py-16 bg-[#1a1a2a]">
-			<div class="max-w-3xl mx-auto px-4 text-center">
-				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Produce tu evento</p>
-				<h2 class="text-2xl font-black text-white mb-4">Planes — Tu evento, tu ritmo</h2>
-				<p class="text-gray-300 text-sm leading-relaxed max-w-xl mx-auto mb-8">
-					Elige cómo quieres producir tu evento con my'G. Cada plan desbloquea propuestas, conexiones y herramientas para simplificar toda la producción.
-				</p>
-				<a href="/planes" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
-					Ver planes →
-				</a>
-			</div>
-		</section>
-
-		<!-- Space Studio teaser (fondo gris) -->
-		<section class="py-16 bg-[#f0f0f0]">
-			<div class="max-w-3xl mx-auto px-4 text-center">
-				<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Próximamente</p>
-				<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">my'G <span class="text-[#e4665c]">Space Studio</span></h2>
-				<p class="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto mb-8">
-					Diseña y visualiza tu evento antes de que suceda. Una herramienta con IA que genera renders, sugiere configuraciones y te ayuda a planificar de forma visual.
-				</p>
-				<a href="/space-studio" class="border-2 border-[#e4665c] text-[#e4665c] hover:bg-[#e4665c] hover:text-white px-8 py-3 rounded-full font-bold transition-all inline-block text-sm">
-					Saber más →
-				</a>
-			</div>
-		</section>
-
-		<!-- CTA -->
-		<section class="py-16 bg-white text-center">
-			<div class="max-w-xl mx-auto px-4">
-				<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">{config?.ctaTitle || '¿Quieres formar parte?'}</h2>
-				<p class="text-gray-500 text-sm mb-8">{config?.ctaSubtitle || 'Espacios, artistas y promotores — únete a la comunidad.'}</p>
-				<a href="/contacto" class="bg-[#e4665c] hover:bg-[#d86259] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
-					Contactar →
-				</a>
-			</div>
-		</section>
-
-		<Footer />
-
-		<ChatBot client:load />
-	</main>
+  <CTA />
 </Layout>

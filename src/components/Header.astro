@@ -1,0 +1,35 @@
+---
+import AccentPicker from "./AccentPicker.tsx";
+import { SITE } from "../data/site";
+
+interface Props {
+  current?: string;
+}
+const { current = "home" } = Astro.props;
+
+const links = [
+  { id: "home", label: "Inicio", href: "/" },
+  { id: "artistas", label: "Artistas", href: "/artistas" },
+  { id: "espacios", label: "Espacios", href: "/espacios" },
+  { id: "estudio", label: "Estudio", href: "/estudio" },
+  { id: "planes", label: "Planes", href: "/planes" },
+  { id: "contacto", label: "Contacto", href: "/contacto" },
+];
+---
+<header class="site-header">
+  <a class="brand" href="/" data-cursor="inicio">
+    my<span class="ap">'</span>G<span class="brand-meta">— {SITE.brandSuffix}</span>
+  </a>
+  <nav class="site-nav">
+    {links.map((l) => (
+      <a href={l.href} class={current === l.id ? "active" : ""} data-cursor="ir →">{l.label}</a>
+    ))}
+  </nav>
+  <div class="header-cta">
+    <AccentPicker client:load />
+    <a class="btn primary" href="/contacto" data-cursor="hablemos →">
+      Hablemos
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>

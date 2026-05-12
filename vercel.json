@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    { "source": "/venue/:slug", "destination": "/espacios/:slug", "permanent": true },
+    { "source": "/artist/:slug", "destination": "/artistas/:slug", "permanent": true },
+    { "source": "/agency", "destination": "/estudio", "permanent": true },
+    { "source": "/space-studio", "destination": "/planes", "permanent": true },
+    { "source": "/create-space", "destination": "/contacto", "permanent": true },
+    { "source": "/proveedores", "destination": "/contacto", "permanent": true },
+    { "source": "/lab/:path*", "destination": "/", "permanent": true },
+    { "source": "/studio/:path*", "destination": "/", "permanent": true }
+  ]
+}

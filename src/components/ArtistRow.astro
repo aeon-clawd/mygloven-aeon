@@ -1,0 +1,22 @@
+---
+import { artistaDisciplineLabel, pad } from "../lib/queries";
+import type { Artista } from "../lib/types";
+
+interface Props {
+  artista: Artista;
+  index?: number;
+}
+const { artista, index = 0 } = Astro.props;
+const num = pad(index + 1);
+const discipline = artistaDisciplineLabel(artista);
+---
+<a class="artist-row" href={`/artistas/${artista.slug}`} data-cursor="abrir →">
+  <span class="artist-row-bg"></span>
+  <span class="num">№ {num}</span>
+  <h3>{artista.nombre}<span style="color: var(--color-accent);">.</span></h3>
+  <span class="disc">{discipline}</span>
+  <span class="city">{artista.tags?.[0] || ""}</span>
+  <span class="arrow">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </span>
+</a>

@@ -1,0 +1,13 @@
+---
+import { SITE } from "../data/site";
+---
+<section class="cta">
+  <div class="container">
+    <h2>{SITE.cta.title}</h2>
+    <p>{SITE.cta.subtitle}</p>
+    <div class="btn-row">
+      <a class="btn lg" href={`mailto:${SITE.contactEmail}`} data-cursor="email →">{SITE.contactEmail}</a>
+      <a class="btn lg outline" href="/contacto" data-cursor="formulario →">Formulario</a>
+    </div>
+  </div>
+</section>
