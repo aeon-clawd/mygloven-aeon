@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
 import AccentPicker from "../components/AccentPicker.tsx";
+import ThemeToggle from "../components/ThemeToggle.tsx";
 import VenueCard from "../components/VenueCard.astro";
 import { SITE } from "../data/site";
 import { getAllVenues } from "../lib/queries";
@@ -40,6 +41,7 @@ const featuredVenues = [...pickRandom("Barcelona", 3), ...pickRandom("Madrid", 3
         <div class="hero-pick">
           <p class="hero-sub">{SITE.hero.subtitle}</p>
           <AccentPicker client:load />
+          <ThemeToggle client:load />
         </div>
         <div class="hero-actions">
           <a class="btn primary lg" href={SITE.hero.cta.href} data-cursor={SITE.hero.cta.cursor}>
