@@ -9,16 +9,19 @@ const { current = "home" } = Astro.props;
 
 const links = [
   { id: "home", label: "Inicio", href: "/" },
-  { id: "artistas", label: "Artistas", href: "/artistas" },
   { id: "espacios", label: "Espacios", href: "/espacios" },
-  { id: "estudio", label: "Estudio", href: "/estudio" },
+  { id: "artistas", label: "Artistas", href: "/artistas" },
+  { id: "proveedores", label: "Proveedores", href: "/proveedores" },
+  { id: "space-studio", label: "Space Studio", href: "/space-studio" },
+  { id: "agency", label: "my'G agency", href: "/agency" },
   { id: "planes", label: "Planes", href: "/planes" },
   { id: "contacto", label: "Contacto", href: "/contacto" },
 ];
 ---
 <header class="site-header">
   <a class="brand" href="/" data-cursor="inicio">
-    my<span class="ap">'</span>G<span class="brand-meta">— {SITE.brandSuffix}</span>
+    <span class="brand-mark">my<span class="ap">'</span>G</span>
+    <span class="brand-meta">— {SITE.brandFull}</span>
   </a>
   <nav class="site-nav">
     {links.map((l) => (
@@ -27,8 +30,8 @@ const links = [
   </nav>
   <div class="header-cta">
     <AccentPicker client:load />
-    <a class="btn primary" href="/contacto" data-cursor="hablemos →">
-      Hablemos
+    <a class="btn primary" href="/contacto?type=login" data-cursor="login →">
+      Login
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
   </div>

@@ -3,11 +3,14 @@ import { SITE } from "../data/site";
 ---
 <section class="cta">
   <div class="container">
-    <h2>{SITE.cta.title}</h2>
-    <p>{SITE.cta.subtitle}</p>
+    <h2>{SITE.ctaFinal.title}</h2>
+    <p>{SITE.ctaFinal.body}</p>
     <div class="btn-row">
-      <a class="btn lg" href={`mailto:${SITE.contactEmail}`} data-cursor="email →">{SITE.contactEmail}</a>
-      <a class="btn lg outline" href="/contacto" data-cursor="formulario →">Formulario</a>
+      <a class="btn primary lg" href={SITE.ctaFinal.cta.href} data-cursor={SITE.ctaFinal.cta.cursor}>
+        {SITE.ctaFinal.cta.label}
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn lg outline" href={`mailto:${SITE.contactEmail}`} data-cursor="email →">{SITE.contactEmail}</a>
     </div>
   </div>
 </section>

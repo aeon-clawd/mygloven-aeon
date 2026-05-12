@@ -4,42 +4,41 @@ import { SITE } from "../data/site";
 <footer class="footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-brand">my<span class="ap">'</span>G<span class="ap">.</span></div>
+      <div class="footer-brand">my<span class="ap">'</span>G</div>
       <p class="footer-tag">
-        Agencia de booking, management y talento — Barcelona / Madrid. Operamos shows en España y Portugal desde 2019.
+        {SITE.brandSuffix}. Espacios, artistas y proveedores en una sola plataforma — Barcelona / Madrid.
       </p>
     </div>
     <div class="footer-col">
-      <h4>— Roster</h4>
+      <h4>— Plataforma</h4>
       <ul>
-        <li><a href="/artistas" data-cursor="artistas →">Todos los artistas</a></li>
-        <li><a href="/artistas" data-cursor="djs →">DJs</a></li>
-        <li><a href="/artistas" data-cursor="bandas →">Bandas en directo</a></li>
-        <li><a href="/artistas" data-cursor="cuerda →">Cuerda y clásico</a></li>
+        <li><a href="/espacios" data-cursor="espacios →">Espacios</a></li>
+        <li><a href="/artistas" data-cursor="artistas →">Artistas</a></li>
+        <li><a href="/proveedores" data-cursor="proveedores →">Proveedores</a></li>
+        <li><a href="/space-studio" data-cursor="space studio →">Space Studio</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>— Espacios</h4>
+      <h4>— Empresa</h4>
       <ul>
-        <li><a href="/espacios" data-cursor="venues →">Todos los espacios</a></li>
-        <li><a href="/espacios" data-cursor="bcn →">Barcelona</a></li>
-        <li><a href="/espacios" data-cursor="mad →">Madrid</a></li>
-        <li><a href="/espacios" data-cursor="open air →">Open air</a></li>
+        <li><a href="/agency" data-cursor="agency →">my'G agency</a></li>
+        <li><a href="/planes" data-cursor="planes →">Planes</a></li>
+        <li><a href="/contacto" data-cursor="contacto →">Contacto</a></li>
+        <li><a href={SITE.instagram} target="_blank" rel="noopener" data-cursor="instagram →">Instagram</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>— Contacto</h4>
       <ul>
-        <li><a href={`mailto:${SITE.contactEmail}`} data-cursor="email">{SITE.contactEmail}</a></li>
-        <li><a href="/contacto" data-cursor="prensa">Prensa & partners</a></li>
-        <li><a href="https://www.instagram.com/mygloven/" target="_blank" rel="noopener" data-cursor="instagram">Instagram</a></li>
-        <li><a href="/planes" data-cursor="planes">Planes</a></li>
+        <li><a href={`mailto:${SITE.contactEmail}`} data-cursor="email →">{SITE.contactEmail}</a></li>
+        <li><a href={SITE.instagram} target="_blank" rel="noopener" data-cursor="ig →">{SITE.instagramHandle}</a></li>
+        <li><a href="https://mygloven.com" data-cursor="web →">mygloven.com</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-base">
-    <span>© MYGLOVEN 2026 — TODOS LOS DERECHOS RESERVADOS</span>
-    <span>BCN · MAD · LIS</span>
-    <span>v2.0 / INDUSTRIAL</span>
+    <span>{SITE.footer.copyright}</span>
+    <span>BCN · MAD</span>
+    <a href={SITE.footer.poweredByUrl} target="_blank" rel="noopener" class="powered-by" data-cursor="aeon →">{SITE.footer.poweredBy}</a>
   </div>
 </footer>
