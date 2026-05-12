@@ -1,96 +1,251 @@
-/* Site copy — hardcoded for v2.
- * To edit: change here and redeploy. We will move to Supabase later if needed.
+/* Site copy — hardcoded para v2 (briefing PDF).
+ * Marca: my'G — myglobalvenue · "asistente de producción inteligente".
+ * Tono: directo, sin relleno, tú, frases cortas.
  */
 
 export const SITE = {
-  brandSuffix: "booking & talento",
-  contactEmail: "hola@mygloven.com",
+  brand: "my'G",
+  brandFull: "myglobalvenue",
+  brandSuffix: "asistente de producción inteligente",
+  contactEmail: "info@mygloven.com",
+  instagram: "https://www.instagram.com/mygloven/",
+  instagramHandle: "@mygloven",
 
   hero: {
     hashtag: "#mygloven",
-    activeLabel: "en activo · 10 may 2026",
-    title: "Booking, gestión y talento",
-    subtitle:
-      "Agencia de management y booking. Conectamos artistas y venues en eventos memorables — de un cumpleaños a un festival.",
-    stats: [
-      { lbl: "Artistas", num: "47", suffix: "." },
-      { lbl: "Venues", num: "152", suffix: "." },
-      { lbl: "Shows / año", num: "200", suffix: "+" },
+    activeLabel: "lanzamiento privado · Primavera Pro '26",
+    title: "Esto es lo único con lo que tu asistente de producción no puede ayudarte.",
+    subtitle: "Elige el color.",
+    body: "Tú eliges el color. my'G produce.",
+    cta: { label: "Conoce a tu asistente", href: "#como-funciona", cursor: "asistente →" },
+  },
+
+  comoFunciona: {
+    eyebrow: "— Cómo funciona",
+    title: "Cómo funciona",
+    steps: [
+      {
+        num: "01",
+        title: "Define tu evento",
+        body:
+          "Cuéntanos qué quieres hacer —tipo de evento, ciudad, público o idea inicial— y my'G empieza a construir contigo la producción desde el primer momento. No es solo una búsqueda: es el punto de partida de un evento real.",
+      },
+      {
+        num: "02",
+        title: "Recibe una propuesta completa",
+        body:
+          "my'G combina su selección curada de espacios, artistas y proveedores con asistencia inteligente para proponerte opciones concretas, viables y adaptadas a tu evento. Desde venues únicos hasta necesidades técnicas: todo conectado en una misma propuesta.",
+      },
+      {
+        num: "03",
+        title: "Activa tu plan y produce tu evento",
+        body:
+          "Elige el plan que mejor se adapte a tu proyecto y desbloquea herramientas para producir tu evento de forma eficiente. Desde contacto directo con todos los agentes hasta funcionalidades como my'G Space Studio, que te ayuda a organizar, visualizar y coordinar toda la producción en un solo lugar.",
+      },
     ],
+    cta: { label: "Ver planes", href: "/planes", cursor: "planes →" },
+  },
+
+  espacios: {
+    eyebrow: "— Red curada",
+    title: "Espacios",
+    subtitle: "Espacios seleccionados para producir tu evento.",
+    body:
+      "Una selección curada de los mejores venues en Madrid y Barcelona. Solo trabajamos con espacios que conocemos, que tienen personalidad y que están preparados para la producción.",
+    cta: { label: "Ver todos los espacios", href: "/espacios", cursor: "espacios →" },
+  },
+
+  artistas: {
+    eyebrow: "— Talento curado",
+    title: "Artistas",
+    subtitle: "Talento curado para hacer memorable tu evento.",
+    ctaMore: { label: "Ver más artistas", href: "/artistas", cursor: "artistas →" },
+    ctaJoin: { label: "¿Eres artista? Regístrate", href: "/contacto", cursor: "unirme →" },
+  },
+
+  agency: {
+    eyebrow: "— Servicio integral",
+    title: "my'G agency",
+    subtitle: "Producimos tu evento de principio a fin.",
+    body:
+      "Creamos y producimos eventos de principio a fin. Desde la localización del espacio hasta la producción técnica, logística, coordinación de proveedores o catering. Un servicio 360° para que solo tengas que imaginar el evento.",
+    servicios: [
+      "Búsqueda y gestión del espacio",
+      "Producción técnica",
+      "Coordinación de proveedores",
+      "Catering",
+      "Logística y coordinación en el día",
+      "Comunicación y contenido del evento",
+    ],
+    cta: { label: "Cuéntanos tu evento", href: "/contacto", cursor: "cuéntanos →" },
+    ctaTitle: "¿Tienes un evento en mente?",
+    ctaBody: "Cuéntanos la idea y te preparamos una propuesta.",
+  },
+
+  about: {
+    eyebrow: "— Sobre my'G",
+    title: "Sobre my'G",
+    body:
+      "mygloven nace con la misión de facilitar la organización de eventos conectando espacios, artistas, proveedores y promotores en una misma plataforma. Estamos desarrollando herramientas inteligentes con IA que conectan espacios, artistas y proveedores en propuestas adaptadas a cada evento, simplificando toda la producción. Nuestro objetivo es crear un punto de encuentro donde se integren proyectos y recursos para eventos, reuniendo todo lo necesario en un solo lugar.",
+    card: {
+      eyebrow: "— Proyecto seleccionado",
+      title: "Primavera Pro '26",
+      meta: "Ideas Showroom · Barcelona · 3-5 Junio 2026",
+      cta: { label: "Ver Ideas Showroom", href: "https://www.primaverapro.net/", cursor: "showroom →" },
+    },
+  },
+
+  planesCTA: {
+    eyebrow: "— Produce tu evento",
+    title: "Planes — Tu evento, tu ritmo",
+    body:
+      "Elige cómo quieres producir tu evento con my'G. Cada plan desbloquea propuestas, conexiones y herramientas para simplificar toda la producción.",
+    cta: { label: "Ver planes", href: "/planes", cursor: "planes →" },
+  },
+
+  spaceStudioTeaser: {
+    eyebrow: "— Próximamente",
+    title: "my'G Space Studio",
+    body:
+      "Diseña y visualiza tu evento antes de que suceda. Una herramienta con IA que genera renders, sugiere configuraciones y te ayuda a planificar de forma visual.",
+    cta: { label: "Saber más", href: "/space-studio", cursor: "space studio →" },
+  },
+
+  ctaFinal: {
+    title: "¿Listo para producir tu evento?",
+    body: "Describe tu idea y my'G construye contigo una propuesta real.",
+    cta: { label: "Contactar", href: "/contacto", cursor: "contactar →" },
   },
 
   marquee: [
-    "MYGLOVEN — booking & talento",
-    "200+ shows / año",
-    "España · Portugal · Europa",
-    "Roster activo · 47 artistas",
-    "Primavera Pro 2026 · 04→06 jun",
+    "my'G — myglobalvenue",
+    "Asistente de producción inteligente",
+    "Barcelona · Madrid",
+    "Primavera Pro '26 · 3-5 Junio",
+    "Lanzamiento privado",
   ],
 
-  clients: ["Razzmatazz", "Sónar", "Primavera", "Mad Cool", "NEU", "Lev Festival", "FIB"],
-
-  features: [
-    {
-      title: "Curado artístico.",
-      description:
-        "Cada artista pasa por un filtro propio: presencia, encaje y solidez en directo.",
-    },
-    {
-      title: "Producción operativa.",
-      description:
-        "Riders, contratos, transporte y backstage. La parte aburrida la hacemos nosotros.",
-    },
-    {
-      title: "Red de espacios.",
-      description:
-        "Más de 150 venues por España y Portugal. De club íntimo a anfiteatro al aire libre.",
-    },
-    {
-      title: "Datos y reporte.",
-      description:
-        "Cierre de cada show con métricas, factura y feedback. Sin sorpresas, sin papeles.",
-    },
-  ],
-
-  about: {
-    primary:
-      "Mygloven nació en 2019 entre Barcelona y Madrid. Empezamos representando a tres artistas en circuitos de club; hoy operamos más de 200 fechas anuales en festivales, espacios privados y giras internacionales.",
-    secondary:
-      "No somos una agencia clásica. Trabajamos en equipos pequeños, con A&R activo, contratos legibles, y tarifas claras. Todo lo que hacemos pasa por un sistema operativo propio — más rápido, más transparente.",
+  proveedores: {
+    eyebrow: "— Próximamente",
+    title: "Proveedores",
+    subtitle: "Los mejores profesionales para que tu evento funcione.",
+    body:
+      "Estamos abriendo la red de proveedores. Pronto podrás darte de alta y conectar con productores que necesitan tus servicios.",
+    categorias: [
+      "Producción técnica",
+      "Catering",
+      "Fotografía y vídeo",
+      "Decoración",
+      "Seguridad",
+      "Transporte",
+      "Otros",
+    ],
+    ctaTitle: "¿Eres proveedor de eventos?",
+    ctaBody: "Súmate a la plataforma y conecta con productores que necesitan tus servicios.",
+    cta: { label: "Abrir solicitud", href: "/contacto?type=proveedor", cursor: "registrarme →" },
   },
 
-  primaveraPro: {
-    year: "2026",
-    subtitle: "Programa oficial — Mygloven en Primavera Pro",
-    date: "04 → 06 JUNIO · BARCELONA",
-    body: "Tres jornadas de showcase de roster propio y reuniones con promotores internacionales. Pasaremos por los paneles de circuito ibérico y curaremos un programa nocturno en Razzmatazz.",
+  spaceStudio: {
+    eyebrow: "— Próximamente",
+    title: "my'G Space Studio",
+    subtitle: "Diseña y visualiza tu evento antes de que suceda.",
+    body:
+      "Una herramienta con IA que genera renders, sugiere configuraciones y te ayuda a planificar de forma visual. Sube una foto del espacio, describe cómo quieres que quede, y my'G te muestra cómo quedaría montado el evento. Antes de hablar con un solo proveedor. Antes de firmar nada.",
+    pasos: [
+      { num: "01", t: "Sube la foto del espacio" },
+      { num: "02", t: "Describe cómo quieres que quede" },
+      { num: "03", t: "La IA genera la visualización y sugiere proveedores" },
+    ],
+    ctaTitle: "Sé de los primeros en probarlo.",
+    ctaBody: "Space Studio está en beta. Apúntate para acceder antes que nadie.",
+    cta: { label: "Quiero acceso anticipado", href: "/contacto?type=space-studio", cursor: "acceso →" },
   },
 
-  cta: {
+  planes: {
+    eyebrow: "— Produce tu evento",
+    title: "Planes — Tu evento, tu ritmo",
+    body:
+      "Elige cómo quieres producir tu evento con my'G. Cada plan desbloquea propuestas, conexiones y herramientas para simplificar toda la producción.",
+    items: [
+      {
+        num: "01",
+        name: "Free",
+        price: "0 €",
+        period: "/mes",
+        para: "Para descubrir my'G",
+        features: [
+          "Catálogo de espacios, artistas y proveedores",
+          "Búsqueda básica",
+          "1 propuesta al mes",
+        ],
+        cta: { label: "Empezar gratis", href: "/contacto?plan=free", cursor: "empezar →" },
+        primary: false,
+      },
+      {
+        num: "02",
+        name: "Starter",
+        price: "19 €",
+        period: "/mes",
+        para: "Para empezar a producir",
+        features: [
+          "Todo lo de Free",
+          "5 propuestas al mes",
+          "Contacto directo con espacios y proveedores",
+          "Asistencia IA para construir tu evento",
+        ],
+        cta: { label: "Empezar con Starter", href: "/contacto?plan=starter", cursor: "starter →" },
+        primary: false,
+      },
+      {
+        num: "03",
+        name: "Pro",
+        price: "49 €",
+        period: "/mes",
+        para: "Para productores activos",
+        features: [
+          "Todo lo de Starter",
+          "Propuestas ilimitadas",
+          "Acceso a my'G Space Studio",
+          "Contacto con todos los agentes",
+        ],
+        cta: { label: "Empezar con Pro", href: "/contacto?plan=pro", cursor: "pro →" },
+        primary: true,
+      },
+      {
+        num: "04",
+        name: "Agency",
+        price: "A medida",
+        period: "",
+        para: "Para producciones complejas",
+        features: [
+          "Servicio completo my'G agency",
+          "Producción integral",
+          "Equipo dedicado",
+          "Presupuesto a medida",
+        ],
+        cta: { label: "Hablar con el equipo", href: "/contacto?plan=agency", cursor: "hablar →" },
+        primary: false,
+      },
+    ],
+    ctaTitle: "¿No sabes qué plan elegir?",
+    ctaBody: "Cuéntanos tu evento y te recomendamos la mejor opción.",
+    cta: { label: "Contactar", href: "/contacto", cursor: "contactar →" },
+  },
+
+  contacto: {
+    eyebrow: "— Hablemos",
     title: "Hablemos.",
-    subtitle: "Booking, prensa, partnerships. Lo más probable es que respondamos hoy.",
+    subtitle: "Cuéntanos tu evento o lo que necesitas. Te respondemos en menos de 24 horas.",
+    formCta: "Enviar",
+    receivedTitle: "Recibido.",
+    receivedBody: "Te respondemos en menos de 24 horas.",
   },
 
-  contact: {
-    channels: [
-      { l: "BOOKING", v: "booking@mygloven.com", k: "booking" },
-      { l: "PRENSA", v: "press@mygloven.com", k: "press" },
-      { l: "PARTNERSHIPS", v: "partners@mygloven.com", k: "partners" },
-      { l: "GENERAL", v: "hola@mygloven.com", k: "general" },
-    ],
-    studios: [
-      { c: "BARCELONA", a: "C/ Pere IV 314\n08020 BCN" },
-      { c: "MADRID", a: "C/ Doctor Fourquet 8\n28012 MAD" },
-      { c: "LISBOA", a: "Rua Maria Pia 45\n1350 LIS" },
-    ],
+  footer: {
+    copyright: "© 2026 mygloven",
+    poweredBy: "Powered by Aeon Infinitive",
+    poweredByUrl: "https://aeoninfinitive.com",
   },
-
-  team: [
-    { name: "Marta Vidal", role: "Founder · Booking", num: "001" },
-    { name: "Pau Ros", role: "A&R Director", num: "002" },
-    { name: "Aina Comas", role: "Producción", num: "003" },
-    { name: "Bruno López", role: "Operaciones", num: "004" },
-  ],
 } as const;
 
 export type Site = typeof SITE;
