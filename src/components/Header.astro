@@ -1,5 +1,6 @@
 ---
 import AccentPicker from "./AccentPicker.tsx";
+import ThemeToggle from "./ThemeToggle.tsx";
 import { SITE } from "../data/site";
 
 interface Props {
@@ -29,6 +30,7 @@ const links = [
     ))}
   </nav>
   <div class="header-cta">
+    <ThemeToggle client:load />
     <AccentPicker client:load />
     <a class="btn primary" href="/contacto?type=login" data-cursor="login →">
       Login

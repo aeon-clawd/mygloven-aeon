@@ -34,6 +34,33 @@ const {
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#0a0a0a" />
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem("myg-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute("content", t === "dark" ? "#0a0a0a" : "#fafafa");
+          }
+          var a = localStorage.getItem("myg-accent");
+          var ACCENTS = {
+            cian:    { c: "#33b9fa", h: "#5cc7fb", s: "#33b9fa14" },
+            naranja: { c: "#ff4d00", h: "#ff6a26", s: "#ff4d0014" },
+            lima:    { c: "#a3e635", h: "#bef264", s: "#a3e63514" },
+            rosa:    { c: "#ff3da5", h: "#ff5fb6", s: "#ff3da514" },
+            ambar:   { c: "#facc15", h: "#fde047", s: "#facc1514" },
+            lila:    { c: "#a78bfa", h: "#c4b5fd", s: "#a78bfa14" },
+          };
+          if (a && ACCENTS[a]) {
+            document.documentElement.style.setProperty("--color-accent", ACCENTS[a].c);
+            document.documentElement.style.setProperty("--color-accent-hover", ACCENTS[a].h);
+            document.documentElement.style.setProperty("--color-accent-soft", ACCENTS[a].s);
+            document.documentElement.setAttribute("data-accent", a);
+          }
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
   </head>
   <body>
     <CustomCursor />

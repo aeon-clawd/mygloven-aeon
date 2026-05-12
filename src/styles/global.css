@@ -30,7 +30,8 @@
   color-scheme: dark;
 }
 
-:root[data-theme="paper"] {
+:root[data-theme="paper"],
+:root[data-theme="light"] {
   --color-background: #fafafa;
   --color-surface:    #ffffff;
   --color-surface-2:  #f0f0f0;
@@ -1194,4 +1195,132 @@ textarea.input-field {
   .circle-grid { grid-template-columns: repeat(3, 1fr); gap: 20px 16px; }
   .hero-mockup-body { grid-template-columns: 1fr; }
   .hero-mockup-aside { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   LIGHT THEME OVERRIDES — gradientes y placeholders que en
+   modo dark son oscuros hardcoded. En light los neutralizamos
+   para evitar manchas negras sobre fondo claro.
+   ═══════════════════════════════════════════════════════ */
+:root[data-theme="light"] .hero-bg,
+:root[data-theme="paper"] .hero-bg {
+  background:
+    radial-gradient(circle at 80% 20%, color-mix(in oklab, var(--color-accent) 14%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, color-mix(in oklab, var(--color-accent) 8%, transparent) 0%, transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px, transparent 38px,
+      color-mix(in oklab, #000 3%, transparent) 38px, color-mix(in oklab, #000 3%, transparent) 39px
+    );
+}
+
+:root[data-theme="light"] .venue-card,
+:root[data-theme="paper"] .venue-card {
+  border: 1px solid var(--color-rule);
+}
+:root[data-theme="light"] .venue-card .ph,
+:root[data-theme="paper"] .venue-card .ph {
+  background: linear-gradient(135deg, #ededed 0%, #f7f7f7 100%);
+}
+:root[data-theme="light"] .venue-card .ph:not(:has(img))::before,
+:root[data-theme="paper"] .venue-card .ph:not(:has(img))::before {
+  background:
+    radial-gradient(circle at var(--cx,30%) var(--cy,40%), color-mix(in oklab, var(--color-accent) 16%, transparent) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, transparent 0 8px, color-mix(in oklab, #000 3%, transparent) 8px 9px);
+}
+:root[data-theme="light"] .venue-card .ph .stamp,
+:root[data-theme="paper"] .venue-card .ph .stamp,
+:root[data-theme="light"] .venue-card .ph .pax,
+:root[data-theme="paper"] .venue-card .ph .pax {
+  color: var(--color-text-primary);
+  text-shadow: 0 1px 2px rgba(255,255,255,.6);
+}
+
+:root[data-theme="light"] .gallery .ph,
+:root[data-theme="paper"] .gallery .ph {
+  background: linear-gradient(135deg, #ededed, #f7f7f7);
+}
+:root[data-theme="light"] .gallery .ph .stamp,
+:root[data-theme="paper"] .gallery .ph .stamp {
+  color: rgba(0,0,0,.55);
+}
+
+:root[data-theme="light"] .hero-mockup-thumb,
+:root[data-theme="paper"] .hero-mockup-thumb {
+  background: linear-gradient(135deg, color-mix(in oklab, var(--color-accent) 22%, #f0f0f0), #e8e8e8);
+}
+:root[data-theme="light"] .hero-mockup-thumb.alt,
+:root[data-theme="paper"] .hero-mockup-thumb.alt {
+  background: linear-gradient(135deg, #f0f0f0, color-mix(in oklab, var(--color-accent) 12%, #e8e8e8));
+}
+
+:root[data-theme="light"] .circle-img,
+:root[data-theme="paper"] .circle-img {
+  background: linear-gradient(135deg, color-mix(in oklab, var(--color-accent) 10%, #f0f0f0), #e8e8e8);
+  border-color: var(--color-rule);
+}
+
+/* CTA (banda accent): sobre fondo amarillo/cian, los botones siguen
+   con texto oscuro — ya estaba bien. Pero el botón outline debe
+   ajustarse para no chocar. */
+:root[data-theme="light"] .cta .btn,
+:root[data-theme="paper"] .cta .btn {
+  background: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+  color: var(--color-background);
+}
+:root[data-theme="light"] .cta .btn.outline,
+:root[data-theme="paper"] .cta .btn.outline {
+  background: transparent;
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+/* Hero mockup frame con sombra: en light la suavizamos */
+:root[data-theme="light"] .hero-mockup-frame,
+:root[data-theme="paper"] .hero-mockup-frame {
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,.18), 0 4px 16px rgba(0,0,0,.06);
+  border-color: var(--color-rule);
+}
+
+/* color-scheme nativo (form controls, scrollbar) */
+:root[data-theme="light"] { color-scheme: light; }
+
+/* ───────── Theme toggle ────────────────────────────── */
+.theme-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 10px;
+  background: var(--color-surface);
+  border-radius: 4px;
+}
+.theme-toggle .lbl {
+  font-family: var(--font-mono);
+  font-size: 9px; font-weight: 600;
+  letter-spacing: var(--tracking-extreme);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.theme-toggle .theme-btn {
+  width: 22px; height: 22px;
+  border-radius: 3px;
+  display: inline-flex; align-items: center; justify-content: center;
+  position: relative;
+  transition: transform 120ms var(--ease-mech);
+}
+.theme-toggle .theme-btn:hover { transform: scale(1.1); }
+.theme-toggle .theme-btn.active::after {
+  content: ""; position: absolute; inset: -3px;
+  border: 1px solid var(--color-text-primary);
+  border-radius: 4px;
+}
+.theme-toggle .theme-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--color-rule);
+}
+.theme-toggle .theme-dot.dark  { background: #0a0a0a; }
+.theme-toggle .theme-dot.light { background: #fafafa; }
+
+@media (max-width: 640px) {
+  .header-cta .theme-toggle .lbl { display: none; }
 }
