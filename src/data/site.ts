@@ -14,7 +14,7 @@ export const SITE = {
   hero: {
     hashtag: "#mygloven",
     activeLabel: "lanzamiento privado · Primavera Pro '26",
-    title: "Esto es lo único con lo que no podemos ayudarte.",
+    title: "Esto es lo único con lo que no podemos ayudarte",
     subtitle: "Elige el color.",
     cta: { label: "Conoce a tu asistente", href: "#como-funciona", cursor: "asistente →" },
   },
