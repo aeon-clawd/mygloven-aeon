@@ -5,9 +5,14 @@ import AccentPicker from "../components/AccentPicker.tsx";
 import ThemeToggle from "../components/ThemeToggle.tsx";
 import VenueCard from "../components/VenueCard.astro";
 import { SITE } from "../data/site";
-import { getAllVenues } from "../lib/queries";
+import { getAllVenues, getVenueCoverUrl, venueCapacityLabel } from "../lib/queries";
 
 const venues = await getAllVenues();
+
+// Venues que aparecen en el mockup del hero (CRM canvas)
+const mockupVenues = ["village-underground-barcelona", "cahoot"]
+  .map((slug) => venues.find((v) => v.slug === slug))
+  .filter(Boolean);
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -108,30 +113,33 @@ const featuredVenues = [...pickRandom("Barcelona", 3), ...pickRandom("Madrid", 3
                     <div class="cm-meta">Tú · ahora</div>
                   </div>
                   <div class="cm-msg ai">
-                    <div class="cm-bubble">He encontrado 2 venues y un catering. Mira.</div>
+                    <div class="cm-bubble">He encontrado 2 venues que encajan. Mira.</div>
                     <div class="cm-tool-cards">
-                      <div class="cm-tool-card">
-                        <div class="cm-ph"></div>
-                        <div class="cm-card-body">
-                          <div class="cm-card-name">Razzmatazz</div>
-                          <div class="cm-card-sub">BCN · Club · 2.500 PAX</div>
-                          <div class="cm-card-actions">
-                            <span class="cm-btn">Ver</span>
-                            <span class="cm-btn primary">Elegir</span>
+                      {mockupVenues.map((v, i) => {
+                        if (!v) return null;
+                        const cover = getVenueCoverUrl(v);
+                        const cap = venueCapacityLabel(v);
+                        const city = (v.ciudad || "").trim();
+                        const sub = [city, v.tipo ? v.tipo.toString().replace(/_/g, " ") : null, cap]
+                          .filter(Boolean)
+                          .join(" · ")
+                          .toUpperCase();
+                        return (
+                          <div class="cm-tool-card">
+                            <div class={`cm-ph${i % 2 === 1 ? " alt" : ""}`}>
+                              {cover && <img src={cover} alt={v.nombre} loading="lazy" />}
+                            </div>
+                            <div class="cm-card-body">
+                              <div class="cm-card-name">{v.nombre}</div>
+                              <div class="cm-card-sub">{sub || "Venue"}</div>
+                              <div class="cm-card-actions">
+                                <span class="cm-btn">Ver</span>
+                                <span class="cm-btn primary">Elegir</span>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="cm-tool-card">
-                        <div class="cm-ph alt"></div>
-                        <div class="cm-card-body">
-                          <div class="cm-card-name">Mediterráneo</div>
-                          <div class="cm-card-sub">Catering · cóctel · 100</div>
-                          <div class="cm-card-actions">
-                            <span class="cm-btn">Ver</span>
-                            <span class="cm-btn primary">Elegir</span>
-                          </div>
-                        </div>
-                      </div>
+                        );
+                      })}
                     </div>
                     <div class="cm-meta">my'G · ahora</div>
                   </div>

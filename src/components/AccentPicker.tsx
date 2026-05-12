@@ -10,6 +10,7 @@ const ACCENTS: Record<string, { color: string; hover: string; soft: string; labe
 };
 
 const STORAGE_KEY = "myg-accent";
+const EVENT_NAME = "myg:accent-change";
 const DEFAULT = "cian";
 
 function applyAccent(name: string) {
@@ -39,7 +40,30 @@ export default function AccentPicker() {
     const name = stored && ACCENTS[stored] ? stored : DEFAULT;
     setActive(name);
     applyAccent(name);
+
+    const onChange = (e: Event) => {
+      const detail = (e as CustomEvent<string>).detail;
+      if (detail && ACCENTS[detail]) setActive(detail);
+    };
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === STORAGE_KEY && e.newValue && ACCENTS[e.newValue]) {
+        applyAccent(e.newValue);
+        setActive(e.newValue);
+      }
+    };
+    window.addEventListener(EVENT_NAME, onChange);
+    window.addEventListener("storage", onStorage);
+    return () => {
+      window.removeEventListener(EVENT_NAME, onChange);
+      window.removeEventListener("storage", onStorage);
+    };
   }, []);
+
+  const handleClick = (name: string) => {
+    applyAccent(name);
+    setActive(name);
+    window.dispatchEvent(new CustomEvent(EVENT_NAME, { detail: name }));
+  };
 
   return (
     <div className="accent-picker">
@@ -50,10 +74,7 @@ export default function AccentPicker() {
           type="button"
           className={`swatch${name === active ? " active" : ""}`}
           style={{ ["--swatch" as any]: a.color }}
-          onClick={() => {
-            applyAccent(name);
-            setActive(name);
-          }}
+          onClick={() => handleClick(name)}
           data-cursor={a.label.toLowerCase()}
           title={a.label}
           aria-label={`Acento ${a.label}`}
