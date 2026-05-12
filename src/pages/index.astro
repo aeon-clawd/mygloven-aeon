@@ -1,153 +1,263 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
+import AccentPicker from "../components/AccentPicker.tsx";
 import VenueCard from "../components/VenueCard.astro";
-import ArtistRow from "../components/ArtistRow.astro";
 import { SITE } from "../data/site";
-import { getAllArtistas, getAllVenues } from "../lib/queries";
+import { getAllArtistas, getAllVenues, getArtistaCoverUrl } from "../lib/queries";
 
 const [artistas, venues] = await Promise.all([getAllArtistas(), getAllVenues()]);
-const featuredArtists = artistas.slice(0, 5);
-const featuredVenues = venues.slice(0, 3);
+
+function pickByCity(city: string, max: number) {
+  return venues.filter((v) => (v.ciudad || "").trim().toLowerCase() === city.toLowerCase()).slice(0, max);
+}
+const venuesBCN = pickByCity("Barcelona", 10);
+const venuesMAD = pickByCity("Madrid", 10);
+const featuredVenues = [...venuesBCN, ...venuesMAD];
+const featuredArtists = artistas.slice(0, 12);
 ---
-<Layout title="MYGLOVEN — Booking, gestión y talento" current="home">
-  <section class="hero">
+<Layout title={`my'G — ${SITE.brandSuffix}`} current="home">
+  <!-- HERO 2 COLUMNAS -->
+  <section class="hero hero-split">
     <div class="hero-bg"></div>
-    <div class="hero-grid">
-      <div class="hero-tag">
-        <span class="pulse"></span>
-        <span>{SITE.hero.hashtag}</span>
-        <span>—</span>
-        <span>{SITE.hero.activeLabel}</span>
-      </div>
-      <h1 class="hero-title">
-        Booking, gestión<br/>y talento<span class="ap">.</span>
-      </h1>
-      <p class="lead" style="font-size: 22px; max-width: 70ch;">
-        {SITE.hero.subtitle}
-      </p>
-      <div class="hero-foot">
+    <div class="hero-grid hero-split-grid">
+      <div class="hero-left">
+        <div class="hero-tag">
+          <span class="pulse"></span>
+          <span>{SITE.hero.hashtag}</span>
+          <span>—</span>
+          <span>{SITE.hero.activeLabel}</span>
+        </div>
+        <h1 class="hero-title hero-title-lg">
+          {SITE.hero.title}
+        </h1>
+        <div class="hero-pick">
+          <p class="hero-sub">{SITE.hero.subtitle}</p>
+          <AccentPicker client:load />
+        </div>
+        <p class="hero-body">{SITE.hero.body}</p>
         <div class="hero-actions">
-          <a class="btn primary lg" href="/artistas" data-cursor="ver roster →">
-            Ver roster
+          <a class="btn primary lg" href={SITE.hero.cta.href} data-cursor={SITE.hero.cta.cursor}>
+            {SITE.hero.cta.label}
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn lg" href="/contacto" data-cursor="contacto →">Contacto</a>
+          <a class="btn lg" href="/planes" data-cursor="planes →">Ver planes</a>
         </div>
-        <div class="hero-stats">
-          {SITE.hero.stats.map((s) => (
-            <div class="hero-stat">
-              <div class="lbl">— {s.lbl}</div>
-              <div class="num">{s.num}<span class="ap">{s.suffix}</span></div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-mockup" aria-hidden="true">
+          <div class="hero-mockup-frame">
+            <div class="hero-mockup-bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="hero-mockup-url">my'G · Space Studio</span>
             </div>
-          ))}
+            <div class="hero-mockup-body">
+              <div class="hero-mockup-aside">
+                <span class="hero-mockup-label">— Eventos</span>
+                <span class="hero-mockup-row active">Showroom · 03 jun</span>
+                <span class="hero-mockup-row">Brand party · 14 jun</span>
+                <span class="hero-mockup-row">Festival · 22 jul</span>
+              </div>
+              <div class="hero-mockup-main">
+                <span class="hero-mockup-label">— Propuesta</span>
+                <div class="hero-mockup-card">
+                  <div class="hero-mockup-thumb"></div>
+                  <div>
+                    <div class="hero-mockup-row strong">Razzmatazz · BCN</div>
+                    <div class="hero-mockup-row faded">Capacidad 2.500 · Open air</div>
+                  </div>
+                </div>
+                <div class="hero-mockup-card">
+                  <div class="hero-mockup-thumb alt"></div>
+                  <div>
+                    <div class="hero-mockup-row strong">DJ · TBA</div>
+                    <div class="hero-mockup-row faded">Techno · 90 min</div>
+                  </div>
+                </div>
+                <div class="hero-mockup-card">
+                  <div class="hero-mockup-thumb"></div>
+                  <div>
+                    <div class="hero-mockup-row strong">Catering · Mediterráneo</div>
+                    <div class="hero-mockup-row faded">300 PAX · cóctel</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="hero-mockup-tag">Mockup · imagen de producto</span>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="clients">
-    <span class="lbl">— Han confiado en nosotros</span>
-    <div class="clients-row">
-      {SITE.clients.map((c) => <span class="client-logo">{c}</span>)}
-    </div>
-  </div>
-
-  <section class="section">
+  <!-- CÓMO FUNCIONA -->
+  <section class="section" id="como-funciona">
     <div class="container">
-      <div class="eyebrow">— Por qué confiar en nosotros</div>
-      <h2 class="h-section">Cuatro razones,<br/>sin más.</h2>
-      <div class="features-grid">
-        {SITE.features.map((f, i) => (
+      <div class="eyebrow">{SITE.comoFunciona.eyebrow}</div>
+      <h2 class="h-section">{SITE.comoFunciona.title}<span style="color: var(--color-accent);">.</span></h2>
+      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+        {SITE.comoFunciona.steps.map((s) => (
           <div class="feature">
-            <div class="num">— 0{i + 1} / 0{SITE.features.length}</div>
-            <h3>{f.title}</h3>
-            <p>{f.description}</p>
+            <div class="num">— {s.num} / 03</div>
+            <h3>{s.title}<span style="color: var(--color-accent);">.</span></h3>
+            <p>{s.body}</p>
           </div>
         ))}
       </div>
-    </div>
-  </section>
-
-  <section class="section dark">
-    <div class="container">
-      <div class="two-col">
-        <div>
-          <div class="eyebrow">— Quiénes somos</div>
-          <h2 class="h-section">Una agencia<br/>operativa<span style="color: var(--color-accent);">.</span></h2>
-        </div>
-        <div>
-          <p>{SITE.about.primary}</p>
-          <p style="color: var(--color-text-primary);">{SITE.about.secondary}</p>
-          <a class="btn lg" href="/estudio" style="margin-top: 16px;" data-cursor="conoce el estudio →">
-            Conoce el estudio
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
+      <div style="margin-top: 32px;">
+        <a class="btn primary lg" href={SITE.comoFunciona.cta.href} data-cursor={SITE.comoFunciona.cta.cursor}>
+          {SITE.comoFunciona.cta.label}
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  {featuredArtists.length > 0 && (
-    <section class="section">
-      <div class="container">
-        <div class="list-head">
-          <div>
-            <div class="eyebrow">— Roster destacado</div>
-            <h2 class="h-section">Artistas.</h2>
-          </div>
-          <a class="btn" href="/artistas" data-cursor="ver todos →">
-            Ver todos los artistas
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <div class="artists-list">
-          {featuredArtists.map((a, i) => <ArtistRow artista={a} index={i} />)}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <section class="primavera">
-    <div class="container">
-      <div class="year">{SITE.primaveraPro.year}<span class="accent">.</span></div>
-      <div>
-        <div class="lbl">— Primavera Pro</div>
-        <h2>{SITE.primaveraPro.subtitle}</h2>
-        <div class="date">{SITE.primaveraPro.date}</div>
-        <p style="font-size: 17px; color: var(--color-text-secondary); max-width: 50ch; line-height: 1.6;">
-          {SITE.primaveraPro.body}
-        </p>
-        <div style="display: flex; gap: 12px; margin-top: 32px;">
-          <a class="btn primary lg" href="/contacto" data-cursor="reunirnos →">
-            Pide reunión
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn lg" href="/contacto" data-cursor="programa →" style="border-color: rgba(255,255,255,.2); color: rgba(255,255,255,.7);">Ver programa</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- ESPACIOS -->
   {featuredVenues.length > 0 && (
-    <section class="section">
+    <section class="section dark">
       <div class="container">
         <div class="list-head">
           <div>
-            <div class="eyebrow">— Espacios destacados</div>
-            <h2 class="h-section">Espacios.</h2>
+            <div class="eyebrow">{SITE.espacios.eyebrow}</div>
+            <h2 class="h-section">{SITE.espacios.title}<span style="color: var(--color-accent);">.</span></h2>
+            <p style="margin-top: 16px; max-width: 60ch; color: var(--color-text-secondary);">{SITE.espacios.subtitle}</p>
           </div>
-          <a class="btn" href="/espacios" data-cursor="ver todos →">
-            Ver todos los espacios
+          <a class="btn" href={SITE.espacios.cta.href} data-cursor={SITE.espacios.cta.cursor}>
+            {SITE.espacios.cta.label}
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
+        <p style="margin: 0 0 32px; max-width: 75ch; color: var(--color-text-muted); font-size: 15px; line-height: 1.6;">
+          {SITE.espacios.body}
+        </p>
         <div class="venues-grid">
           {featuredVenues.map((v, i) => <VenueCard venue={v} index={i} />)}
         </div>
       </div>
     </section>
   )}
+
+  <!-- ARTISTAS (grid circular) -->
+  {featuredArtists.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">{SITE.artistas.eyebrow}</div>
+            <h2 class="h-section">{SITE.artistas.title}<span style="color: var(--color-accent);">.</span></h2>
+            <p style="margin-top: 16px; max-width: 60ch; color: var(--color-text-secondary);">{SITE.artistas.subtitle}</p>
+          </div>
+        </div>
+        <div class="circle-grid">
+          {featuredArtists.map((a) => {
+            const cover = getArtistaCoverUrl(a);
+            return (
+              <a class="circle-card" href={`/artistas/${a.slug}`} data-cursor="abrir →">
+                <div class="circle-img">
+                  {cover && <img src={cover} alt={a.nombre} loading="lazy" />}
+                </div>
+                <div class="circle-name">{a.nombre}</div>
+                <div class="circle-disc">{a.genero_musical || a.descripcion_corta || "Artista"}</div>
+              </a>
+            );
+          })}
+        </div>
+        <div class="hero-actions" style="margin-top: 40px;">
+          <a class="btn primary lg" href={SITE.artistas.ctaMore.href} data-cursor={SITE.artistas.ctaMore.cursor}>
+            {SITE.artistas.ctaMore.label}
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn lg" href={SITE.artistas.ctaJoin.href} data-cursor={SITE.artistas.ctaJoin.cursor}>
+            {SITE.artistas.ctaJoin.label}
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- MY'G AGENCY -->
+  <section class="section dark">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="eyebrow">{SITE.agency.eyebrow}</div>
+          <h2 class="h-section">{SITE.agency.title}<span style="color: var(--color-accent);">.</span></h2>
+        </div>
+        <div>
+          <p style="font-size: 18px; line-height: 1.6;">{SITE.agency.body}</p>
+          <a class="btn primary lg" href={SITE.agency.cta.href} style="margin-top: 24px;" data-cursor={SITE.agency.cta.cursor}>
+            {SITE.agency.cta.label}
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT my'G + Primavera Pro card -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="eyebrow">{SITE.about.eyebrow}</div>
+          <h2 class="h-section">{SITE.about.title}<span style="color: var(--color-accent);">.</span></h2>
+          <p style="margin-top: 24px; font-size: 17px; line-height: 1.7; color: var(--color-text-secondary);">
+            {SITE.about.body}
+          </p>
+        </div>
+        <div>
+          <div class="card-primavera">
+            <div class="eyebrow">{SITE.about.card.eyebrow}</div>
+            <h3 style="font-family: var(--font-display); font-size: 36px; font-weight: 600; letter-spacing: -.02em; margin: 16px 0 8px;">
+              {SITE.about.card.title}<span style="color: var(--color-accent);">.</span>
+            </h3>
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--tracking-extreme); color: var(--color-text-muted); margin-bottom: 24px; text-transform: uppercase;">
+              {SITE.about.card.meta}
+            </div>
+            <a class="btn" href={SITE.about.card.cta.href} target="_blank" rel="noopener" data-cursor={SITE.about.card.cta.cursor}>
+              {SITE.about.card.cta.label}
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES CTA -->
+  <section class="section dark">
+    <div class="container" style="text-align: center;">
+      <div class="eyebrow" style="justify-content: center;">{SITE.planesCTA.eyebrow}</div>
+      <h2 class="h-section">{SITE.planesCTA.title}<span style="color: var(--color-accent);">.</span></h2>
+      <p style="margin: 32px auto 0; max-width: 60ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
+        {SITE.planesCTA.body}
+      </p>
+      <a class="btn primary lg" href={SITE.planesCTA.cta.href} style="margin-top: 32px;" data-cursor={SITE.planesCTA.cta.cursor}>
+        {SITE.planesCTA.cta.label}
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- SPACE STUDIO TEASER -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="eyebrow">{SITE.spaceStudioTeaser.eyebrow}</div>
+          <h2 class="h-section">{SITE.spaceStudioTeaser.title}<span style="color: var(--color-accent);">.</span></h2>
+        </div>
+        <div>
+          <p style="font-size: 18px; line-height: 1.6;">{SITE.spaceStudioTeaser.body}</p>
+          <a class="btn primary lg" href={SITE.spaceStudioTeaser.cta.href} style="margin-top: 24px;" data-cursor={SITE.spaceStudioTeaser.cta.cursor}>
+            {SITE.spaceStudioTeaser.cta.label}
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <CTA />
 </Layout>
