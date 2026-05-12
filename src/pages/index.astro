@@ -52,40 +52,107 @@ const featuredVenues = [...pickRandom("Barcelona", 3), ...pickRandom("Madrid", 3
         </div>
       </div>
       <div class="hero-right">
-        <div class="hero-mockup" aria-hidden="true">
-          <div class="hero-mockup-frame">
-            <div class="hero-mockup-bar">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              <span class="hero-mockup-url">my'G · Space Studio</span>
-            </div>
-            <div class="hero-mockup-body">
-              <div class="hero-mockup-aside">
-                <span class="hero-mockup-label">— Eventos</span>
-                <span class="hero-mockup-row active">Showroom · 03 jun</span>
-                <span class="hero-mockup-row">Brand party · 14 jun</span>
-                <span class="hero-mockup-row">Festival · 22 jul</span>
+        <div class="canvas-mockup" aria-hidden="true">
+          <div class="canvas-mockup-frame">
+            <!-- Top bar -->
+            <div class="canvas-mockup-bar">
+              <span class="cm-dots">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              </span>
+              <span class="cm-url">my'G · Canvas</span>
+              <div class="cm-segmented">
+                <span>chat</span>
+                <span class="active">split</span>
+                <span>data</span>
               </div>
-              <div class="hero-mockup-main">
-                <span class="hero-mockup-label">— Propuesta</span>
-                <div class="hero-mockup-card">
-                  <div class="hero-mockup-thumb"></div>
-                  <div>
-                    <div class="hero-mockup-row strong">Razzmatazz · BCN</div>
-                    <div class="hero-mockup-row faded">Capacidad 2.500 · Open air</div>
+            </div>
+
+            <!-- Split body -->
+            <div class="canvas-mockup-split">
+              <!-- LEFT — Chat -->
+              <div class="cm-pane cm-chat">
+                <div class="cm-pane-head">
+                  <span class="cm-pane-lbl">— Chat</span>
+                  <span class="cm-pane-meta">my'G · live</span>
+                </div>
+                <div class="cm-msgs">
+                  <div class="cm-msg user">
+                    <div class="cm-bubble">Showroom Primavera Pro · 3 jun · BCN · 100 PAX</div>
+                    <div class="cm-meta">Tú · ahora</div>
+                  </div>
+                  <div class="cm-msg ai">
+                    <div class="cm-bubble">He encontrado 2 venues y un catering. Mira.</div>
+                    <div class="cm-tool-cards">
+                      <div class="cm-tool-card">
+                        <div class="cm-ph"></div>
+                        <div class="cm-card-body">
+                          <div class="cm-card-name">Razzmatazz</div>
+                          <div class="cm-card-sub">BCN · Club · 2.500 PAX</div>
+                          <div class="cm-card-actions">
+                            <span class="cm-btn">Ver</span>
+                            <span class="cm-btn primary">Elegir</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cm-tool-card">
+                        <div class="cm-ph alt"></div>
+                        <div class="cm-card-body">
+                          <div class="cm-card-name">Mediterráneo</div>
+                          <div class="cm-card-sub">Catering · cóctel · 100</div>
+                          <div class="cm-card-actions">
+                            <span class="cm-btn">Ver</span>
+                            <span class="cm-btn primary">Elegir</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cm-meta">my'G · ahora</div>
                   </div>
                 </div>
-                <div class="hero-mockup-card">
-                  <div class="hero-mockup-thumb alt"></div>
-                  <div>
-                    <div class="hero-mockup-row strong">DJ · TBA</div>
-                    <div class="hero-mockup-row faded">Techno · 90 min</div>
-                  </div>
+                <div class="cm-input">
+                  <span class="cm-input-placeholder">Escribe a my'G…</span>
+                  <span class="cm-input-send">↑</span>
                 </div>
-                <div class="hero-mockup-card">
-                  <div class="hero-mockup-thumb"></div>
-                  <div>
-                    <div class="hero-mockup-row strong">Catering · Mediterráneo</div>
-                    <div class="hero-mockup-row faded">300 PAX · cóctel</div>
+              </div>
+
+              <!-- RIGHT — Brief estructurado -->
+              <div class="cm-pane cm-brief">
+                <div class="cm-pane-head">
+                  <span class="cm-pane-lbl">— Brief estructurado</span>
+                  <span class="cm-pane-meta">6 / 8</span>
+                </div>
+                <div class="cm-brief-rows">
+                  <div class="cm-brief-row">
+                    <span class="cm-brief-lbl">Tipo</span>
+                    <span class="cm-brief-val">Showroom</span>
+                  </div>
+                  <div class="cm-brief-row">
+                    <span class="cm-brief-lbl">Ciudad</span>
+                    <span class="cm-brief-val">Barcelona</span>
+                  </div>
+                  <div class="cm-brief-row">
+                    <span class="cm-brief-lbl">Fecha</span>
+                    <span class="cm-brief-val">03 jun</span>
+                  </div>
+                  <div class="cm-brief-row">
+                    <span class="cm-brief-lbl">Personas</span>
+                    <span class="cm-brief-val">100</span>
+                  </div>
+                  <div class="cm-brief-row">
+                    <span class="cm-brief-lbl">Presupuesto</span>
+                    <span class="cm-brief-val">5–15K€</span>
+                  </div>
+                  <div class="cm-brief-row">
+                    <span class="cm-brief-lbl">Catering</span>
+                    <span class="cm-brief-val accent">Cóctel</span>
+                  </div>
+                  <div class="cm-brief-row empty">
+                    <span class="cm-brief-lbl">Venue</span>
+                    <span class="cm-brief-val muted">— por elegir</span>
+                  </div>
+                  <div class="cm-brief-row empty">
+                    <span class="cm-brief-lbl">Artistas</span>
+                    <span class="cm-brief-val muted">— por elegir</span>
                   </div>
                 </div>
               </div>
