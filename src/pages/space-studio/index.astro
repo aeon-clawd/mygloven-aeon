@@ -1,0 +1,75 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../data/site";
+---
+<Layout title={`Space Studio — ${SITE.brand}`} current="space-studio">
+  <section class="detail-hero">
+    <div class="container">
+      <div class="eyebrow">{SITE.spaceStudio.eyebrow}</div>
+      <h1>{SITE.spaceStudio.title}<span class="ap">.</span></h1>
+      <p class="lead" style="margin-top: 32px; max-width: 70ch; font-size: 24px;">
+        {SITE.spaceStudio.subtitle}
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p style="max-width: 70ch; font-size: 18px; line-height: 1.7; color: var(--color-text-secondary);">
+        {SITE.spaceStudio.body}
+      </p>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container">
+      <div class="eyebrow">— Cómo funciona</div>
+      <h2 class="h-section" style="margin-bottom: 48px;">3 pasos<span style="color: var(--color-accent);">.</span></h2>
+      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+        {SITE.spaceStudio.pasos.map((p) => (
+          <div class="feature">
+            <div class="num">— {p.num} / 03</div>
+            <h3>{p.t}<span style="color: var(--color-accent);">.</span></h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="text-align: center; max-width: 900px;">
+      <div class="eyebrow" style="justify-content: center;">— Beta privada</div>
+      <h2 class="h-section">{SITE.spaceStudio.ctaTitle}</h2>
+      <p style="margin: 32px auto 0; max-width: 50ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
+        {SITE.spaceStudio.ctaBody}
+      </p>
+      <form id="waitlist-form" style="margin: 32px auto 0; display: flex; gap: 8px; max-width: 460px;">
+        <input class="input-field" type="email" name="email" required placeholder="tu@email.com" style="flex: 1;" />
+        <button type="submit" class="btn primary lg" data-cursor={SITE.spaceStudio.cta.cursor}>
+          {SITE.spaceStudio.cta.label}
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <div id="waitlist-sent" style="display: none; margin-top: 24px; font-family: var(--font-mono); font-size: 12px; color: var(--color-accent); letter-spacing: var(--tracking-wide); text-transform: uppercase;">
+        — Apuntado. Te avisamos cuando abramos.
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</Layout>
+
+<script is:inline>
+  (function () {
+    const form = document.getElementById("waitlist-form");
+    const sent = document.getElementById("waitlist-sent");
+    if (!form || !sent) return;
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // TODO: cablear endpoint real (Supabase / email).
+      form.style.display = "none";
+      sent.style.display = "block";
+    });
+  })();
+</script>

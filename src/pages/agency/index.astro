@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../data/site";
+---
+<Layout title={`my'G agency — ${SITE.brand}`} current="agency">
+  <section class="detail-hero">
+    <div class="container">
+      <div class="eyebrow">{SITE.agency.eyebrow}</div>
+      <h1>{SITE.agency.title}<span class="ap">.</span></h1>
+      <p class="lead" style="margin-top: 32px; max-width: 60ch; font-size: 24px;">
+        {SITE.agency.subtitle}
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="eyebrow">— 360°</div>
+          <h2 class="h-section">Producimos<br/>tu evento<span style="color: var(--color-accent);">.</span></h2>
+        </div>
+        <div>
+          <p style="font-size: 18px; line-height: 1.7; color: var(--color-text-secondary);">
+            {SITE.agency.body}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container">
+      <div class="eyebrow">— Servicios incluidos</div>
+      <h2 class="h-section" style="margin-bottom: 48px;">Qué cubrimos<span style="color: var(--color-accent);">.</span></h2>
+      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+        {SITE.agency.servicios.map((s, i) => (
+          <div class="feature">
+            <div class="num">— 0{i + 1} / 0{SITE.agency.servicios.length}</div>
+            <h3 style="font-size: 22px;">{s}<span style="color: var(--color-accent);">.</span></h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="text-align: center; max-width: 900px;">
+      <div class="eyebrow" style="justify-content: center;">— ¿Empezamos?</div>
+      <h2 class="h-section">{SITE.agency.ctaTitle}<span style="color: var(--color-accent);">.</span></h2>
+      <p style="margin: 32px auto 0; max-width: 50ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
+        {SITE.agency.ctaBody}
+      </p>
+      <a class="btn primary lg" href={SITE.agency.cta.href} style="margin-top: 32px;" data-cursor={SITE.agency.cta.cursor}>
+        {SITE.agency.cta.label}
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <CTA />
+</Layout>
