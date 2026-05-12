@@ -54,20 +54,47 @@ const featuredVenues = [...pickRandom("Barcelona", 3), ...pickRandom("Madrid", 3
       <div class="hero-right">
         <div class="canvas-mockup" aria-hidden="true">
           <div class="canvas-mockup-frame">
-            <!-- Top bar -->
-            <div class="canvas-mockup-bar">
+            <!-- Chrome bar (navegador) -->
+            <div class="cm-chrome">
               <span class="cm-dots">
                 <span class="dot"></span><span class="dot"></span><span class="dot"></span>
               </span>
-              <span class="cm-url">my'G · Canvas</span>
-              <div class="cm-segmented">
-                <span>chat</span>
-                <span class="active">split</span>
-                <span>data</span>
-              </div>
+              <span class="cm-url">app.mygloven.com / productor / canvas</span>
+              <span class="cm-chrome-meta">my'G · v2</span>
             </div>
 
-            <!-- Split body -->
+            <!-- Shell del dashboard: sidebar + main -->
+            <div class="cm-shell">
+              <!-- Sidebar del CRM -->
+              <aside class="cm-sidebar">
+                <div class="cm-side-brand">my<span class="ap">'</span>G</div>
+                <div class="cm-side-role">Productor</div>
+                <nav class="cm-side-nav">
+                  <span class="cm-side-link active"><span class="cm-dot"></span>Mis eventos</span>
+                  <span class="cm-side-link">Explorar</span>
+                  <span class="cm-side-link">Calendario</span>
+                  <span class="cm-side-link">Tareas</span>
+                </nav>
+                <div class="cm-side-foot">
+                  <span class="cm-side-user">MV</span>
+                </div>
+              </aside>
+
+              <!-- Main: topbar + canvas -->
+              <div class="cm-main">
+                <div class="canvas-mockup-bar">
+                  <div class="cm-event-head">
+                    <span class="cm-event-eyebrow">— Evento</span>
+                    <span class="cm-event-title">Showroom Primavera Pro</span>
+                  </div>
+                  <div class="cm-segmented">
+                    <span>chat</span>
+                    <span class="active">split</span>
+                    <span>data</span>
+                  </div>
+                </div>
+
+                <!-- Split body -->
             <div class="canvas-mockup-split">
               <!-- LEFT — Chat -->
               <div class="cm-pane cm-chat">
@@ -155,6 +182,8 @@ const featuredVenues = [...pickRandom("Barcelona", 3), ...pickRandom("Madrid", 3
                     <span class="cm-brief-val muted">— por elegir</span>
                   </div>
                 </div>
+              </div>
+            </div>
               </div>
             </div>
           </div>
