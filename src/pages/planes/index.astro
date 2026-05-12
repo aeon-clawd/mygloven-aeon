@@ -1,148 +1,65 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from "../../layouts/Layout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../data/site";
 ---
-<Layout title="Planes — Produce tu evento | mygloven">
-	<main>
-		<Navbar currentPage="/planes" />
+<Layout title={`Planes — ${SITE.brand}`} current="planes">
+  <section class="detail-hero">
+    <div class="container">
+      <div class="eyebrow">{SITE.planes.eyebrow}</div>
+      <h1>{SITE.planes.title}<span class="ap">.</span></h1>
+      <p class="lead" style="margin-top: 32px; max-width: 70ch; font-size: 22px;">
+        {SITE.planes.body}
+      </p>
+    </div>
+  </section>
 
-		<!-- Hero -->
-		<section class="relative min-h-[50vh] flex flex-col items-center justify-center text-center px-4 pt-20 pb-16 bg-[#1a1a2a]">
-			<p class="text-[#e4665c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Tu evento empieza aquí</p>
-			<h1 class="text-4xl md:text-6xl font-extralight text-white mb-6 leading-tight tracking-tight">
-				Elige cómo quieres <span class="text-[#e4665c] font-bold">producir</span> tu evento
-			</h1>
-			<p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-				Nuestros planes desbloquean acceso a propuestas completas, conexión con espacios, artistas y proveedores, y herramientas diseñadas para simplificar todo el proceso de producción.
-			</p>
-		</section>
+  <section class="section" style="padding-top: 48px;">
+    <div class="container">
+      <div class="features-grid plans-grid" style="grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 0; align-items: stretch;">
+        {SITE.planes.items.map((p) => (
+          <div class="feature plan-card" style={p.primary ? "background: var(--color-surface-2); border-color: var(--color-accent); display: flex; flex-direction: column; height: 100%;" : "display: flex; flex-direction: column; height: 100%;"}>
+            <div class="num">— {p.num} / 0{SITE.planes.items.length}</div>
+            <h3 style={p.primary ? "color: var(--color-accent); font-size: 28px;" : "font-size: 28px;"}>
+              {p.name}<span style="color: var(--color-accent);">.</span>
+            </h3>
+            <div style="font-family: var(--font-display); font-size: 32px; font-weight: 700; letter-spacing: -.02em; margin: 12px 0 4px;">
+              {p.price}<span style="font-size: 14px; font-weight: 400; color: var(--color-text-muted);">{p.period}</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 20px;">
+              — {p.para}
+            </div>
+            <ul style="list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-direction: column; gap: 8px; flex: 1;">
+              {p.features.map((f) => (
+                <li style="font-size: 13px; line-height: 1.5; display: flex; gap: 10px; align-items: flex-start; color: var(--color-text-secondary);">
+                  <span style="font-family: var(--font-mono); font-weight: 700; color: var(--color-accent); flex-shrink: 0;">+</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+            <a class={`btn lg${p.primary ? " primary" : ""}`} href={p.cta.href} style="width: 100%; justify-content: center; margin-top: auto;" data-cursor={p.cta.cursor}>
+              {p.cta.label}
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-		<!-- Value message -->
-		<section class="py-6 bg-white border-b border-gray-100">
-			<div class="max-w-3xl mx-auto px-4 text-center">
-				<p class="text-gray-500 text-sm leading-relaxed">
-					No pagas por usar una plataforma — pagas por <strong class="text-[#1a1a2a]">resolver tu evento</strong>. Cada plan incluye propuestas reales, conexiones directas y herramientas para producir.
-				</p>
-			</div>
-		</section>
+  <section class="section dark">
+    <div class="container" style="text-align: center; max-width: 900px;">
+      <div class="eyebrow" style="justify-content: center;">— Recomendación</div>
+      <h2 class="h-section">{SITE.planes.ctaTitle}<span style="color: var(--color-accent);">.</span></h2>
+      <p style="margin: 32px auto 0; max-width: 50ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
+        {SITE.planes.ctaBody}
+      </p>
+      <a class="btn primary lg" href={SITE.planes.cta.href} style="margin-top: 32px;" data-cursor={SITE.planes.cta.cursor}>
+        {SITE.planes.cta.label}
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
 
-		<!-- Plans grid -->
-		<section class="py-16 bg-white">
-			<div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-				<!-- Explorador -->
-				<div class="rounded-2xl border border-gray-100 p-8 hover:shadow-lg transition-all relative flex flex-col">
-					<h3 class="text-xl font-black text-[#1a1a2a] mb-1">Explorador</h3>
-					<p class="text-[#e4665c] text-sm font-bold mb-6">Gratis</p>
-					<ul class="space-y-3 text-sm text-gray-600 mb-8">
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Descubre espacios y artistas en la plataforma</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Visualiza tu evento con renders básicos de IA</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Recibe ideas y sugerencias para tu proyecto</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-gray-300 mt-0.5">✗</span>
-							<span class="text-gray-400">Sin propuestas personalizadas</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-gray-300 mt-0.5">✗</span>
-							<span class="text-gray-400">Renders con marca de agua</span>
-						</li>
-					</ul>
-					<a href="/space-studio" class="block text-center border-2 border-[#1a1a2a] text-[#1a1a2a] hover:bg-[#1a1a2a] hover:text-white px-6 py-3 rounded-full font-bold transition-all text-sm mt-auto">
-						Explorar gratis →
-					</a>
-				</div>
-
-				<!-- Creador -->
-				<div class="rounded-2xl border-2 border-[#e4665c] p-8 shadow-lg relative bg-white flex flex-col">
-					<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#e4665c] text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-wider">
-						Recomendado
-					</div>
-					<h3 class="text-xl font-black text-[#1a1a2a] mb-1">Creador</h3>
-					<p class="text-[#e4665c] text-sm font-bold mb-6">Suscripción mensual</p>
-					<ul class="space-y-3 text-sm text-gray-600 mb-8">
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Propuestas completas adaptadas a tu evento</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Renders ilimitados sin marca de agua</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Planifica y produce tu evento en un solo lugar</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Acceso a my'G Space Studio</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-gray-300 mt-0.5">✗</span>
-							<span class="text-gray-400">Sin contratación ni producción directa</span>
-						</li>
-					</ul>
-					<a href="/contacto" class="block text-center bg-[#e4665c] hover:bg-[#d86259] text-white px-6 py-3 rounded-full font-bold transition-all text-sm mt-auto">
-						Empezar a crear →
-					</a>
-				</div>
-
-				<!-- Promotor -->
-				<div class="rounded-2xl border border-gray-100 p-8 hover:shadow-lg transition-all relative bg-[#1a1a2a] flex flex-col">
-					<h3 class="text-xl font-black text-white mb-1">Promotor</h3>
-					<p class="text-[#e4665c] text-sm font-bold mb-6">Pago por proyecto</p>
-					<ul class="space-y-3 text-sm text-gray-300 mb-8">
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Todo lo del plan Creador</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Propuesta completa con proveedores adaptados a tu evento</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Conexión directa con espacios, artistas y proveedores</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Producción centralizada en un solo lugar</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-[#e4665c] mt-0.5">✓</span>
-							<span>Servicio integral my'G agency</span>
-						</li>
-					</ul>
-					<a href="/contacto" class="block text-center bg-[#e4665c] hover:bg-[#d86259] text-white px-6 py-3 rounded-full font-bold transition-all text-sm mt-auto">
-						Hablar con el equipo →
-					</a>
-				</div>
-
-			</div>
-		</section>
-
-		<!-- Bottom message -->
-		<section class="py-16 bg-[#fafafa] border-t border-gray-100">
-			<div class="max-w-3xl mx-auto px-4 text-center">
-				<h2 class="text-2xl font-black text-[#1a1a2a] mb-4">No vendemos renders.<br>Creamos eventos.</h2>
-				<p class="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto mb-8">
-					La IA es el punto de entrada: te ayuda a imaginar, diseñar y visualizar. Pero el objetivo real es que tu evento suceda. Desde la idea hasta la producción, my'G te acompaña en todo el camino.
-				</p>
-				<a href="/contacto" class="bg-[#1a1a2a] hover:bg-[#2a2a3a] text-white px-10 py-3.5 rounded-full font-bold inline-block transition-all text-sm">
-					Cuéntanos tu idea →
-				</a>
-			</div>
-		</section>
-
-		<Footer />
-	</main>
+  <CTA />
 </Layout>

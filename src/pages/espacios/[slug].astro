@@ -1,0 +1,174 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CTA from "../../components/CTA.astro";
+import {
+  getAllVenues,
+  getVenueBySlug,
+  venueCapacityLabel,
+  venueTagLabel,
+  pad,
+} from "../../lib/queries";
+
+export async function getStaticPaths() {
+  const venues = await getAllVenues();
+  return venues.map((v, idx) => ({
+    params: { slug: v.slug },
+    props: { idx },
+  }));
+}
+
+const { slug } = Astro.params;
+const { idx } = Astro.props;
+const venue = await getVenueBySlug(slug as string);
+if (!venue) return Astro.redirect("/404");
+
+const num = pad((idx ?? 0) + 1);
+const tag = venueTagLabel(venue);
+const capacity = venueCapacityLabel(venue);
+const cityCountry = [venue.ciudad?.trim(), venue.pais?.trim()].filter(Boolean).join(", ");
+const galleryImages = venue.images.slice(0, 6);
+const totalImages = galleryImages.length;
+---
+<Layout title={`${venue.nombre} — Espacios MYGLOVEN`} current="espacios">
+  <section class="detail-hero">
+    <div class="container">
+      <a class="detail-back" href="/espacios" data-cursor="volver">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Espacios
+      </a>
+      <div class="eyebrow">— № {num} · {tag}{venue.ciudad ? ` · ${venue.ciudad.trim()}` : ""}</div>
+      <h1>{venue.nombre}<span class="ap">.</span></h1>
+      <div class="detail-meta">
+        {cityCountry && (
+          <div class="item">
+            <span class="lbl">CIUDAD</span>
+            <span class="val">{cityCountry}</span>
+          </div>
+        )}
+        {capacity && (
+          <div class="item">
+            <span class="lbl">CAPACIDAD</span>
+            <span class="val">{capacity}</span>
+          </div>
+        )}
+        <div class="item">
+          <span class="lbl">TIPO</span>
+          <span class="val">{tag}</span>
+        </div>
+        <div class="item">
+          <span class="lbl">CÓDIGO</span>
+          <span class="val" style="color: var(--color-accent);">№ {num}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {totalImages > 0 && (
+    <div class="gallery" style="padding-top: 32px; padding-bottom: 32px;">
+      {galleryImages.map((img, i) => (
+        <div class="ph" style={`aspect-ratio: 16/10;`}>
+          <img src={img.url} alt={img.label || venue.nombre} loading="lazy" />
+          <span class="stamp">— {String(i + 1).padStart(2, "0")} / {String(totalImages).padStart(2, "0")}</span>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <section class="detail-body">
+    <div>
+      {venue.descripcion && <p>{venue.descripcion}</p>}
+      <p>
+        Si te interesa programar un evento aquí, escríbenos y montamos la propuesta en 48 h.
+      </p>
+      <div style="display: flex; gap: 12px; margin-top: 32px;">
+        <a class="btn primary lg" href="/contacto" data-cursor="reservar →">
+          Solicitar venue
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        {venue.web && (
+          <a class="btn lg" href={venue.web} target="_blank" rel="noopener" data-cursor="web ↗">Web oficial</a>
+        )}
+      </div>
+    </div>
+    <aside class="detail-aside">
+      <h4>— Datos clave</h4>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        {capacity && (
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; padding: 10px 0; border-bottom: 1px solid var(--color-rule);">
+            <span style="color: var(--color-text-muted);">AFORO</span>
+            <span style="font-weight: 600; color: var(--color-accent);">{capacity}</span>
+          </div>
+        )}
+        {venue.barrio && (
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; padding: 10px 0; border-bottom: 1px solid var(--color-rule);">
+            <span style="color: var(--color-text-muted);">DISTRITO</span>
+            <span style="font-weight: 600;">{venue.barrio}</span>
+          </div>
+        )}
+        {venue.equipo_sonido && (
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; padding: 10px 0; border-bottom: 1px solid var(--color-rule);">
+            <span style="color: var(--color-text-muted);">SONIDO</span>
+            <span style="font-weight: 600;">{venue.equipo_sonido}</span>
+          </div>
+        )}
+        {venue.exterior && (
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; padding: 10px 0; border-bottom: 1px solid var(--color-rule);">
+            <span style="color: var(--color-text-muted);">EXTERIOR</span>
+            <span style="font-weight: 600;">SÍ</span>
+          </div>
+        )}
+        {venue.licencia_musica && (
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; padding: 10px 0;">
+            <span style="color: var(--color-text-muted);">LIC. MÚSICA</span>
+            <span style="font-weight: 600;">SÍ</span>
+          </div>
+        )}
+      </div>
+
+      {venue.annexes && venue.annexes.length > 0 && (
+        <>
+          <h4 style="margin-top: 24px;">— Anexos</h4>
+          <div class="platforms">
+            {venue.annexes.map((a) => {
+              const cap = Math.max(a.config_de_pie ?? 0, a.config_sentado ?? 0);
+              return (
+                <a href="#" data-cursor="ver">
+                  <span>{a.nombre}</span>
+                  <span>{cap > 0 ? `${cap} PAX` : "—"}</span>
+                </a>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      {(venue.web || venue.instagram || venue.email) && (
+        <>
+          <h4 style="margin-top: 24px;">— Contacto</h4>
+          <div class="platforms">
+            {venue.web && (
+              <a href={venue.web} target="_blank" rel="noopener" data-cursor="web ↗">
+                <span>Web</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+            )}
+            {venue.instagram && (
+              <a href={venue.instagram.startsWith("http") ? venue.instagram : `https://instagram.com/${venue.instagram.replace(/^@/, "")}`} target="_blank" rel="noopener" data-cursor="ig ↗">
+                <span>Instagram</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+            )}
+            {venue.email && (
+              <a href={`mailto:${venue.email}`} data-cursor="email">
+                <span>Email</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+            )}
+          </div>
+        </>
+      )}
+    </aside>
+  </section>
+
+  <CTA />
+</Layout>

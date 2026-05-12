@@ -1,28 +1,95 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
-import SearchBox from '../../components/SearchBox';
-import { getAllVenues } from '../../sanity/queries';
+import Layout from "../../layouts/Layout.astro";
+import VenueCard from "../../components/VenueCard.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../data/site";
+import { getAllVenues } from "../../lib/queries";
 
 const venues = await getAllVenues();
+const bcn = venues.filter((v) => (v.ciudad || "").trim().toLowerCase() === "barcelona");
+const mad = venues.filter((v) => (v.ciudad || "").trim().toLowerCase() === "madrid");
+const others = venues.filter(
+  (v) => !["barcelona", "madrid"].includes((v.ciudad || "").trim().toLowerCase()),
+);
 ---
-<Layout title="Espacios · mygloven">
-	<main>
-		<Navbar currentPage="/espacios" />
+<Layout title={`Espacios — ${SITE.brand}`} current="espacios">
+  <section class="detail-hero">
+    <div class="container">
+      <div class="eyebrow">— Red curada · {venues.length} venue{venues.length !== 1 ? "s" : ""}</div>
+      <h1>{SITE.espacios.title}<span class="ap">.</span></h1>
+      <p class="lead" style="margin-top: 32px; max-width: 60ch; font-size: 22px;">
+        {SITE.espacios.subtitle}
+      </p>
+      <p style="margin-top: 16px; max-width: 70ch; color: var(--color-text-muted);">
+        {SITE.espacios.body}
+      </p>
+    </div>
+  </section>
 
-		<section class="pt-24 pb-16 bg-[#fafafa]">
-			<div class="max-w-7xl mx-auto px-4">
-				<div class="text-center mb-8">
-					<h1 class="text-3xl font-black text-[#1a1a2a] mb-2">Espacios</h1>
-					<p class="text-gray-400 text-xs max-w-2xl mx-auto mt-4 leading-relaxed">
-						En mygloven estamos enfocando la plataforma hacia una selección más cuidada de venues. Próximamente trabajaremos principalmente con espacios muy especiales, característicos y polivalentes en Madrid y Barcelona, con información mucho más completa y detallada para facilitar la producción de eventos. Además, mantendremos una base informativa con otros espacios en distintas ciudades.
-					</p>
-				</div>
-				<SearchBox client:load venues={venues} searchType="venue" />
-			</div>
-		</section>
+  {bcn.length > 0 && (
+    <section class="section" style="padding-top: 48px;">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">— Ciudad</div>
+            <h2 class="h-section">Barcelona<span style="color: var(--color-accent);">.</span></h2>
+          </div>
+          <span class="eyebrow" style="margin: 0;">{bcn.length} espacio{bcn.length !== 1 ? "s" : ""}</span>
+        </div>
+        <div class="venues-grid">
+          {bcn.map((v, i) => <VenueCard venue={v} index={i} />)}
+        </div>
+      </div>
+    </section>
+  )}
 
-		<Footer />
-	</main>
+  {mad.length > 0 && (
+    <section class="section dark">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">— Ciudad</div>
+            <h2 class="h-section">Madrid<span style="color: var(--color-accent);">.</span></h2>
+          </div>
+          <span class="eyebrow" style="margin: 0;">{mad.length} espacio{mad.length !== 1 ? "s" : ""}</span>
+        </div>
+        <div class="venues-grid">
+          {mad.map((v, i) => <VenueCard venue={v} index={i} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {others.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">— Otras ciudades</div>
+            <h2 class="h-section">Más espacios<span style="color: var(--color-accent);">.</span></h2>
+          </div>
+          <span class="eyebrow" style="margin: 0;">{others.length} espacio{others.length !== 1 ? "s" : ""}</span>
+        </div>
+        <div class="venues-grid">
+          {others.map((v, i) => <VenueCard venue={v} index={i} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section dark">
+    <div class="container" style="text-align: center; max-width: 900px;">
+      <div class="eyebrow" style="justify-content: center;">— Búsqueda guiada</div>
+      <h2 class="h-section">¿No encuentras lo que buscas?<span style="color: var(--color-accent);">.</span></h2>
+      <p style="margin: 32px auto 0; max-width: 50ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
+        Cuéntanos tu evento y my'G te propone el espacio ideal.
+      </p>
+      <a class="btn primary lg" href="/contacto" style="margin-top: 32px;" data-cursor="hablar →">
+        Hablar con my'G
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <CTA />
 </Layout>

@@ -1,33 +1,74 @@
 ---
-interface Props { title: string; description?: string; }
-const { title, description = "my'G — your event production assistant" } = Astro.props;
+import "../styles/global.css";
+import CustomCursor from "../components/CustomCursor.astro";
+import Marquee from "../components/Marquee.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  current?: string;
+  showMarquee?: boolean;
+}
+const {
+  title,
+  description = "my'G — asistente de producción inteligente. Espacios, artistas y proveedores en una sola plataforma. Barcelona y Madrid.",
+  current = "home",
+  showMarquee = true,
+} = Astro.props;
 ---
 <!doctype html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>{title}</title>
-	<meta property="og:title" content="mygloven | my'G your event production assistant" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://mygloven.com" />
-	<meta property="og:description" content={description} />
-	<meta name="description" content={description} />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<link rel="manifest" href="/manifest.json" />
-	<meta name="theme-color" content="#1a1a2a" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-	<script defer src="https://vps-dee05c78.vps.ovh.net/script.js" data-website-id="f7310538-0c32-4027-944d-84622b6225da"></script>
-</head>
-<body class="bg-[#fafafa] text-[#1a1a2a] min-h-screen font-['Inter',sans-serif]">
-	<slot />
-</body>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mygloven.com" />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem("myg-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute("content", t === "dark" ? "#0a0a0a" : "#fafafa");
+          }
+          var a = localStorage.getItem("myg-accent");
+          var ACCENTS = {
+            cian:    { c: "#33b9fa", h: "#5cc7fb", s: "#33b9fa14" },
+            naranja: { c: "#ff4d00", h: "#ff6a26", s: "#ff4d0014" },
+            lima:    { c: "#a3e635", h: "#bef264", s: "#a3e63514" },
+            rosa:    { c: "#ff3da5", h: "#ff5fb6", s: "#ff3da514" },
+            ambar:   { c: "#facc15", h: "#fde047", s: "#facc1514" },
+            lila:    { c: "#a78bfa", h: "#c4b5fd", s: "#a78bfa14" },
+          };
+          if (a && ACCENTS[a]) {
+            document.documentElement.style.setProperty("--color-accent", ACCENTS[a].c);
+            document.documentElement.style.setProperty("--color-accent-hover", ACCENTS[a].h);
+            document.documentElement.style.setProperty("--color-accent-soft", ACCENTS[a].s);
+            document.documentElement.setAttribute("data-accent", a);
+          }
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
+  </head>
+  <body>
+    <CustomCursor />
+    {showMarquee && <Marquee />}
+    <Header current={current} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
-<style is:global>
-@import "tailwindcss";
-html { scroll-behavior: smooth; }
-</style>

@@ -1,0 +1,38 @@
+---
+// Cursor custom — sigue al ratón con label en hover.
+---
+<div id="mg-cursor"><span class="cursor-label"></span></div>
+
+<script is:inline>
+  (function () {
+    if (window.matchMedia && window.matchMedia("(hover: none)").matches) return;
+    const cursor = document.getElementById("mg-cursor");
+    if (!cursor) return;
+    const label = cursor.querySelector(".cursor-label");
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    document.addEventListener("mousemove", (e) => {
+      tx = e.clientX;
+      ty = e.clientY;
+    });
+    function loop() {
+      cx += (tx - cx) * 0.22;
+      cy += (ty - cy) * 0.22;
+      cursor.style.left = cx + "px";
+      cursor.style.top = cy + "px";
+      requestAnimationFrame(loop);
+    }
+    loop();
+    document.addEventListener("mouseover", (e) => {
+      const t = e.target.closest("[data-cursor], a, button");
+      if (t) {
+        cursor.classList.add("is-hover");
+        if (label) label.textContent = t.getAttribute("data-cursor") || "→";
+      }
+    });
+    document.addEventListener("mouseout", (e) => {
+      if (!e.relatedTarget || !e.relatedTarget.closest?.("[data-cursor], a, button")) {
+        cursor.classList.remove("is-hover");
+      }
+    });
+  })();
+</script>

@@ -1,0 +1,40 @@
+---
+import AccentPicker from "./AccentPicker.tsx";
+import ThemeToggle from "./ThemeToggle.tsx";
+import { SITE } from "../data/site";
+
+interface Props {
+  current?: string;
+}
+const { current = "home" } = Astro.props;
+
+const links = [
+  { id: "home", label: "Inicio", href: "/" },
+  { id: "espacios", label: "Espacios", href: "/espacios" },
+  { id: "artistas", label: "Artistas", href: "/artistas" },
+  { id: "proveedores", label: "Proveedores", href: "/proveedores" },
+  { id: "space-studio", label: "Space Studio", href: "/space-studio" },
+  { id: "agency", label: "my'G agency", href: "/agency" },
+  { id: "planes", label: "Planes", href: "/planes" },
+  { id: "contacto", label: "Contacto", href: "/contacto" },
+];
+---
+<header class="site-header">
+  <a class="brand" href="/" data-cursor="inicio">
+    <span class="brand-mark">my<span class="ap">'</span>G</span>
+    <span class="brand-meta">— {SITE.brandFull}</span>
+  </a>
+  <nav class="site-nav">
+    {links.map((l) => (
+      <a href={l.href} class={current === l.id ? "active" : ""} data-cursor="ir →">{l.label}</a>
+    ))}
+  </nav>
+  <div class="header-cta">
+    <ThemeToggle client:load />
+    <AccentPicker client:load />
+    <a class="btn primary" href="/contacto?type=login" data-cursor="login →">
+      Login
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
