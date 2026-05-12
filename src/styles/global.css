@@ -819,9 +819,9 @@ body::before {
 
 /* ───────── Footer ──────────────────────────────────── */
 .footer {
-  background: #050505;
+  background: color-mix(in oklab, var(--color-background) 92%, #000);
   padding: 64px 32px 32px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-rule);
 }
 .footer-grid {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
