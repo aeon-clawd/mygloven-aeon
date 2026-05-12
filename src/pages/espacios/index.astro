@@ -2,67 +2,94 @@
 import Layout from "../../layouts/Layout.astro";
 import VenueCard from "../../components/VenueCard.astro";
 import CTA from "../../components/CTA.astro";
+import { SITE } from "../../data/site";
 import { getAllVenues } from "../../lib/queries";
 
 const venues = await getAllVenues();
-const cities = Array.from(new Set(venues.map((v) => (v.ciudad || "").trim()).filter(Boolean))).sort();
+const bcn = venues.filter((v) => (v.ciudad || "").trim().toLowerCase() === "barcelona");
+const mad = venues.filter((v) => (v.ciudad || "").trim().toLowerCase() === "madrid");
+const others = venues.filter(
+  (v) => !["barcelona", "madrid"].includes((v.ciudad || "").trim().toLowerCase()),
+);
 ---
-<Layout title="Espacios — MYGLOVEN" current="espacios">
+<Layout title={`Espacios — ${SITE.brand}`} current="espacios">
   <section class="detail-hero">
     <div class="container">
-      <div class="eyebrow">— Red de espacios · {venues.length} venue{venues.length !== 1 ? "s" : ""}</div>
-      <h1>Espacios<span class="ap">.</span></h1>
+      <div class="eyebrow">— Red curada · {venues.length} venue{venues.length !== 1 ? "s" : ""}</div>
+      <h1>{SITE.espacios.title}<span class="ap">.</span></h1>
       <p class="lead" style="margin-top: 32px; max-width: 60ch; font-size: 22px;">
-        De club íntimo a anfiteatro al aire libre. Cada venue de la red lo hemos producido al menos una vez.
+        {SITE.espacios.subtitle}
+      </p>
+      <p style="margin-top: 16px; max-width: 70ch; color: var(--color-text-muted);">
+        {SITE.espacios.body}
       </p>
     </div>
   </section>
 
-  <section class="section" style="padding-top: 48px;" id="venues-section">
-    <div class="container">
-      <div class="list-head">
-        <div class="filters" id="venues-filters">
-          <button class="chip active" data-city="todas" data-cursor="filtrar">Todas</button>
-          {cities.map((c) => (
-            <button class="chip" data-city={c} data-cursor="filtrar">{c}</button>
-          ))}
-        </div>
-        <span class="eyebrow" style="margin: 0;" id="venues-count">
-          {venues.length} resultado{venues.length !== 1 ? "s" : ""}
-        </span>
-      </div>
-      <div class="venues-grid" id="venues-grid">
-        {venues.map((v, i) => (
-          <div data-city={(v.ciudad || "").trim()} data-venue-card>
-            <VenueCard venue={v} index={i} />
+  {bcn.length > 0 && (
+    <section class="section" style="padding-top: 48px;">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">— Ciudad</div>
+            <h2 class="h-section">Barcelona<span style="color: var(--color-accent);">.</span></h2>
           </div>
-        ))}
+          <span class="eyebrow" style="margin: 0;">{bcn.length} espacio{bcn.length !== 1 ? "s" : ""}</span>
+        </div>
+        <div class="venues-grid">
+          {bcn.map((v, i) => <VenueCard venue={v} index={i} />)}
+        </div>
       </div>
+    </section>
+  )}
+
+  {mad.length > 0 && (
+    <section class="section dark">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">— Ciudad</div>
+            <h2 class="h-section">Madrid<span style="color: var(--color-accent);">.</span></h2>
+          </div>
+          <span class="eyebrow" style="margin: 0;">{mad.length} espacio{mad.length !== 1 ? "s" : ""}</span>
+        </div>
+        <div class="venues-grid">
+          {mad.map((v, i) => <VenueCard venue={v} index={i} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {others.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <div class="eyebrow">— Otras ciudades</div>
+            <h2 class="h-section">Más espacios<span style="color: var(--color-accent);">.</span></h2>
+          </div>
+          <span class="eyebrow" style="margin: 0;">{others.length} espacio{others.length !== 1 ? "s" : ""}</span>
+        </div>
+        <div class="venues-grid">
+          {others.map((v, i) => <VenueCard venue={v} index={i} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section dark">
+    <div class="container" style="text-align: center; max-width: 900px;">
+      <div class="eyebrow" style="justify-content: center;">— Búsqueda guiada</div>
+      <h2 class="h-section">¿No encuentras lo que buscas?<span style="color: var(--color-accent);">.</span></h2>
+      <p style="margin: 32px auto 0; max-width: 50ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
+        Cuéntanos tu evento y my'G te propone el espacio ideal.
+      </p>
+      <a class="btn primary lg" href="/contacto" style="margin-top: 32px;" data-cursor="hablar →">
+        Hablar con my'G
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </section>
 
   <CTA />
 </Layout>
-
-<script is:inline>
-  (function () {
-    const filters = document.getElementById("venues-filters");
-    const grid = document.getElementById("venues-grid");
-    const count = document.getElementById("venues-count");
-    if (!filters || !grid || !count) return;
-
-    filters.addEventListener("click", (e) => {
-      const btn = e.target.closest(".chip");
-      if (!btn) return;
-      const city = btn.dataset.city;
-      filters.querySelectorAll(".chip").forEach((c) => c.classList.toggle("active", c === btn));
-      let visible = 0;
-      grid.querySelectorAll("[data-venue-card]").forEach((card) => {
-        const match = city === "todas" || card.dataset.city === city;
-        card.style.display = match ? "" : "none";
-        if (match) visible++;
-      });
-      count.textContent = `${visible} resultado${visible !== 1 ? "s" : ""}`;
-    });
-  })();
-</script>

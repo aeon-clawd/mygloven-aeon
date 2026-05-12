@@ -1,68 +1,54 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import ArtistRow from "../../components/ArtistRow.astro";
 import CTA from "../../components/CTA.astro";
-import { getAllArtistas, artistaDisciplineLabel } from "../../lib/queries";
+import { SITE } from "../../data/site";
+import { getAllArtistas, getArtistaCoverUrl, artistaDisciplineLabel } from "../../lib/queries";
 
 const artistas = await getAllArtistas();
-const disciplineKeys = ["DJ", "Banda", "Cantante", "Cuerda"];
 ---
-<Layout title="Artistas — MYGLOVEN" current="artistas">
+<Layout title={`Artistas — ${SITE.brand}`} current="artistas">
   <section class="detail-hero">
     <div class="container">
-      <div class="eyebrow">— Roster · {artistas.length} artista{artistas.length !== 1 ? "s" : ""}</div>
-      <h1>Artistas<span class="ap">.</span></h1>
+      <div class="eyebrow">— Talento curado · {artistas.length} artista{artistas.length !== 1 ? "s" : ""}</div>
+      <h1>{SITE.artistas.title}<span class="ap">.</span></h1>
       <p class="lead" style="margin-top: 32px; max-width: 60ch; font-size: 22px;">
-        DJs, bandas y formaciones en directo. Cada nombre pasa por un filtro propio — presencia, encaje y solidez en directo.
+        {SITE.artistas.subtitle}
       </p>
     </div>
   </section>
 
   <section class="section" style="padding-top: 48px;">
     <div class="container">
-      <div class="list-head">
-        <div class="filters" id="artists-filters">
-          <button class="chip active" data-q="todos" data-cursor="filtrar">Todos</button>
-          {disciplineKeys.map((k) => (
-            <button class="chip" data-q={k.toLowerCase()} data-cursor="filtrar">{k}s</button>
-          ))}
-        </div>
-        <span class="eyebrow" style="margin: 0;" id="artists-count">
-          {artistas.length} resultado{artistas.length !== 1 ? "s" : ""}
-        </span>
+      <div class="circle-grid">
+        {artistas.map((a) => {
+          const cover = getArtistaCoverUrl(a);
+          return (
+            <a class="circle-card" href={`/artistas/${a.slug}`} data-cursor="abrir →">
+              <div class="circle-img">
+                {cover && <img src={cover} alt={a.nombre} loading="lazy" />}
+              </div>
+              <div class="circle-name">{a.nombre}</div>
+              <div class="circle-disc">{artistaDisciplineLabel(a)}</div>
+            </a>
+          );
+        })}
       </div>
-      <div class="artists-list" id="artists-list">
-        {artistas.map((a, i) => (
-          <div data-disc={artistaDisciplineLabel(a).toLowerCase()} data-artist-row>
-            <ArtistRow artista={a} index={i} />
-          </div>
-        ))}
-      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container" style="text-align: center; max-width: 900px;">
+      <div class="eyebrow" style="justify-content: center;">— Únete</div>
+      <h2 class="h-section">¿Eres artista?<span style="color: var(--color-accent);">.</span></h2>
+      <p style="margin: 32px auto 0; max-width: 50ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
+        Forma parte de la red de artistas de my'G. Conectamos tu talento con los eventos que lo necesitan.
+      </p>
+      <a class="btn primary lg" href={SITE.artistas.ctaJoin.href} style="margin-top: 32px;" data-cursor={SITE.artistas.ctaJoin.cursor}>
+        Únete como artista
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </section>
 
   <CTA />
 </Layout>
-
-<script is:inline>
-  (function () {
-    const filters = document.getElementById("artists-filters");
-    const list = document.getElementById("artists-list");
-    const count = document.getElementById("artists-count");
-    if (!filters || !list || !count) return;
-
-    filters.addEventListener("click", (e) => {
-      const btn = e.target.closest(".chip");
-      if (!btn) return;
-      const q = btn.dataset.q;
-      filters.querySelectorAll(".chip").forEach((c) => c.classList.toggle("active", c === btn));
-      let visible = 0;
-      list.querySelectorAll("[data-artist-row]").forEach((row) => {
-        const match = q === "todos" || (row.dataset.disc || "").includes(q);
-        row.style.display = match ? "" : "none";
-        if (match) visible++;
-      });
-      count.textContent = `${visible} resultado${visible !== 1 ? "s" : ""}`;
-    });
-  })();
-</script>
