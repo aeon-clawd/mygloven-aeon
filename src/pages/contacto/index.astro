@@ -2,81 +2,67 @@
 import Layout from "../../layouts/Layout.astro";
 import { SITE } from "../../data/site";
 ---
-<Layout title="Contacto — MYGLOVEN" current="contacto">
+<Layout title={`Contacto — ${SITE.brand}`} current="contacto">
   <section class="detail-hero">
     <div class="container">
-      <div class="eyebrow">— Hablemos</div>
-      <h1>Contacto<span class="ap">.</span></h1>
+      <div class="eyebrow">{SITE.contacto.eyebrow}</div>
+      <h1>{SITE.contacto.title.replace(".", "")}<span class="ap">.</span></h1>
       <p class="lead" style="margin-top: 32px; max-width: 60ch; font-size: 22px;">
-        Booking, prensa, partnerships. Lo más probable es que respondamos hoy.
+        {SITE.contacto.subtitle}
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;" id="contact-grid">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start;" id="contact-grid">
         <div>
-          <div class="eyebrow">— Vías directas</div>
-          <div style="display: flex; flex-direction: column; gap: 24px; margin-top: 24px;">
-            {SITE.contact.channels.map((c) => (
-              <a href={`mailto:${c.v}`} data-cursor="email →" style="display: block; padding: 20px 0; border-bottom: 1px solid var(--color-rule);">
-                <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); color: var(--color-text-muted); margin-bottom: 6px;">— {c.l}</div>
-                <div style="font-family: var(--font-display); font-size: 28px; font-weight: 600; letter-spacing: -.02em; color: var(--color-text-primary);">{c.v}</div>
-              </a>
-            ))}
-          </div>
-
-          <div class="eyebrow" style="margin-top: 40px;">— Estudios</div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 16px;">
-            {SITE.contact.studios.map((s) => (
-              <div style="padding: 16px; border: 1px solid var(--color-rule); border-radius: 4px; background: var(--color-surface);">
-                <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: var(--tracking-extreme); color: var(--color-accent); margin-bottom: 8px;">{s.c}</div>
-                <div style="font-family: var(--font-mono); font-size: 11px; line-height: 1.6; white-space: pre-line; color: var(--color-text-secondary);">{s.a}</div>
-              </div>
-            ))}
+          <div class="eyebrow">— Datos</div>
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;">
+            <a href={`mailto:${SITE.contactEmail}`} data-cursor="email →" style="display: block; padding: 20px 0; border-bottom: 1px solid var(--color-rule); text-decoration: none;">
+              <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); color: var(--color-text-muted); margin-bottom: 6px;">— EMAIL</div>
+              <div style="font-family: var(--font-display); font-size: 28px; font-weight: 600; letter-spacing: -.02em; color: var(--color-text-primary);">{SITE.contactEmail}</div>
+            </a>
+            <a href={SITE.instagram} target="_blank" rel="noopener" data-cursor="instagram →" style="display: block; padding: 20px 0; border-bottom: 1px solid var(--color-rule); text-decoration: none;">
+              <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); color: var(--color-text-muted); margin-bottom: 6px;">— INSTAGRAM</div>
+              <div style="font-family: var(--font-display); font-size: 28px; font-weight: 600; letter-spacing: -.02em; color: var(--color-text-primary);">{SITE.instagramHandle}</div>
+            </a>
+            <a href="https://mygloven.com" data-cursor="web →" style="display: block; padding: 20px 0; border-bottom: 1px solid var(--color-rule); text-decoration: none;">
+              <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); color: var(--color-text-muted); margin-bottom: 6px;">— WEB</div>
+              <div style="font-family: var(--font-display); font-size: 28px; font-weight: 600; letter-spacing: -.02em; color: var(--color-text-primary);">mygloven.com</div>
+            </a>
           </div>
         </div>
 
-        <div style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 32px; border-radius: 4px;" id="contact-card">
+        <div style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 32px; border-radius: 8px;" id="contact-card">
           <div id="contact-form-block">
             <div class="eyebrow">— Formulario</div>
             <h3 style="font-family: var(--font-display); font-size: 32px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 24px;">
-              Cuéntanos qué tienes entre manos<span style="color: var(--color-accent);">.</span>
+              Cuéntanos qué necesitas<span style="color: var(--color-accent);">.</span>
             </h3>
             <form id="contact-form" style="display: flex; flex-direction: column; gap: 16px;">
               <label style="display: flex; flex-direction: column; gap: 6px;">
-                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Tu nombre</span>
-                <input class="input-field" name="name" placeholder="Marta Vidal" required />
+                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Nombre</span>
+                <input class="input-field" name="name" placeholder="Tu nombre" required />
               </label>
               <label style="display: flex; flex-direction: column; gap: 6px;">
                 <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Email</span>
                 <input class="input-field" name="email" type="email" placeholder="tu@email.com" required />
               </label>
               <label style="display: flex; flex-direction: column; gap: 6px;">
-                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Tipo de consulta</span>
-                <select class="input-field" name="type">
-                  <option>Booking de un artista</option>
-                  <option>Programar un venue</option>
-                  <option>Producción de evento</option>
-                  <option>Prensa</option>
-                  <option>Otra</option>
-                </select>
-              </label>
-              <label style="display: flex; flex-direction: column; gap: 6px;">
-                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Cuéntanos más</span>
-                <textarea class="input-field" name="message" rows="5" placeholder="Fecha, ciudad, presupuesto orientativo, lo que sepas."></textarea>
+                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted);">— Mensaje</span>
+                <textarea class="input-field" name="message" rows="6" placeholder="Cuéntanos tu evento, plan que te interesa, o lo que necesites." required></textarea>
               </label>
               <button type="submit" class="btn primary lg" style="margin-top: 8px; width: 100%; justify-content: center;" data-cursor="enviar →">
-                Enviar mensaje
+                {SITE.contacto.formCta}
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </button>
             </form>
           </div>
           <div id="contact-sent" style="display: none; text-align: center; padding: 60px 20px;">
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: var(--tracking-extreme); color: var(--color-accent); margin-bottom: 16px;">— RECIBIDO</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: var(--tracking-extreme); color: var(--color-accent); margin-bottom: 16px;">— {SITE.contacto.receivedTitle.toUpperCase()}</div>
             <div style="font-family: var(--font-display); font-size: 40px; font-weight: 600; letter-spacing: -.02em; line-height: 1; margin-bottom: 16px;">Gracias<span style="color: var(--color-accent);">.</span></div>
-            <p style="color: var(--color-text-secondary); max-width: 30ch; margin: 0 auto;">Te respondemos hoy. Si es urgente, escribe directamente a {SITE.contactEmail}.</p>
+            <p style="color: var(--color-text-secondary); max-width: 30ch; margin: 0 auto;">{SITE.contacto.receivedBody} Si es urgente, escribe a {SITE.contactEmail}.</p>
           </div>
         </div>
       </div>
@@ -90,6 +76,21 @@ import { SITE } from "../../data/site";
     const block = document.getElementById("contact-form-block");
     const sent = document.getElementById("contact-sent");
     if (!form || !block || !sent) return;
+
+    // Prellena tipo de consulta si llega ?type= o ?plan=
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const type = params.get("type");
+      const plan = params.get("plan");
+      const msg = form.querySelector('[name="message"]');
+      if (msg && (type || plan)) {
+        if (plan) msg.value = `Hola, me interesa el plan ${plan}. `;
+        else if (type === "proveedor") msg.value = "Hola, quiero registrarme como proveedor. ";
+        else if (type === "space-studio") msg.value = "Hola, quiero acceso anticipado a Space Studio. ";
+        else if (type === "login") msg.value = "Hola, quiero acceder a my'G. ";
+      }
+    } catch { /* ignore */ }
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       // TODO: cablear envío real (endpoint, Supabase, mailto, etc.)

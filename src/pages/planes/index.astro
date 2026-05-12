@@ -1,79 +1,43 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import CTA from "../../components/CTA.astro";
-
-const plans = [
-  {
-    num: "01",
-    name: "Explorador",
-    price: "Gratis",
-    cta: { label: "Explorar gratis", href: "/artistas", cursor: "explorar →" },
-    primary: false,
-    features: [
-      { ok: true, t: "Descubre espacios y artistas en la plataforma" },
-      { ok: true, t: "Visualiza tu evento con renders básicos de IA" },
-      { ok: true, t: "Recibe ideas y sugerencias para tu proyecto" },
-      { ok: false, t: "Sin propuestas personalizadas" },
-      { ok: false, t: "Renders con marca de agua" },
-    ],
-  },
-  {
-    num: "02",
-    name: "Creador",
-    price: "Suscripción mensual",
-    cta: { label: "Empezar a crear", href: "/contacto", cursor: "empezar →" },
-    primary: true,
-    features: [
-      { ok: true, t: "Propuestas completas adaptadas a tu evento" },
-      { ok: true, t: "Renders ilimitados sin marca de agua" },
-      { ok: true, t: "Planifica y produce tu evento en un solo lugar" },
-      { ok: true, t: "Acceso a my'G Space Studio" },
-      { ok: false, t: "Sin contratación ni producción directa" },
-    ],
-  },
-  {
-    num: "03",
-    name: "Promotor",
-    price: "Pago por proyecto",
-    cta: { label: "Hablar con el equipo", href: "/contacto", cursor: "hablar →" },
-    primary: false,
-    features: [
-      { ok: true, t: "Todo lo del plan Creador" },
-      { ok: true, t: "Propuesta completa con proveedores adaptados a tu evento" },
-      { ok: true, t: "Conexión directa con espacios, artistas y proveedores" },
-      { ok: true, t: "Producción centralizada en un solo lugar" },
-      { ok: true, t: "Servicio integral my'G agency" },
-    ],
-  },
-];
+import { SITE } from "../../data/site";
 ---
-<Layout title="Planes — MYGLOVEN" current="planes">
+<Layout title={`Planes — ${SITE.brand}`} current="planes">
   <section class="detail-hero">
     <div class="container">
-      <div class="eyebrow">— Tu evento empieza aquí</div>
-      <h1>Planes<span class="ap">.</span></h1>
+      <div class="eyebrow">{SITE.planes.eyebrow}</div>
+      <h1>{SITE.planes.title}<span class="ap">.</span></h1>
       <p class="lead" style="margin-top: 32px; max-width: 70ch; font-size: 22px;">
-        Desbloquea propuestas completas, conexión con espacios, artistas y proveedores, y herramientas pensadas para producir.
+        {SITE.planes.body}
       </p>
     </div>
   </section>
 
   <section class="section" style="padding-top: 48px;">
     <div class="container">
-      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 0;">
-        {plans.map((p) => (
-          <div class="feature" style={p.primary ? "background: var(--color-surface-2);" : undefined}>
-            <div class="num">— {p.num} / 03 · {p.price.toUpperCase()}</div>
-            <h3 style={p.primary ? "color: var(--color-accent);" : undefined}>{p.name}<span style="color: var(--color-accent);">.</span></h3>
-            <ul style="list-style: none; margin: 24px 0 32px; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+      <div class="features-grid" style="grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 0;">
+        {SITE.planes.items.map((p) => (
+          <div class="feature" style={p.primary ? "background: var(--color-surface-2); border-color: var(--color-accent);" : undefined}>
+            <div class="num">— {p.num} / 0{SITE.planes.items.length}</div>
+            <h3 style={p.primary ? "color: var(--color-accent); font-size: 28px;" : "font-size: 28px;"}>
+              {p.name}<span style="color: var(--color-accent);">.</span>
+            </h3>
+            <div style="font-family: var(--font-display); font-size: 32px; font-weight: 700; letter-spacing: -.02em; margin: 12px 0 4px;">
+              {p.price}<span style="font-size: 14px; font-weight: 400; color: var(--color-text-muted);">{p.period}</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: var(--tracking-extreme); text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 20px;">
+              — {p.para}
+            </div>
+            <ul style="list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-direction: column; gap: 8px;">
               {p.features.map((f) => (
-                <li style={`font-size: 14px; line-height: 1.5; color: ${f.ok ? "var(--color-text-primary)" : "var(--color-text-muted)"}; display: flex; gap: 10px; align-items: flex-start;`}>
-                  <span style={`font-family: var(--font-mono); font-weight: 700; color: ${f.ok ? "var(--color-accent)" : "var(--color-text-muted)"}; flex-shrink: 0;`}>{f.ok ? "✓" : "✗"}</span>
-                  <span>{f.t}</span>
+                <li style="font-size: 13px; line-height: 1.5; display: flex; gap: 10px; align-items: flex-start; color: var(--color-text-secondary);">
+                  <span style="font-family: var(--font-mono); font-weight: 700; color: var(--color-accent); flex-shrink: 0;">+</span>
+                  <span>{f}</span>
                 </li>
               ))}
             </ul>
-            <a class={`btn lg${p.primary ? " primary" : ""}`} href={p.cta.href} data-cursor={p.cta.cursor}>
+            <a class={`btn lg${p.primary ? " primary" : ""}`} href={p.cta.href} style="width: 100%; justify-content: center;" data-cursor={p.cta.cursor}>
               {p.cta.label}
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -85,13 +49,13 @@ const plans = [
 
   <section class="section dark">
     <div class="container" style="text-align: center; max-width: 900px;">
-      <div class="eyebrow" style="justify-content: center;">— No vendemos renders</div>
-      <h2 class="h-section">Creamos eventos<span style="color: var(--color-accent);">.</span></h2>
+      <div class="eyebrow" style="justify-content: center;">— Recomendación</div>
+      <h2 class="h-section">{SITE.planes.ctaTitle}<span style="color: var(--color-accent);">.</span></h2>
       <p style="margin: 32px auto 0; max-width: 50ch; color: var(--color-text-secondary); font-size: 17px; line-height: 1.6;">
-        La IA es el punto de entrada: te ayuda a imaginar, diseñar y visualizar. Pero el objetivo real es que tu evento suceda. Desde la idea hasta la producción, my'G te acompaña en todo el camino.
+        {SITE.planes.ctaBody}
       </p>
-      <a class="btn primary lg" href="/contacto" style="margin-top: 32px;" data-cursor="contar idea →">
-        Cuéntanos tu idea
+      <a class="btn primary lg" href={SITE.planes.cta.href} style="margin-top: 32px;" data-cursor={SITE.planes.cta.cursor}>
+        {SITE.planes.cta.label}
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
