@@ -1696,6 +1696,7 @@ body.nav-open { overflow: hidden; }
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex: 1;
 }
 .cm-card-name {
   font-family: var(--font-display);
@@ -1714,7 +1715,8 @@ body.nav-open { overflow: hidden; }
 }
 .cm-card-actions {
   display: flex; gap: 6px;
-  margin-top: 6px;
+  margin-top: auto;
+  padding-top: 6px;
 }
 .cm-btn {
   flex: 1;
