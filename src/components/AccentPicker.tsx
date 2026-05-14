@@ -67,7 +67,7 @@ export default function AccentPicker() {
 
   return (
     <div className="accent-picker">
-      <span className="lbl">— Acento</span>
+      <span className="lbl">— Color</span>
       {Object.entries(ACCENTS).map(([name, a]) => (
         <button
           key={name}
@@ -77,7 +77,7 @@ export default function AccentPicker() {
           onClick={() => handleClick(name)}
           data-cursor={a.label.toLowerCase()}
           title={a.label}
-          aria-label={`Acento ${a.label}`}
+          aria-label={`Color ${a.label}`}
         />
       ))}
     </div>

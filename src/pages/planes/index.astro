@@ -14,6 +14,42 @@ import { SITE } from "../../data/site";
     </div>
   </section>
 
+  <section class="section promo-section" style="padding-top: 32px; padding-bottom: 32px;">
+    <div class="container">
+      <div class="promo-card" id="promo-card">
+        <div class="promo-left">
+          <div class="eyebrow" style="color: var(--color-accent);">— Promo de lanzamiento</div>
+          <h2 class="promo-title">
+            Prueba <strong>Starter</strong> 1 mes <span class="ap">gratis</span>
+          </h2>
+          <p class="promo-body">
+            Antes del <strong>5 de junio</strong>, déjanos tu email y te invitamos a probar el plan Starter durante un mes sin coste. Buscamos feedback real antes del lanzamiento oficial.
+          </p>
+        </div>
+        <form class="promo-form" id="promo-form" action="https://formsubmit.co/ajax/info@mygloven.com" method="POST">
+          <input type="hidden" name="_subject" value="Nuevo lead promo Starter — mygloven.com" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="origen" value="Promo lanzamiento Starter (planes)" />
+          <label class="promo-label">
+            <span>— Email</span>
+            <input class="input-field" name="email" type="email" placeholder="tu@email.com" required />
+          </label>
+          <button type="submit" class="btn primary lg" data-cursor="probar →" id="promo-submit">
+            Quiero probarlo
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <div class="promo-fineprint">Sin tarjeta. Cancelas cuando quieras.</div>
+        </form>
+        <div class="promo-sent" id="promo-sent">
+          <div class="eyebrow" style="color: var(--color-accent); justify-content: center;">— Recibido</div>
+          <div class="promo-sent-title">Gracias<span class="ap">.</span></div>
+          <p>Te escribimos antes del 5 de junio con el acceso a Starter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" style="padding-top: 48px;">
     <div class="container">
       <div class="features-grid plans-grid" style="grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 0; align-items: stretch;">
@@ -63,3 +99,96 @@ import { SITE } from "../../data/site";
 
   <CTA />
 </Layout>
+
+<style>
+  .promo-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+    align-items: center;
+    position: relative;
+  }
+  .promo-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.4vw, 40px);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .promo-title strong { color: var(--color-accent); font-weight: 600; }
+  .promo-title .ap { color: var(--color-accent); }
+  .promo-body {
+    color: var(--color-text-secondary);
+    max-width: 50ch;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .promo-body strong { color: var(--color-text-primary); font-weight: 600; }
+  .promo-form { display: flex; flex-direction: column; gap: 12px; }
+  .promo-label { display: flex; flex-direction: column; gap: 6px; }
+  .promo-label > span {
+    font-family: var(--font-mono); font-size: 10px; font-weight: 600;
+    letter-spacing: var(--tracking-extreme); text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .promo-fineprint {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--color-text-muted);
+    letter-spacing: var(--tracking-extreme); text-transform: uppercase;
+    text-align: center;
+  }
+  .promo-sent {
+    display: none;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 24px 0;
+  }
+  .promo-sent-title {
+    font-family: var(--font-display);
+    font-size: 40px; font-weight: 600; letter-spacing: -.02em;
+    margin: 12px 0 8px;
+  }
+  .promo-sent .ap { color: var(--color-accent); }
+  .promo-sent p { color: var(--color-text-secondary); margin: 0; }
+  .promo-card.is-sent .promo-left,
+  .promo-card.is-sent .promo-form { display: none; }
+  .promo-card.is-sent .promo-sent { display: block; }
+  @media (max-width: 760px) {
+    .promo-card { grid-template-columns: 1fr; padding: 24px; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const form = document.getElementById("promo-form");
+    const card = document.getElementById("promo-card");
+    const btn = document.getElementById("promo-submit");
+    if (!form || !card || !btn) return;
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      btn.disabled = true;
+      const original = btn.innerHTML;
+      btn.innerHTML = "Enviando…";
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: data,
+        });
+        if (!res.ok) throw new Error("Network");
+        card.classList.add("is-sent");
+      } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = original;
+        alert("No hemos podido enviar tu email. Escríbenos a info@mygloven.com.");
+      }
+    });
+  })();
+</script>
