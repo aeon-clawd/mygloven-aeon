@@ -13,7 +13,6 @@ export const SITE = {
 
   hero: {
     hashtag: "#mygloven",
-    activeLabel: "lanzamiento privado · Primavera Pro '26",
     title: "Esto es lo único con lo que no podemos ayudarte",
     subtitle: "Elige el color.",
     cta: { label: "Conoce a tu asistente", href: "#como-funciona", cursor: "asistente →" },
@@ -120,8 +119,7 @@ export const SITE = {
     "my'G — myglobalvenue",
     "Asistente de producción inteligente",
     "Barcelona · Madrid",
-    "Primavera Pro '26 · 3-5 Junio",
-    "Lanzamiento privado",
+    "Primavera Pro '26 · 3-5 Junio"
   ],
 
   proveedores: {
