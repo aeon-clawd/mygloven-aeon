@@ -215,7 +215,7 @@ export const SITE = {
         name: "Agency",
         price: "A medida",
         period: "",
-        para: "Para producciones complejas",
+        para: "Para producciones complejas — y para productores sin experiencia previa",
         features: [
           "Servicio completo my'G agency",
           "Producción integral",
